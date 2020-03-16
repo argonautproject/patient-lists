@@ -4,6 +4,7 @@ Patient List API: Provider-facing apps often need to know things like "who are t
 ## Resources:
 
 - Meetings: Every Other Wednesdays 1-2 PM ET
+  - Public [calendar for viewing](https://calendar.google.com/calendar/embed?src=idchd9q6skpvncjc0u24s32h80%40group.calendar.google.com) and [iCal for import](https://calendar.google.com/calendar/ical/idchd9q6skpvncjc0u24s32h80%40group.calendar.google.com/public/basic.ics)
   - https://meet.jit.si/argo2020.lists
   - To join by phone instead, tap this: +1.512.402.2718,,4225410989#
   
