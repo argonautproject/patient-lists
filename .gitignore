@@ -1,5 +1,5 @@
 /output/
-/input-cache/
+#/input-cache/
 /temp/
 /template/
 /node_modules/
@@ -11,3 +11,4 @@
 SUSHI-GENERATED-FILES.md
 .DS_Store
 Thumbs.db
+*.sh
