@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="142de0a4-ac8b-4acb-a082-877e3d71507f"/>
+  <id value="b0189c1e-9c61-4ecd-bef3-44157d61b592"/>
   <meta>
-    <lastUpdated value="2020-12-10T19:44:33.233-08:00"/>
+    <lastUpdated value="2020-12-10T21:54:11.670-08:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -75,7 +75,7 @@
         <name value="ArgonautGroupCharacteristicValueSet"/>
         <title value="Argonaut Group Characteristic Value Set"/>
         <status value="active"/>
-        <date value="2020-12-10T19:44:33-08:00"/>
+        <date value="2020-12-10T21:54:11-08:00"/>
         <publisher value="Argonaut Project"/>
         <contact>
           <telecom>
@@ -85,8 +85,8 @@
         </contact>
         <description value="Used to define group characteristic and limited to &#39;location&#39;or...."/>
         <expansion>
-          <identifier value="urn:uuid:9d0dc49c-8b6e-48cb-bac0-b6bd7a7716df"/>
-          <timestamp value="2020-12-10T19:45:20-08:00"/>
+          <identifier value="urn:uuid:18b40b2e-a62f-4002-8623-1545a696dc83"/>
+          <timestamp value="2020-12-10T21:55:01-08:00"/>
           <total value="4"/>
           <parameter>
             <name value="excludeNested"/>

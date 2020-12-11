@@ -60,6 +60,9 @@
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
       "StructureDefinition.snapshot.element.binding"
     ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support": [
       "StructureDefinition.differential.element.type",
       "StructureDefinition.differential.element.type.targetProfile",

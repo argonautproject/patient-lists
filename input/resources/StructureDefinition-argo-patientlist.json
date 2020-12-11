@@ -18,7 +18,7 @@
             ]
         }
     ],
-    "description": "Profile on the R4 Group resource to for [Argonaut Patient List Project](https://confluence.hl7.org/display/AP/Argonaut+Project+Home).  Note that the [Group](http://hl7.org/fhir/group.html) resource is used for this patient **list** use case even though there is also a FHIR List resource",
+    "description": "This profile sets minimum expectations for the [Group](http://hl7.org/fhir/group.html) resource to record, search, and fetch user-facing patient lists.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
     "abstract": false,
@@ -115,6 +115,12 @@
                         ]
                     }
                 ],
+                "mustSupport": true
+            },
+            {
+                "id": "Group.managingEntity.reference",
+                "path": "Group.managingEntity.reference",
+                "min": 1,
                 "mustSupport": true
             },
             {
@@ -292,6 +298,12 @@
                         ]
                     }
                 ],
+                "mustSupport": true
+            },
+            {
+                "id": "Group.member.entity.reference",
+                "path": "Group.member.entity.reference",
+                "min": 1,
                 "mustSupport": true
             }
         ]
