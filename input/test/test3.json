@@ -1,0 +1,46 @@
+{
+  "status": "final",
+  "category": [
+    {
+      "text": "Social History",
+      "coding": [
+        {
+          "code": "social-history",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Social History"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "text": "Tobacco smoking status",
+    "coding": [
+      {
+        "code": "72166-2",
+        "system": "http://loinc.org",
+        "display": "Tobacco smoking status"
+      }
+    ]
+  },
+  "resourceType": "Observation",
+  "effectiveDateTime": "2016-03",
+  "meta": {
+    "profile": [
+      "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/test-obs"
+    ]
+  },
+  "valueCodeableConcept": {
+    "text": "Current some day smoker",
+    "coding": [
+      {
+        "code": "428041000124106",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "id": "test3",
+  "subject": {
+    "display": "Amy Shaw",
+    "reference": "Patient/example"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "package": "ig",
+  "version": "0.1.0",
+  "fhirVersion": "4.0.1",
+  "extensions": [
+    {
+      "url": "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment",
+      "title": "Argonaut Patient List Member Appointment",
+      "types": [
+        "Reference",
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-encounter",
+      "title": "Argonaut Patient List Member Encounter",
+      "types": [
+        "Reference",
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaire",
+      "title": "Argonaut Patient List Questionnaire",
+      "types": [
+        "Reference",
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse",
+      "title": "Argonaut Patient List Member QuestionnaireResponse",
+      "types": [
+        "Reference",
+        "Reference"
+      ]
+    }
+  ],
+  "profiles": {
+    "Group": [
+      {
+        "url": "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/argo-patientlist",
+        "title": "Argonaut Patient List (Group) Profile"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support": [
+      "StructureDefinition.differential.element.type",
+      "StructureDefinition.differential.element.type.targetProfile",
+      "StructureDefinition.snapshot.element.type",
+      "StructureDefinition.snapshot.element.type.targetProfile"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/instance-description": [
+      "Observation.meta"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/instance-name": [
+      "Observation.meta"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/rendered-value": [
+      "Observation.identifier.value"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment": [
+      "Group.member"
+    ],
+    "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-encounter": [
+      "Group.member"
+    ],
+    "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaire": [
+      "Group"
+    ],
+    "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse": [
+      "Group.member"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "ArgonautGroupCharacteristicCodeSystem",
+  "id": "argo-group-characteristic",
+  "title": "Argonaut Group Characteristic Code System",
+  "description": "Used to define group characteristic and limited to 'location'or 'team' or 'organization' or 'practitioner'",
+  "version": "0.1.0",
+  "url": "http://www.fhir.org/guides/argonaut/patient-list/CodeSystem/argo-group-characteristic",
+  "concept": [
+    {
+      "code": "location",
+      "display": "Location",
+      "definition": "Members (Patients) whose care is at the location specified by the value which references the Location resource representing the physical structures managed/operated by an organization (e.g., a ward, building, clinic, etc)"
+    },
+    {
+      "code": "team",
+      "display": "CareTeam",
+      "definition": "Members (Patients) who are under the care of the care-team specified by the value which references the CareTeam resource representing the care-team. (e.g., Respiratory Therapy CareTeam, CareTeam blue , etc)"
+    },
+    {
+      "code": "organization",
+      "display": "Organization",
+      "definition": "Members (Patients) whose care is at the organization specified by the value which references the Organization resource representing the organization. (e.g., Burgess Medical Group)"
+    },
+    {
+      "code": "practitioner",
+      "display": "Practitioner",
+      "definition": "Members (Patients) who are under the care of the practitioner specified by the value which references the Practitioner resource representing the practitioner. (e.g., Dr Leung)"
+    }
+  ],
+  "count": 4
+}

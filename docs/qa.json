@@ -1,0 +1,12 @@
+{
+  "url": "http://www.fhir.org/guides/argonaut/patient-list/ImplementationGuide/ig",
+  "name": "ArgonautPatientList",
+  "package-id": "ig",
+  "ig-ver": "0.1.0",
+  "date": "Thu, 10 Dec, 2020 19:44:33 -0800",
+  "errs": 1,
+  "warnings": 6,
+  "hints": 0,
+  "version": "4.0.1",
+  "tool": "4.5.0 (3)"
+}

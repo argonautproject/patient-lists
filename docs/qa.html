@@ -1,0 +1,247 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- broken links = 3, errors = 1, warn = 6, info = 0 -->
+<head>
+  <title>ArgonautPatientList : Validation Results</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results for ArgonautPatientList</h1>
+ <p>Generated Thu Dec 10 19:45:53 PST 2020, FHIR version 4.0.1 for ig#0.1.0 (canonical = <a href="http://www.fhir.org/guides/argonaut/patient-list">http://www.fhir.org/guides/argonaut/patient-list</a> (<a href="http://www.fhir.org/guides/argonaut/patient-list/history.html">history</a>)). See <a href="/users/ehaas/documents/fhir/argo-pl/docs/qa.min.html">Errors Only</a></p>
+<table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.51</span></td></tr>
+ <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ig, Canonical = http://www.fhir.org/guides/argonaut/patient-list</td></tr>
+ <tr><td>Realm Check for :</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
+ <tr><td>Version Check:</td><td>0.1.0: <span stlye="color: marron; font-weight: bold">no package-list.json - the guide is not ready for publishing</span></td></tr>
+ <tr><td>Supressed Messages:</td><td>No Suppressed Issues
+</td></tr>
+ <tr><td>Dependency Checks:</td><td><div><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of the package">Version</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR Release</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Canonical URL">Canonical</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Web Reference Base">Web Base</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Comments about this entry">Comment</span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/ehaas/Documents/FHIR/Argo-PL/docsdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> ig</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0.1.0</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://www.fhir.org/guides/argonaut/patient-list</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/ehaas/Documents/FHIR/Argo-PL/docsdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.us.core</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">3.1.1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/us/core</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/us/core/STU3.1.1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/ehaas/Documents/FHIR/Argo-PL/docsdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAJUlEQVR4Xu3IIQEAAAgDsHd9/w4EQIOamFnaBgAA4MMKAACAKwNp30CqZFfFmwAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.uv.sdc</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">2.8.0</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/uv/sdc</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">https://build.fhir.org/ig/HL7/sdc/</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Matched to latest patch release</td></tr>
+</table><para>Templates: fhir.base.template#current</para></div></td></tr>
+ <tr><td>HL7 Publication Rules:</td><td>Code = n/a. package-list.json: file not found in /Users/ehaas/Documents/FHIR/Argo-PL</td></tr>
+ <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://www.fhir.org/guides/argonaut/patient-list (Problem #1 with package-list.json at http://www.fhir.org/guides/argonaut/patient-list: http://www.fhir.org/guides/argonaut/patient-list/package-list.json)</td></tr>
+ <tr><td>Summary:</td><td> broken links = 3, errors = 1, warn = 6, info = 0</td></tr>
+</table>
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Argo-PL_fsh-generated_resources_CodeSystem-argo-group-characteristic"><b>/Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/CodeSystem-argo-group-characteristic</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Argo-PL_fsh-generated_resources_ImplementationGuide-ig"><b>/Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ImplementationGuide-ig</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Argo-PL_fsh-generated_resources_StructureDefinition-patientlist-appointment"><b>/Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-appointment</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Argo-PL_fsh-generated_resources_StructureDefinition-patientlist-encounter"><b>/Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-encounter</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Argo-PL_fsh-generated_resources_StructureDefinition-patientlist-questionnaire"><b>/Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-questionnaire</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Argo-PL_fsh-generated_resources_StructureDefinition-patientlist-questionnaireresponse"><b>/Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-questionnaireresponse</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Argo-PL_fsh-generated_resources_ValueSet-argo-group-characteristic"><b>/Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ValueSet-argo-group-characteristic</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Argo-PL_input_examples_test"><b>/Users/ehaas/Documents/FHIR/Argo-PL/input/examples/test</b></a></td><td><b>1</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Argo-PL_input_resources_SearchParameter-argo-characteristic-reference"><b>/Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-argo-characteristic-reference</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Argo-PL_input_resources_StructureDefinition-argo-patientlist"><b>/Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-argo-patientlist</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="internal"> </a>
+<h2><a href="">n/a</a></h2>
+ <table class="grid">
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Observation-test.html#096411e3-0280-4b26-bf64-875d9bf9fd4f">Observation-test.html#/html/body/div/div/div/div/div/div/p/a at Line 143, column 382</a></b></td><td><b>error</b></td><td><b>The link 'Patient-example.html' for &quot;Amy Shaw&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-patientlist-questionnaireresponse.html#3ebe41be-231f-4431-8002-57a335a84701">StructureDefinition-patientlist-questionnaireresponse.html#/html/body/div/div/div/div/div/p/p/a at Line 146, column 153</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;Patient List Questionnaire&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="artifacts.html#aa4ee417-28bb-4c48-b0b4-fb9b768573b7">artifacts.html#/html/body/div/div/div/div/div/div/p/table/tbody/tr/td/p/a at Line 226, column 148</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;Patient List Questionnaire&quot; cannot be resolved</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Argo-PL_fsh-generated_resources_CodeSystem-argo-group-characteristic"> </a>
+<h2><a href="CodeSystem-argo-group-characteristic.html">/Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/CodeSystem-argo-group-characteristic.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>CodeSystem/argo-group-characteristic: CodeSystem</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Argo-PL_fsh-generated_resources_ImplementationGuide-ig"> </a>
+<h2><a href="ImplementationGuide-ig.html">/Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ImplementationGuide-ig.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>ImplementationGuide/ig: ImplementationGuide</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Argo-PL_fsh-generated_resources_StructureDefinition-patientlist-appointment"> </a>
+<h2><a href="StructureDefinition-patientlist-appointment.html">/Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-appointment.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/patientlist-appointment: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this extension</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Argo-PL_fsh-generated_resources_StructureDefinition-patientlist-encounter"> </a>
+<h2><a href="StructureDefinition-patientlist-encounter.html">/Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-encounter.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/patientlist-encounter: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-encounter')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this extension</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Argo-PL_fsh-generated_resources_StructureDefinition-patientlist-questionnaire"> </a>
+<h2><a href="StructureDefinition-patientlist-questionnaire.html">/Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-questionnaire.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/patientlist-questionnaire: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaire')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this extension</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Argo-PL_fsh-generated_resources_StructureDefinition-patientlist-questionnaireresponse"> </a>
+<h2><a href="StructureDefinition-patientlist-questionnaireresponse.html">/Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-questionnaireresponse.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/patientlist-questionnaireresponse: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this extension</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Argo-PL_fsh-generated_resources_ValueSet-argo-group-characteristic"> </a>
+<h2><a href="ValueSet-argo-group-characteristic.html">/Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ValueSet-argo-group-characteristic.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>ValueSet/argo-group-characteristic: ValueSet</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Argo-PL_input_examples_test"> </a>
+<h2><a href="Observation-test.html">/Users/ehaas/Documents/FHIR/Argo-PL/input/examples/test.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>Observation/test: Observation (l1/c2)</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Observation/test: Observation.subject (l67/c31)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource 'Patient/example'</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Observation/test: Observation.meta.profile[0] (l1/c2)</b></td><td><b>warning</b></td><td title="VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"><b>Profile reference 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/test-obs' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Argo-PL_input_resources_SearchParameter-argo-characteristic-reference"> </a>
+<h2><a href="SearchParameter-Group-value-reference.html">/Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-argo-characteristic-reference.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>SearchParameter/Group-value-reference: SearchParameter</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Argo-PL_input_resources_StructureDefinition-argo-patientlist"> </a>
+<h2><a href="StructureDefinition-argo-patientlist.html">/Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-argo-patientlist.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/argo-patientlist: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/argo-patientlist')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<a name="suppressed"> </a>
+<p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
+<p>No suppressed messsages</p><a name="sorted"> </a>
+<p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="Reference_REF_CantResolve"> </a>
+<h2>Reference_REF_CantResolve</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="Observation-test.html">/Users/ehaas/Documents/FHIR/Argo-PL/input/examples/test.json</a></td><td><b>Unable to resolve resource 'Patient/example'</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"> </a>
+<h2>VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="Observation-test.html">/Users/ehaas/Documents/FHIR/Argo-PL/input/examples/test.json</a></td><td><b>Profile reference 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/test-obs' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles</b></td>
+   </tr>
+</table>
+</body>
+</html>

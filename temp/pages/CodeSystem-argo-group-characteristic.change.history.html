@@ -1,0 +1,21 @@
+---
+---
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
+
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='CodeSystem' id='argo-group-characteristic' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{type}}: ArgonautGroupCharacteristicCodeSystem - Change History</h2>
+  <p>History of changes for argo-group-characteristic {{type | downcase}}.</p>
+
+  {%include CodeSystem-argo-group-characteristic-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

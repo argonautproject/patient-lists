@@ -1,0 +1,299 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "argo-patientlist",
+    "url": "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/argo-patientlist",
+    "version": "0.1.0",
+    "name": "ArgonautPatientListProfile",
+    "title": "Argonaut Patient List (Group) Profile",
+    "status": "active",
+    "date": "2020-12-10T16:51:15-08:00",
+    "publisher": "Argonaut Project",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "https://confluence.hl7.org/display/AP/Argonaut+Project+Home"
+                }
+            ]
+        }
+    ],
+    "description": "Profile on the R4 Group resource to for [Argonaut Patient List Project](https://confluence.hl7.org/display/AP/Argonaut+Project+Home).  Note that the [Group](http://hl7.org/fhir/group.html) resource is used for this patient **list** use case even though there is also a FHIR List resource",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Group",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Group",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Group",
+                "path": "Group"
+            },
+            {
+                "id": "Group.extension:q-ref",
+                "path": "Group.extension",
+                "sliceName": "q-ref",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension",
+                        "profile": [
+                            "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaire"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Group.type",
+                "path": "Group.type",
+                "fixedCode": "person",
+                "mustSupport": true
+            },
+            {
+                "id": "Group.actual",
+                "path": "Group.actual",
+                "requirements": "Argo Patient Lists always list members",
+                "fixedBoolean": true,
+                "mustSupport": true
+            },
+            {
+                "id": "Group.quantity",
+                "path": "Group.quantity",
+                "comment": "It may not be possible to determine at run time for some servers.",
+                "mustSupport": true
+            },
+            {
+                "id": "Group.managingEntity",
+                "path": "Group.managingEntity",
+                "requirements": "Used for searching for user or system-maintained lists",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+                            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+                        ],
+                        "_targetProfile": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Group.characteristic",
+                "path": "Group.characteristic",
+                "requirements": "Used for searching for by group parameter such as location",
+                "mustSupport": true
+            },
+            {
+                "id": "Group.characteristic.code",
+                "path": "Group.characteristic.code",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "valueSet": "http://www.fhir.org/guides/argonaut/patient-list/ValueSet/argo-group-characteristic"
+                }
+            },
+            {
+                "id": "Group.characteristic.value[x]",
+                "path": "Group.characteristic.value[x]",
+                "type": [
+                    {
+                        "code": "CodeableConcept",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ]
+                    },
+                    {
+                        "code": "boolean",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": false
+                            }
+                        ]
+                    },
+                    {
+                        "code": "Quantity",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": false
+                            }
+                        ]
+                    },
+                    {
+                        "code": "Range",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": false
+                            }
+                        ]
+                    },
+                    {
+                        "code": "Reference",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": false
+                            }
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Group.characteristic.exclude",
+                "path": "Group.characteristic.exclude",
+                "mustSupport": true
+            },
+            {
+                "id": "Group.member",
+                "path": "Group.member",
+                "comment": "enumerated list of members",
+                "mustSupport": true
+            },
+            {
+                "id": "Group.member.extension:qr-ref",
+                "path": "Group.member.extension",
+                "sliceName": "qr-ref",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension",
+                        "profile": [
+                            "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Group.member.extension:enc-ref",
+                "path": "Group.member.extension",
+                "sliceName": "enc-ref",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension",
+                        "profile": [
+                            "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-encounter"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Group.member.extension:appt-ref",
+                "path": "Group.member.extension",
+                "sliceName": "appt-ref",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension",
+                        "profile": [
+                            "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Group.member.entity",
+                "path": "Group.member.entity",
+                "comment": "Group with different characteristics can be combined to create a union of characteristic, for example a group of patients at location = Location1 or Location2 or a group of patients at location = Location1 or Practitioner = Practitioner2",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+                            "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/argo-patientlist",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+                        ],
+                        "_targetProfile": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            }
+        ]
+    }
+}

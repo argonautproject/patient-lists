@@ -1,0 +1,18 @@
+﻿<html>
+<head>
+  <title>table-name-structuredefinitions-xml</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+ <tr><td><a href="StructureDefinition-argo-patientlist.xml.html">Argonaut Patient List (Group) Profile</a> </td><td><p>Profile on the R4 Group resource to for <a href="https://confluence.hl7.org/display/AP/Argonaut+Project+Home">Argonaut Patient List Project</a>.  Note that the <a href="http://hl7.org/fhir/group.html">Group</a> resource is used for this patient <strong>list</strong> use case even though there is also a FHIR List resource</p>
+</td></tr>
+ <tr><td><a href="StructureDefinition-patientlist-appointment.xml.html">Argonaut Patient List Member Appointment</a> </td><td><p>A reference to the Appointment that is the <em>reason</em> the target patient is a member of this Group.</p>
+</td></tr>
+ <tr><td><a href="StructureDefinition-patientlist-encounter.xml.html">Argonaut Patient List Member Encounter</a> </td><td><p>A reference to the Encounter that is the <em>reason</em> the target patient is a member of this Group.</p>
+</td></tr>
+ <tr><td><a href="StructureDefinition-patientlist-questionnaire.xml.html">Argonaut Patient List Questionnaire</a> </td><td><p>A reference to a form definition that is bound to certain types of lists and defines each column for the purpose of providing additional data for each member</p>
+</td></tr>
+ <tr><td><a href="StructureDefinition-patientlist-questionnaireresponse.xml.html">Argonaut Patient List Member QuestionnaireResponse</a> </td><td><p>A reference to a QuestionnaireResponse of prepopulated form that provides additional data about the target patient. The form is defined by the <a href="">Patient List Questionnaire</a> that is bound to the Group using the Argonaut Patient List Questionnaire extension. This extension <strong>SHALL NOT</strong> be used if the Argonaut Patient List Questionnaire extension is not present on the Group resource</p>
+</td></tr>
+</body>
+</html>

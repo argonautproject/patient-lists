@@ -1,0 +1,76 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "patientlist-questionnaireresponse",
+  "url": "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse",
+  "version": "0.1.0",
+  "name": "PatientListQuestionnaireResponse",
+  "title": "Argonaut Patient List Member QuestionnaireResponse",
+  "status": "active",
+  "description": "A reference to a QuestionnaireResponse of prepopulated form that provides additional data about the target patient. The form is defined by the [Patient List Questionnaire]() that is bound to the Group using the Argonaut Patient List Questionnaire extension. This extension **SHALL NOT** be used if the Argonaut Patient List Questionnaire extension is not present on the Group resource",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Group.member"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ]
+      },
+      {
+        "id": "Extension.valueReference",
+        "path": "Extension.valueReference",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

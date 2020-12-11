@@ -1,0 +1,30 @@
+{
+    "resourceType": "SearchParameter",
+    "id": "Group-value-reference",
+    "url": "http://www.fhir.org/guides/argonaut/patient-list/SearchParameter/Group-value-reference",
+    "version": "4.0.1",
+    "name": "GroupValueReference",
+    "status": "draft",
+    "experimental": false,
+    "date": "2020-09-02",
+    "publisher": "The Argonaut Project",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "https://confluence.hl7.org/display/AP/Argonaut+Project+Home"
+                }
+            ]
+        }
+    ],
+    "description": "Reference value held by characteristic",
+    "code": "value-reference",
+    "base": [
+        "Group"
+    ],
+    "type": "reference",
+    "expression": "Group.characteristic.value as Reference",
+    "xpath": "f:Group/f:characteristic/f:valueReference",
+    "xpathUsage": "normal"
+}
