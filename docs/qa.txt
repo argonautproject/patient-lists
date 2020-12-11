@@ -3,9 +3,9 @@
 
 err = 1, warn = 6, info = 0
 IG Publisher Version: 1.1.51
-Generated Thu Dec 10 21:55:29 PST 2020. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
+Generated Fri Dec 11 14:43:46 PST 2020. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
 
- Build Errors : 3 / 0 / 0
+ Build Errors : 1 / 0 / 0
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ImplementationGuide-ig : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-appointment : 0 / 1 / 1
@@ -19,8 +19,6 @@ Generated Thu Dec 10 21:55:29 PST 2020. FHIR version 4.0.1 for ig#0.1.0 (canonic
 </table>
 == n/a ==
 ERROR: /Users/ehaas/Documents/FHIR/Argo-PL/docs/Observation-test.html#/html/body/div/div/div/div/div/div/p/a at Line 143, column 382: The link 'Patient-example.html' for "Amy Shaw" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Argo-PL/docs/StructureDefinition-patientlist-questionnaireresponse.html#/html/body/div/div/div/div/div/p/p/a at Line 146, column 153: The link '' for "Patient List Questionnaire" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Argo-PL/docs/artifacts.html#/html/body/div/div/div/div/div/div/p/table/tbody/tr/td/p/a at Line 226, column 148: The link '' for "Patient List Questionnaire" cannot be resolved
 == /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/CodeSystem-argo-group-characteristic.json ==
 INFORMATION: CodeSystem/argo-group-characteristic: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 == /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ImplementationGuide-ig.json ==

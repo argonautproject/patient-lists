@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "ArgonautPatientList"];
   fhir:ImplementationGuide.title [ fhir:value "Argonaut Patient List"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-12-10T21:54:11-08:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-12-11T14:42:34-08:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Argonaut Project"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -419,7 +419,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/patientlist-questionnaire" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Patient List Questionnaire" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A reference to a form definition that is bound to certain types of lists and defines each column for the purpose of providing additional data for each member" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A reference to a form definition based on [SDC Base Questionnaire](https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html) that can be used to define additional data for the Group members. The [Argonaut Patient List Member QuestionnaireResponse](StructureDefinition-patientlist-questionnaireresponse.html) extension provides a link to the pre-filled answers for a Group member." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 3;
@@ -433,7 +433,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/patientlist-questionnaireresponse" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Patient List Member QuestionnaireResponse" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A reference to a QuestionnaireResponse of prepopulated form that provides additional data about the target patient. The form is defined by the [Patient List Questionnaire]() that is bound to the Group using the Argonaut Patient List Questionnaire extension. This extension **SHALL NOT** be used if the Argonaut Patient List Questionnaire extension is not present on the Group resource" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A reference to a QuestionnaireResponse of pre-populated form that provides additional data about the target patient. The form is defined by the [Argonaut Patient List Questionnaire](StructureDefinition-patientlist-questionnaire.html) that is bound to the Group using the Argonaut Patient List Questionnaire extension. This extension **SHALL NOT** be used if the Argonaut Patient List Questionnaire extension is not present on the Group resource" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 4;
@@ -489,7 +489,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/argo-patientlist" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Patient List (Group) Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profile on the R4 Group resource to for [Argonaut Patient List Project](https://confluence.hl7.org/display/AP/Argonaut+Project+Home).  Note that the [Group](http://hl7.org/fhir/group.html) resource is used for this patient **list** use case even though there is also a FHIR List resource" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This profile sets minimum expectations for the [Group](http://hl7.org/fhir/group.html) resource to record, search, and fetch user-facing patient lists." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 8;

@@ -11,7 +11,7 @@
   <name value="ArgonautPatientList"/>
   <title value="Argonaut Patient List"/>
   <status value="active"/>
-  <date value="2020-12-10T21:54:11-08:00"/>
+  <date value="2020-12-11T14:42:34-08:00"/>
   <publisher value="Argonaut Project"/>
   <contact>
     <telecom>
@@ -280,7 +280,7 @@
         <reference value="StructureDefinition/patientlist-questionnaire"/>
       </reference>
       <name value="Argonaut Patient List Questionnaire"/>
-      <description value="A reference to a form definition that is bound to certain types of lists and defines each column for the purpose of providing additional data for each member"/>
+      <description value="A reference to a form definition based on [SDC Base Questionnaire](https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html) that can be used to define additional data for the Group members. The [Argonaut Patient List Member QuestionnaireResponse](StructureDefinition-patientlist-questionnaireresponse.html) extension provides a link to the pre-filled answers for a Group member."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -291,7 +291,7 @@
         <reference value="StructureDefinition/patientlist-questionnaireresponse"/>
       </reference>
       <name value="Argonaut Patient List Member QuestionnaireResponse"/>
-      <description value="A reference to a QuestionnaireResponse of prepopulated form that provides additional data about the target patient. The form is defined by the [Patient List Questionnaire]() that is bound to the Group using the Argonaut Patient List Questionnaire extension. This extension **SHALL NOT** be used if the Argonaut Patient List Questionnaire extension is not present on the Group resource"/>
+      <description value="A reference to a QuestionnaireResponse of pre-populated form that provides additional data about the target patient. The form is defined by the [Argonaut Patient List Questionnaire](StructureDefinition-patientlist-questionnaire.html) that is bound to the Group using the Argonaut Patient List Questionnaire extension. This extension **SHALL NOT** be used if the Argonaut Patient List Questionnaire extension is not present on the Group resource"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -335,7 +335,7 @@
         <reference value="StructureDefinition/argo-patientlist"/>
       </reference>
       <name value="Argonaut Patient List (Group) Profile"/>
-      <description value="Profile on the R4 Group resource to for [Argonaut Patient List Project](https://confluence.hl7.org/display/AP/Argonaut+Project+Home).  Note that the [Group](http://hl7.org/fhir/group.html) resource is used for this patient **list** use case even though there is also a FHIR List resource"/>
+      <description value="This profile sets minimum expectations for the [Group](http://hl7.org/fhir/group.html) resource to record, search, and fetch user-facing patient lists."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
