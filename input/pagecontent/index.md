@@ -2,4 +2,4 @@
 
 This Implementation Guide defines and renders the [Argonaut Patient List FHIR Artifacts](artifacts.html)
 
-this is a stub for a future Implementation Guide.
+The current [Argonaut Draft IG](https://hackmd.io/iLbMj3DVTtaNjTsseYAo5g?view) (using HACKMD) is able to render these artifacts.  This site will host a future Implementation Guide.
