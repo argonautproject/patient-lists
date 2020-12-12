@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "ArgonautPatientList"];
   fhir:ImplementationGuide.title [ fhir:value "Argonaut Patient List"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-12-11T14:42:34-08:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-12-11T16:41:03-08:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Argonaut Project"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;

@@ -6,7 +6,7 @@ Alias: $SDCBaseQR = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionn
 Extension:   PatientListQuestionnaire
 Id:          patientlist-questionnaire
 Title:       "Argonaut Patient List Questionnaire"
-Description: "A reference to a form definition based on [SDC Base Questionnaire](https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html) that can be used to define additional data for the Group members. The [Argonaut Patient List Member QuestionnaireResponse](StructureDefinition-patientlist-questionnaireresponse.html) extension provides a link to the pre-filled answers for a Group member."
+Description: "An EHR **MAY** defines additional data for the members in a Patient List using a FHIR [Questionnaire](http://hl7.org/fhir/questionnaire.html)  based on the [SDC Base Questionnaire](https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html) profile.  This extension references the Questionnaire resource so the client app can retrieve it. The *Argonaut Patient List Member QuestionnaireResponse Extension* provides a corresponding link to the completed answers to the Questionnaire for a `Group.member`.  Note that typically the EHR and not the patient supplies the responses to the Questionnaire."
 * ^context.type = #element
 * ^context.expression = "Group"
 * valueReference only Reference($SDCBaseQ)
@@ -15,7 +15,7 @@ Description: "A reference to a form definition based on [SDC Base Questionnaire]
 Extension:   PatientListQuestionnaireResponse
 Id:          patientlist-questionnaireresponse
 Title:       "Argonaut Patient List Member QuestionnaireResponse"
-Description: "A reference to a QuestionnaireResponse of pre-populated form that provides additional data about the target patient. The form is defined by the [Argonaut Patient List Questionnaire](StructureDefinition-patientlist-questionnaire.html) that is bound to the Group using the Argonaut Patient List Questionnaire extension. This extension **SHALL NOT** be used if the Argonaut Patient List Questionnaire extension is not present on the Group resource"
+Description: "An EHR **MAY** defines additional data for the members in a Patient List using a FHIR [Questionnaire](http://hl7.org/fhir/questionnaire.html)  based on the [SDC Base Questionnaire](https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html) profile.  This extension references the [QuestionnaireResponse](http://hl7.org/fhir/questionnaireresponse.html) resource that represents the completed answers to the Questionnaire for a `Group.member`. The client app can use the reference to retrieve the data.  Note that typically the EHR and not the patient supplies the responses to the Questionnaire. The *Argonaut Patient List Questionnaire Extension* provides a corresponding link to the Questionnaire"
 * ^context.type = #element
 * ^context.expression = "Group.member"
 * valueReference only Reference($SDCBaseQR)
@@ -24,7 +24,7 @@ Description: "A reference to a QuestionnaireResponse of pre-populated form that 
 Extension:   PatientListEncounter
 Id:          patientlist-encounter
 Title:       "Argonaut Patient List Member Encounter"
-Description: "A reference to the Encounter that is the *reason* the target patient is a member of this Group."
+Description: "Some patient lists are defined by a specific encounter such as an admission list or a discharge list. For these types of patient lists, an EHR **MAY** supply a reference to a specific [Encounter](http://hl7.org/fhir/encounter.html) that is the *reason* the target patient is a member of this patient list.  This extension references the relevant Encounter resource for a `Group.member` so the client app can retrieve it.  The Encounter resource is based on the [US Core Encounter](http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter) profile."
 * ^context.type = #element
 * ^context.expression = "Group.member"
 * valueReference only Reference($USEncounter)
