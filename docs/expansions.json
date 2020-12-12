@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "6acb4821-0fae-41e5-aa1b-50718422556c",
+  "id" : "2bb97711-381f-4fb7-b851-2acc6e5af03f",
   "meta" : {
-    "lastUpdated" : "2020-12-11T16:41:03.865-08:00"
+    "lastUpdated" : "2020-12-11T16:52:40.332-08:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -19,7 +19,7 @@
       "name" : "ArgonautGroupCharacteristicValueSet",
       "title" : "Argonaut Group Characteristic Value Set",
       "status" : "active",
-      "date" : "2020-12-11T16:41:03-08:00",
+      "date" : "2020-12-11T16:52:40-08:00",
       "publisher" : "Argonaut Project",
       "contact" : [{
         "telecom" : [{
@@ -29,8 +29,8 @@
       }],
       "description" : "Used to define group characteristic and limited to 'location'or....",
       "expansion" : {
-        "identifier" : "urn:uuid:c5b99be7-348b-4289-97db-53767bec5101",
-        "timestamp" : "2020-12-11T16:41:52-08:00",
+        "identifier" : "urn:uuid:3198ab03-5ab9-4583-a912-84133656ebbd",
+        "timestamp" : "2020-12-11T16:53:21-08:00",
         "total" : 4,
         "parameter" : [{
           "name" : "excludeNested",

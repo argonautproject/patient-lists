@@ -143,7 +143,7 @@
 
   <a name="root"> </a>
   <h2 id="root">Extension: Argonaut Patient List Questionnaire</h2>
-  <p><p>A reference to a form definition based on <a href="https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html">SDC Base Questionnaire</a> that can be used to define additional data for the Group members. The <a href="StructureDefinition-patientlist-questionnaireresponse.html">Argonaut Patient List Member QuestionnaireResponse</a> extension provides a link to the pre-filled answers for a Group member.</p>
+  <p><p>An EHR <strong>MAY</strong> defines additional data for the members in a Patient List using a FHIR <a href="http://hl7.org/fhir/questionnaire.html">Questionnaire</a>  based on the <a href="https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html">SDC Base Questionnaire</a> profile.  This extension references the Questionnaire resource so the client app can retrieve it. The <em>Argonaut Patient List Member QuestionnaireResponse Extension</em> provides a corresponding link to the completed answers to the Questionnaire for a <code class="highlighter-rouge">Group.member</code>.  Note that typically the EHR and not the patient supplies the responses to the Questionnaire.</p>
 </p>
   <p>
   The official URL for this extension is:
@@ -420,7 +420,7 @@ Summary
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="https://confluence.hl7.org/display/AP/Argonaut+Project+Home">Argonaut Project</a>.  Package ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 11, 2020 16:41-0800">2020-12-11</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="https://confluence.hl7.org/display/AP/Argonaut+Project+Home">Argonaut Project</a>.  Package ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 11, 2020 16:52-0800">2020-12-11</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

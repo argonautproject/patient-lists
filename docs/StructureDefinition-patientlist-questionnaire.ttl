@@ -17,7 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "PatientListQuestionnaire"];
   fhir:StructureDefinition.title [ fhir:value "Argonaut Patient List Questionnaire"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2020-12-11T16:41:03-08:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-12-11T16:52:40-08:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Argonaut Project"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -27,7 +27,7 @@
        fhir:ContactPoint.value [ fhir:value "https://confluence.hl7.org/display/AP/Argonaut+Project+Home" ]
      ]
   ];
-  fhir:StructureDefinition.description [ fhir:value "A reference to a form definition based on [SDC Base Questionnaire](https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html) that can be used to define additional data for the Group members. The [Argonaut Patient List Member QuestionnaireResponse](StructureDefinition-patientlist-questionnaireresponse.html) extension provides a link to the pre-filled answers for a Group member."];
+  fhir:StructureDefinition.description [ fhir:value "An EHR **MAY** defines additional data for the members in a Patient List using a FHIR [Questionnaire](http://hl7.org/fhir/questionnaire.html)  based on the [SDC Base Questionnaire](https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html) profile.  This extension references the Questionnaire resource so the client app can retrieve it. The *Argonaut Patient List Member QuestionnaireResponse Extension* provides a corresponding link to the completed answers to the Questionnaire for a `Group.member`.  Note that typically the EHR and not the patient supplies the responses to the Questionnaire."];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
      fhir:index 0;

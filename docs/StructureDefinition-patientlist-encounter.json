@@ -10,7 +10,7 @@
   "name": "PatientListEncounter",
   "title": "Argonaut Patient List Member Encounter",
   "status": "active",
-  "date": "2020-12-11T16:41:03-08:00",
+  "date": "2020-12-11T16:52:40-08:00",
   "publisher": "Argonaut Project",
   "contact": [
     {
@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "A reference to the Encounter that is the *reason* the target patient is a member of this Group.",
+  "description": "Some patient lists are defined by a specific encounter such as an admission list or a discharge list. For these types of patient lists, an EHR **MAY** supply a reference to a specific [Encounter](http://hl7.org/fhir/encounter.html) that is the *reason* the target patient is a member of this patient list.  This extension references the relevant Encounter resource for a `Group.member` so the client app can retrieve it.  The Encounter resource is based on the [US Core Encounter](http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter) profile.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

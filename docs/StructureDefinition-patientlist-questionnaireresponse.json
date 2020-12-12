@@ -10,7 +10,7 @@
   "name": "PatientListQuestionnaireResponse",
   "title": "Argonaut Patient List Member QuestionnaireResponse",
   "status": "active",
-  "date": "2020-12-11T16:41:03-08:00",
+  "date": "2020-12-11T16:52:40-08:00",
   "publisher": "Argonaut Project",
   "contact": [
     {
@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "A reference to a QuestionnaireResponse of pre-populated form that provides additional data about the target patient. The form is defined by the [Argonaut Patient List Questionnaire](StructureDefinition-patientlist-questionnaire.html) that is bound to the Group using the Argonaut Patient List Questionnaire extension. This extension **SHALL NOT** be used if the Argonaut Patient List Questionnaire extension is not present on the Group resource",
+  "description": "An EHR **MAY** defines additional data for the members in a Patient List using a FHIR [Questionnaire](http://hl7.org/fhir/questionnaire.html)  based on the [SDC Base Questionnaire](https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html) profile.  This extension references the [QuestionnaireResponse](http://hl7.org/fhir/questionnaireresponse.html) resource that represents the completed answers to the Questionnaire for a `Group.member`. The client app can use the reference to retrieve the data.  Note that typically the EHR and not the patient supplies the responses to the Questionnaire. The *Argonaut Patient List Questionnaire Extension* provides a corresponding link to the Questionnaire",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

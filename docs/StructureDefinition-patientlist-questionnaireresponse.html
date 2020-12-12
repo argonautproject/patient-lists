@@ -143,7 +143,7 @@
 
   <a name="root"> </a>
   <h2 id="root">Extension: Argonaut Patient List Member QuestionnaireResponse</h2>
-  <p><p>A reference to a QuestionnaireResponse of pre-populated form that provides additional data about the target patient. The form is defined by the <a href="StructureDefinition-patientlist-questionnaire.html">Argonaut Patient List Questionnaire</a> that is bound to the Group using the Argonaut Patient List Questionnaire extension. This extension <strong>SHALL NOT</strong> be used if the Argonaut Patient List Questionnaire extension is not present on the Group resource</p>
+  <p><p>An EHR <strong>MAY</strong> defines additional data for the members in a Patient List using a FHIR <a href="http://hl7.org/fhir/questionnaire.html">Questionnaire</a>  based on the <a href="https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html">SDC Base Questionnaire</a> profile.  This extension references the <a href="http://hl7.org/fhir/questionnaireresponse.html">QuestionnaireResponse</a> resource that represents the completed answers to the Questionnaire for a <code class="highlighter-rouge">Group.member</code>. The client app can use the reference to retrieve the data.  Note that typically the EHR and not the patient supplies the responses to the Questionnaire. The <em>Argonaut Patient List Questionnaire Extension</em> provides a corresponding link to the Questionnaire</p>
 </p>
   <p>
   The official URL for this extension is:
@@ -420,7 +420,7 @@ Summary
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="https://confluence.hl7.org/display/AP/Argonaut+Project+Home">Argonaut Project</a>.  Package ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 11, 2020 16:41-0800">2020-12-11</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="https://confluence.hl7.org/display/AP/Argonaut+Project+Home">Argonaut Project</a>.  Package ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 11, 2020 16:52-0800">2020-12-11</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

@@ -143,7 +143,7 @@
 
   <a name="root"> </a>
   <h2 id="root">Extension: Argonaut Patient List Member Appointment</h2>
-  <p><p>A reference to the Appointment that is the <em>reason</em> the target patient is a member of this Group.</p>
+  <p><p>Some patient lists are defined by a specific appointment such as an list of patients being seen today. For these types of patient lists, an EHR <strong>MAY</strong> supply a reference to a specific <a href="http://hl7.org/fhir/appointment.html">Appointment</a> that is the <em>reason</em> the target patient is a member of this patient list.  This extension references the relevant Appointment resource for a <code class="highlighter-rouge">Group.member</code> so the client app can retrieve it.</p>
 </p>
   <p>
   The official URL for this extension is:
@@ -406,7 +406,7 @@ Summary
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="https://confluence.hl7.org/display/AP/Argonaut+Project+Home">Argonaut Project</a>.  Package ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 11, 2020 16:41-0800">2020-12-11</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="https://confluence.hl7.org/display/AP/Argonaut+Project+Home">Argonaut Project</a>.  Package ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 11, 2020 16:52-0800">2020-12-11</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

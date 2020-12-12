@@ -33,7 +33,7 @@ Description: "Some patient lists are defined by a specific encounter such as an 
 Extension:   PatientListAppointment
 Id:          patientlist-appointment
 Title:       "Argonaut Patient List Member Appointment"
-Description: "A reference to the Appointment that is the *reason* the target patient is a member of this Group."
+Description: "Some patient lists are defined by a specific appointment such as an list of patients being seen today. For these types of patient lists, an EHR **MAY** supply a reference to a specific [Appointment](http://hl7.org/fhir/appointment.html) that is the *reason* the target patient is a member of this patient list.  This extension references the relevant Appointment resource for a `Group.member` so the client app can retrieve it."
 * ^context.type = #element
 * ^context.expression = "Group.member"
 * valueReference only Reference(Appointment)
