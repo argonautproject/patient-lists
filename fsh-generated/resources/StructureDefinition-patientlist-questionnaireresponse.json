@@ -4,7 +4,7 @@
   "url": "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse",
   "version": "0.1.0",
   "name": "PatientListQuestionnaireResponse",
-  "title": "Argonaut Patient List Member QuestionnaireResponse",
+  "title": "Argonaut Patient List Member QuestionnaireResponse Extension",
   "status": "active",
   "description": "An EHR **MAY** defines additional data for the members in a Patient List using a FHIR [Questionnaire](http://hl7.org/fhir/questionnaire.html)  based on the [SDC Base Questionnaire](https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html) profile.  This extension references the [QuestionnaireResponse](http://hl7.org/fhir/questionnaireresponse.html) resource that represents the completed answers to the Questionnaire for a `Group.member`. The client app can use the reference to retrieve the data.  Note that typically the EHR and not the patient supplies the responses to the Questionnaire. The *Argonaut Patient List Questionnaire Extension* provides a corresponding link to the Questionnaire",
   "fhirVersion": "4.0.1",

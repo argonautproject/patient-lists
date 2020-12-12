@@ -11,7 +11,7 @@
   <name value="ArgonautPatientList"/>
   <title value="Argonaut Patient List"/>
   <status value="active"/>
-  <date value="2020-12-11T16:52:40-08:00"/>
+  <date value="2020-12-11T18:22:01-08:00"/>
   <publisher value="Argonaut Project"/>
   <contact>
     <telecom>
@@ -257,7 +257,7 @@
       <reference>
         <reference value="StructureDefinition/patientlist-appointment"/>
       </reference>
-      <name value="Argonaut Patient List Member Appointment"/>
+      <name value="Argonaut Patient List Member Appointment Extension"/>
       <description value="Some patient lists are defined by a specific appointment such as an list of patients being seen today. For these types of patient lists, an EHR **MAY** supply a reference to a specific [Appointment](http://hl7.org/fhir/appointment.html) that is the *reason* the target patient is a member of this patient list.  This extension references the relevant Appointment resource for a `Group.member` so the client app can retrieve it."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -268,7 +268,7 @@
       <reference>
         <reference value="StructureDefinition/patientlist-encounter"/>
       </reference>
-      <name value="Argonaut Patient List Member Encounter"/>
+      <name value="Argonaut Patient List Member Encounter Extension"/>
       <description value="Some patient lists are defined by a specific encounter such as an admission list or a discharge list. For these types of patient lists, an EHR **MAY** supply a reference to a specific [Encounter](http://hl7.org/fhir/encounter.html) that is the *reason* the target patient is a member of this patient list.  This extension references the relevant Encounter resource for a `Group.member` so the client app can retrieve it.  The Encounter resource is based on the [US Core Encounter](http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter) profile."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -279,7 +279,7 @@
       <reference>
         <reference value="StructureDefinition/patientlist-questionnaire"/>
       </reference>
-      <name value="Argonaut Patient List Questionnaire"/>
+      <name value="Argonaut Patient List Questionnaire Extension"/>
       <description value="An EHR **MAY** defines additional data for the members in a Patient List using a FHIR [Questionnaire](http://hl7.org/fhir/questionnaire.html)  based on the [SDC Base Questionnaire](https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html) profile.  This extension references the Questionnaire resource so the client app can retrieve it. The *Argonaut Patient List Member QuestionnaireResponse Extension* provides a corresponding link to the completed answers to the Questionnaire for a `Group.member`.  Note that typically the EHR and not the patient supplies the responses to the Questionnaire."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -290,7 +290,7 @@
       <reference>
         <reference value="StructureDefinition/patientlist-questionnaireresponse"/>
       </reference>
-      <name value="Argonaut Patient List Member QuestionnaireResponse"/>
+      <name value="Argonaut Patient List Member QuestionnaireResponse Extension"/>
       <description value="An EHR **MAY** defines additional data for the members in a Patient List using a FHIR [Questionnaire](http://hl7.org/fhir/questionnaire.html)  based on the [SDC Base Questionnaire](https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html) profile.  This extension references the [QuestionnaireResponse](http://hl7.org/fhir/questionnaireresponse.html) resource that represents the completed answers to the Questionnaire for a `Group.member`. The client app can use the reference to retrieve the data.  Note that typically the EHR and not the patient supplies the responses to the Questionnaire. The *Argonaut Patient List Questionnaire Extension* provides a corresponding link to the Questionnaire"/>
       <exampleBoolean value="false"/>
     </resource>
@@ -302,7 +302,7 @@
         <reference value="ValueSet/argo-group-characteristic"/>
       </reference>
       <name value="Argonaut Group Characteristic Value Set"/>
-      <description value="Used to define group characteristic and limited to &#39;location&#39;or...."/>
+      <description value="Initial set of group characteristic concepts for defining and searching for patient lists."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -313,7 +313,7 @@
         <reference value="CodeSystem/argo-group-characteristic"/>
       </reference>
       <name value="Argonaut Group Characteristic Code System"/>
-      <description value="Used to define group characteristic and limited to &#39;location&#39;or &#39;team&#39; or &#39;organization&#39; or &#39;practitioner&#39;"/>
+      <description value="Initial set of group characteristic concepts for defining and searching for patient lists."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

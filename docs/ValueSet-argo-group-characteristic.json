@@ -10,7 +10,7 @@
   "name": "ArgonautGroupCharacteristicValueSet",
   "title": "Argonaut Group Characteristic Value Set",
   "status": "active",
-  "date": "2020-12-11T16:52:40-08:00",
+  "date": "2020-12-11T18:22:01-08:00",
   "publisher": "Argonaut Project",
   "contact": [
     {
@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "Used to define group characteristic and limited to 'location'or....",
+  "description": "Initial set of group characteristic concepts for defining and searching for patient lists.",
   "compose": {
     "include": [
       {

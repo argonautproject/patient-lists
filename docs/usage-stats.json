@@ -5,7 +5,7 @@
   "extensions": [
     {
       "url": "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment",
-      "title": "Argonaut Patient List Member Appointment",
+      "title": "Argonaut Patient List Member Appointment Extension",
       "types": [
         "Reference",
         "Reference"
@@ -13,7 +13,7 @@
     },
     {
       "url": "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-encounter",
-      "title": "Argonaut Patient List Member Encounter",
+      "title": "Argonaut Patient List Member Encounter Extension",
       "types": [
         "Reference",
         "Reference"
@@ -21,7 +21,7 @@
     },
     {
       "url": "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaire",
-      "title": "Argonaut Patient List Questionnaire",
+      "title": "Argonaut Patient List Questionnaire Extension",
       "types": [
         "Reference",
         "Reference"
@@ -29,7 +29,7 @@
     },
     {
       "url": "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse",
-      "title": "Argonaut Patient List Member QuestionnaireResponse",
+      "title": "Argonaut Patient List Member QuestionnaireResponse Extension",
       "types": [
         "Reference",
         "Reference"

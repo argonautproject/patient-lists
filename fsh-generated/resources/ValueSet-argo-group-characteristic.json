@@ -4,7 +4,7 @@
   "name": "ArgonautGroupCharacteristicValueSet",
   "id": "argo-group-characteristic",
   "title": "Argonaut Group Characteristic Value Set",
-  "description": "Used to define group characteristic and limited to 'location'or....",
+  "description": "Initial set of group characteristic concepts for defining and searching for patient lists.",
   "version": "0.1.0",
   "url": "http://www.fhir.org/guides/argonaut/patient-list/ValueSet/argo-group-characteristic",
   "compose": {

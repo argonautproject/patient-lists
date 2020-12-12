@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="2bb97711-381f-4fb7-b851-2acc6e5af03f"/>
+  <id value="e38149c9-9b1a-4b4d-bb71-9f564a434570"/>
   <meta>
-    <lastUpdated value="2020-12-11T16:52:40.332-08:00"/>
+    <lastUpdated value="2020-12-11T18:22:01.673-08:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -75,7 +75,7 @@
         <name value="ArgonautGroupCharacteristicValueSet"/>
         <title value="Argonaut Group Characteristic Value Set"/>
         <status value="active"/>
-        <date value="2020-12-11T16:52:40-08:00"/>
+        <date value="2020-12-11T18:22:01-08:00"/>
         <publisher value="Argonaut Project"/>
         <contact>
           <telecom>
@@ -83,10 +83,10 @@
             <value value="https://confluence.hl7.org/display/AP/Argonaut+Project+Home"/>
           </telecom>
         </contact>
-        <description value="Used to define group characteristic and limited to &#39;location&#39;or...."/>
+        <description value="Initial set of group characteristic concepts for defining and searching for patient lists."/>
         <expansion>
-          <identifier value="urn:uuid:3198ab03-5ab9-4583-a912-84133656ebbd"/>
-          <timestamp value="2020-12-11T16:53:21-08:00"/>
+          <identifier value="urn:uuid:4db7acc2-732f-4600-a0c0-c97c398c2b2c"/>
+          <timestamp value="2020-12-11T18:22:44-08:00"/>
           <total value="4"/>
           <parameter>
             <name value="excludeNested"/>

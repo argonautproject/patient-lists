@@ -17,7 +17,7 @@
   fhir:CodeSystem.name [ fhir:value "ArgonautGroupCharacteristicCodeSystem"];
   fhir:CodeSystem.title [ fhir:value "Argonaut Group Characteristic Code System"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2020-12-11T16:52:40-08:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2020-12-11T18:22:01-08:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "Argonaut Project"];
   fhir:CodeSystem.contact [
      fhir:index 0;
@@ -27,7 +27,7 @@
        fhir:ContactPoint.value [ fhir:value "https://confluence.hl7.org/display/AP/Argonaut+Project+Home" ]
      ]
   ];
-  fhir:CodeSystem.description [ fhir:value "Used to define group characteristic and limited to 'location'or 'team' or 'organization' or 'practitioner'"];
+  fhir:CodeSystem.description [ fhir:value "Initial set of group characteristic concepts for defining and searching for patient lists."];
   fhir:CodeSystem.content [ fhir:value "complete"];
   fhir:CodeSystem.count [ fhir:value "4"^^xsd:nonNegativeInteger];
   fhir:CodeSystem.concept [

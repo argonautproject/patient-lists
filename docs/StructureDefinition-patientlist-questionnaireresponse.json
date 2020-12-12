@@ -8,9 +8,9 @@
   "url": "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse",
   "version": "0.1.0",
   "name": "PatientListQuestionnaireResponse",
-  "title": "Argonaut Patient List Member QuestionnaireResponse",
+  "title": "Argonaut Patient List Member QuestionnaireResponse Extension",
   "status": "active",
-  "date": "2020-12-11T16:52:40-08:00",
+  "date": "2020-12-11T18:22:01-08:00",
   "publisher": "Argonaut Project",
   "contact": [
     {

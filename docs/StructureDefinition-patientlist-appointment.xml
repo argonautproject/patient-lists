@@ -13,9 +13,9 @@
   <url value="http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment"/>
   <version value="0.1.0"/>
   <name value="PatientListAppointment"/>
-  <title value="Argonaut Patient List Member Appointment"/>
+  <title value="Argonaut Patient List Member Appointment Extension"/>
   <status value="active"/>
-  <date value="2020-12-11T16:52:40-08:00"/>
+  <date value="2020-12-11T18:22:01-08:00"/>
   <publisher value="Argonaut Project"/>
   <contact>
     <telecom>

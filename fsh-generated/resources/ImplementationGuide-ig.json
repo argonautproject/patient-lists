@@ -43,7 +43,7 @@
         "reference": {
           "reference": "StructureDefinition/patientlist-appointment"
         },
-        "name": "Argonaut Patient List Member Appointment",
+        "name": "Argonaut Patient List Member Appointment Extension",
         "description": "Some patient lists are defined by a specific appointment such as an list of patients being seen today. For these types of patient lists, an EHR **MAY** supply a reference to a specific [Appointment](http://hl7.org/fhir/appointment.html) that is the *reason* the target patient is a member of this patient list.  This extension references the relevant Appointment resource for a `Group.member` so the client app can retrieve it.",
         "exampleBoolean": false
       },
@@ -51,7 +51,7 @@
         "reference": {
           "reference": "StructureDefinition/patientlist-encounter"
         },
-        "name": "Argonaut Patient List Member Encounter",
+        "name": "Argonaut Patient List Member Encounter Extension",
         "description": "Some patient lists are defined by a specific encounter such as an admission list or a discharge list. For these types of patient lists, an EHR **MAY** supply a reference to a specific [Encounter](http://hl7.org/fhir/encounter.html) that is the *reason* the target patient is a member of this patient list.  This extension references the relevant Encounter resource for a `Group.member` so the client app can retrieve it.  The Encounter resource is based on the [US Core Encounter](http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter) profile.",
         "exampleBoolean": false
       },
@@ -59,7 +59,7 @@
         "reference": {
           "reference": "StructureDefinition/patientlist-questionnaire"
         },
-        "name": "Argonaut Patient List Questionnaire",
+        "name": "Argonaut Patient List Questionnaire Extension",
         "description": "An EHR **MAY** defines additional data for the members in a Patient List using a FHIR [Questionnaire](http://hl7.org/fhir/questionnaire.html)  based on the [SDC Base Questionnaire](https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html) profile.  This extension references the Questionnaire resource so the client app can retrieve it. The *Argonaut Patient List Member QuestionnaireResponse Extension* provides a corresponding link to the completed answers to the Questionnaire for a `Group.member`.  Note that typically the EHR and not the patient supplies the responses to the Questionnaire.",
         "exampleBoolean": false
       },
@@ -67,7 +67,7 @@
         "reference": {
           "reference": "StructureDefinition/patientlist-questionnaireresponse"
         },
-        "name": "Argonaut Patient List Member QuestionnaireResponse",
+        "name": "Argonaut Patient List Member QuestionnaireResponse Extension",
         "description": "An EHR **MAY** defines additional data for the members in a Patient List using a FHIR [Questionnaire](http://hl7.org/fhir/questionnaire.html)  based on the [SDC Base Questionnaire](https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html) profile.  This extension references the [QuestionnaireResponse](http://hl7.org/fhir/questionnaireresponse.html) resource that represents the completed answers to the Questionnaire for a `Group.member`. The client app can use the reference to retrieve the data.  Note that typically the EHR and not the patient supplies the responses to the Questionnaire. The *Argonaut Patient List Questionnaire Extension* provides a corresponding link to the Questionnaire",
         "exampleBoolean": false
       },
@@ -76,7 +76,7 @@
           "reference": "ValueSet/argo-group-characteristic"
         },
         "name": "Argonaut Group Characteristic Value Set",
-        "description": "Used to define group characteristic and limited to 'location'or....",
+        "description": "Initial set of group characteristic concepts for defining and searching for patient lists.",
         "exampleBoolean": false
       },
       {
@@ -84,7 +84,7 @@
           "reference": "CodeSystem/argo-group-characteristic"
         },
         "name": "Argonaut Group Characteristic Code System",
-        "description": "Used to define group characteristic and limited to 'location'or 'team' or 'organization' or 'practitioner'",
+        "description": "Initial set of group characteristic concepts for defining and searching for patient lists.",
         "exampleBoolean": false
       },
       {

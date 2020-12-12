@@ -74,9 +74,6 @@
   <li>
     <a href="index.html">IG Home</a>
   </li>
-  <li>
-    <a href="artifacts.html">Artifact Index</a>
-  </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
           </div>  <!-- /.container -->
@@ -193,7 +190,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
                <td style="column-width:30%">
                   <a href="StructureDefinition-patientlist-appointment.html"
-                     title="StructureDefinition/patientlist-appointment">Argonaut Patient List Member Appointment</a>
+                     title="StructureDefinition/patientlist-appointment">Argonaut Patient List Member Appointment Extension</a>
                </td>
                <td>
 <p>Some patient lists are defined by a specific appointment such as an list of patients being seen today. For these types of patient lists, an EHR <strong>MAY</strong> supply a reference to a specific <a href="http://hl7.org/fhir/appointment.html">Appointment</a> that is the <em>reason</em> the target patient is a member of this patient list.  This extension references the relevant Appointment resource for a <code class="highlighter-rouge">Group.member</code> so the client app can retrieve it.</p>
@@ -202,7 +199,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
                <td style="column-width:30%">
                   <a href="StructureDefinition-patientlist-encounter.html"
-                     title="StructureDefinition/patientlist-encounter">Argonaut Patient List Member Encounter</a>
+                     title="StructureDefinition/patientlist-encounter">Argonaut Patient List Member Encounter Extension</a>
                </td>
                <td>
 <p>Some patient lists are defined by a specific encounter such as an admission list or a discharge list. For these types of patient lists, an EHR <strong>MAY</strong> supply a reference to a specific <a href="http://hl7.org/fhir/encounter.html">Encounter</a> that is the <em>reason</em> the target patient is a member of this patient list.  This extension references the relevant Encounter resource for a <code class="highlighter-rouge">Group.member</code> so the client app can retrieve it.  The Encounter resource is based on the <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter">US Core Encounter</a> profile.</p>
@@ -211,7 +208,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
                <td style="column-width:30%">
                   <a href="StructureDefinition-patientlist-questionnaire.html"
-                     title="StructureDefinition/patientlist-questionnaire">Argonaut Patient List Questionnaire</a>
+                     title="StructureDefinition/patientlist-questionnaire">Argonaut Patient List Questionnaire Extension</a>
                </td>
                <td>
 <p>An EHR <strong>MAY</strong> defines additional data for the members in a Patient List using a FHIR <a href="http://hl7.org/fhir/questionnaire.html">Questionnaire</a>  based on the <a href="https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html">SDC Base Questionnaire</a> profile.  This extension references the Questionnaire resource so the client app can retrieve it. The <em>Argonaut Patient List Member QuestionnaireResponse Extension</em> provides a corresponding link to the completed answers to the Questionnaire for a <code class="highlighter-rouge">Group.member</code>.  Note that typically the EHR and not the patient supplies the responses to the Questionnaire.</p>
@@ -220,7 +217,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
                <td style="column-width:30%">
                   <a href="StructureDefinition-patientlist-questionnaireresponse.html"
-                     title="StructureDefinition/patientlist-questionnaireresponse">Argonaut Patient List Member QuestionnaireResponse</a>
+                     title="StructureDefinition/patientlist-questionnaireresponse">Argonaut Patient List Member QuestionnaireResponse Extension</a>
                </td>
                <td>
 <p>An EHR <strong>MAY</strong> defines additional data for the members in a Patient List using a FHIR <a href="http://hl7.org/fhir/questionnaire.html">Questionnaire</a>  based on the <a href="https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html">SDC Base Questionnaire</a> profile.  This extension references the <a href="http://hl7.org/fhir/questionnaireresponse.html">QuestionnaireResponse</a> resource that represents the completed answers to the Questionnaire for a <code class="highlighter-rouge">Group.member</code>. The client app can use the reference to retrieve the data.  Note that typically the EHR and not the patient supplies the responses to the Questionnaire. The <em>Argonaut Patient List Questionnaire Extension</em> provides a corresponding link to the Questionnaire</p>
@@ -244,7 +241,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                      title="ValueSet/argo-group-characteristic">Argonaut Group Characteristic Value Set</a>
                </td>
                <td>
-<p>Used to define group characteristic and limited to ‘location’or….</p>
+<p>Initial set of group characteristic concepts for defining and searching for patient lists.</p>
 </td>
             </tr>
          </tbody>
@@ -265,7 +262,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                      title="CodeSystem/argo-group-characteristic">Argonaut Group Characteristic Code System</a>
                </td>
                <td>
-<p>Used to define group characteristic and limited to ‘location’or ‘team’ or ‘organization’ or ‘practitioner’</p>
+<p>Initial set of group characteristic concepts for defining and searching for patient lists.</p>
 </td>
             </tr>
          </tbody>
@@ -316,7 +313,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="https://confluence.hl7.org/display/AP/Argonaut+Project+Home">Argonaut Project</a>.  Package ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 11, 2020 16:52-0800">2020-12-11</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="https://confluence.hl7.org/display/AP/Argonaut+Project+Home">Argonaut Project</a>.  Package ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 11, 2020 18:22-0800">2020-12-11</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

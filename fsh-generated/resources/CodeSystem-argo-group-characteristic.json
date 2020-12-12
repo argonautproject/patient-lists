@@ -5,7 +5,7 @@
   "name": "ArgonautGroupCharacteristicCodeSystem",
   "id": "argo-group-characteristic",
   "title": "Argonaut Group Characteristic Code System",
-  "description": "Used to define group characteristic and limited to 'location'or 'team' or 'organization' or 'practitioner'",
+  "description": "Initial set of group characteristic concepts for defining and searching for patient lists.",
   "version": "0.1.0",
   "url": "http://www.fhir.org/guides/argonaut/patient-list/CodeSystem/argo-group-characteristic",
   "concept": [

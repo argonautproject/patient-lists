@@ -10,7 +10,7 @@
   <name value="ArgonautGroupCharacteristicCodeSystem"/>
   <title value="Argonaut Group Characteristic Code System"/>
   <status value="active"/>
-  <date value="2020-12-11T16:52:40-08:00"/>
+  <date value="2020-12-11T18:22:01-08:00"/>
   <publisher value="Argonaut Project"/>
   <contact>
     <telecom>
@@ -18,7 +18,7 @@
       <value value="https://confluence.hl7.org/display/AP/Argonaut+Project+Home"/>
     </telecom>
   </contact>
-  <description value="Used to define group characteristic and limited to &#39;location&#39;or &#39;team&#39; or &#39;organization&#39; or &#39;practitioner&#39;"/>
+  <description value="Initial set of group characteristic concepts for defining and searching for patient lists."/>
   <content value="complete"/>
   <count value="4"/>
   <concept>

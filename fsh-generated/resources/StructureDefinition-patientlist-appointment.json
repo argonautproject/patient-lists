@@ -4,7 +4,7 @@
   "url": "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment",
   "version": "0.1.0",
   "name": "PatientListAppointment",
-  "title": "Argonaut Patient List Member Appointment",
+  "title": "Argonaut Patient List Member Appointment Extension",
   "status": "active",
   "description": "Some patient lists are defined by a specific appointment such as an list of patients being seen today. For these types of patient lists, an EHR **MAY** supply a reference to a specific [Appointment](http://hl7.org/fhir/appointment.html) that is the *reason* the target patient is a member of this patient list.  This extension references the relevant Appointment resource for a `Group.member` so the client app can retrieve it.",
   "fhirVersion": "4.0.1",

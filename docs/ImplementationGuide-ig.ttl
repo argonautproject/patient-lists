@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "ArgonautPatientList"];
   fhir:ImplementationGuide.title [ fhir:value "Argonaut Patient List"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-12-11T16:52:40-08:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-12-11T18:22:01-08:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Argonaut Project"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -390,7 +390,7 @@
          fhir:link <http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/patientlist-appointment" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Patient List Member Appointment" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Patient List Member Appointment Extension" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Some patient lists are defined by a specific appointment such as an list of patients being seen today. For these types of patient lists, an EHR **MAY** supply a reference to a specific [Appointment](http://hl7.org/fhir/appointment.html) that is the *reason* the target patient is a member of this patient list.  This extension references the relevant Appointment resource for a `Group.member` so the client app can retrieve it." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -404,7 +404,7 @@
          fhir:link <http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-encounter>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/patientlist-encounter" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Patient List Member Encounter" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Patient List Member Encounter Extension" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Some patient lists are defined by a specific encounter such as an admission list or a discharge list. For these types of patient lists, an EHR **MAY** supply a reference to a specific [Encounter](http://hl7.org/fhir/encounter.html) that is the *reason* the target patient is a member of this patient list.  This extension references the relevant Encounter resource for a `Group.member` so the client app can retrieve it.  The Encounter resource is based on the [US Core Encounter](http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter) profile." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -418,7 +418,7 @@
          fhir:link <http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaire>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/patientlist-questionnaire" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Patient List Questionnaire" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Patient List Questionnaire Extension" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "An EHR **MAY** defines additional data for the members in a Patient List using a FHIR [Questionnaire](http://hl7.org/fhir/questionnaire.html)  based on the [SDC Base Questionnaire](https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html) profile.  This extension references the Questionnaire resource so the client app can retrieve it. The *Argonaut Patient List Member QuestionnaireResponse Extension* provides a corresponding link to the completed answers to the Questionnaire for a `Group.member`.  Note that typically the EHR and not the patient supplies the responses to the Questionnaire." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -432,7 +432,7 @@
          fhir:link <http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/patientlist-questionnaireresponse" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Patient List Member QuestionnaireResponse" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Patient List Member QuestionnaireResponse Extension" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "An EHR **MAY** defines additional data for the members in a Patient List using a FHIR [Questionnaire](http://hl7.org/fhir/questionnaire.html)  based on the [SDC Base Questionnaire](https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html) profile.  This extension references the [QuestionnaireResponse](http://hl7.org/fhir/questionnaireresponse.html) resource that represents the completed answers to the Questionnaire for a `Group.member`. The client app can use the reference to retrieve the data.  Note that typically the EHR and not the patient supplies the responses to the Questionnaire. The *Argonaut Patient List Questionnaire Extension* provides a corresponding link to the Questionnaire" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -447,7 +447,7 @@
          fhir:Reference.reference [ fhir:value "ValueSet/argo-group-characteristic" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Group Characteristic Value Set" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Used to define group characteristic and limited to 'location'or...." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Initial set of group characteristic concepts for defining and searching for patient lists." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 5;
@@ -461,7 +461,7 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/argo-group-characteristic" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Group Characteristic Code System" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Used to define group characteristic and limited to 'location'or 'team' or 'organization' or 'practitioner'" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Initial set of group characteristic concepts for defining and searching for patient lists." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 6;

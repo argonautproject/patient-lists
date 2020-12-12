@@ -48,7 +48,7 @@ definition:
             extension references the relevant Appointment resource for a `Group.member`
             so the client app can retrieve it.
         exampleBoolean: false
-        name: Argonaut Patient List Member Appointment
+        name: Argonaut Patient List Member Appointment Extension
         reference:
             reference: StructureDefinition/patientlist-appointment
     -   description: Some patient lists are defined by a specific encounter such as
@@ -60,7 +60,7 @@ definition:
             the [US Core Encounter](http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter)
             profile.
         exampleBoolean: false
-        name: Argonaut Patient List Member Encounter
+        name: Argonaut Patient List Member Encounter Extension
         reference:
             reference: StructureDefinition/patientlist-encounter
     -   description: An EHR **MAY** defines additional data for the members in a Patient
@@ -72,7 +72,7 @@ definition:
             Questionnaire for a `Group.member`.  Note that typically the EHR and not
             the patient supplies the responses to the Questionnaire.
         exampleBoolean: false
-        name: Argonaut Patient List Questionnaire
+        name: Argonaut Patient List Questionnaire Extension
         reference:
             reference: StructureDefinition/patientlist-questionnaire
     -   description: An EHR **MAY** defines additional data for the members in a Patient
@@ -85,16 +85,17 @@ definition:
             to the Questionnaire. The *Argonaut Patient List Questionnaire Extension*
             provides a corresponding link to the Questionnaire
         exampleBoolean: false
-        name: Argonaut Patient List Member QuestionnaireResponse
+        name: Argonaut Patient List Member QuestionnaireResponse Extension
         reference:
             reference: StructureDefinition/patientlist-questionnaireresponse
-    -   description: Used to define group characteristic and limited to 'location'or....
+    -   description: Initial set of group characteristic concepts for defining and
+            searching for patient lists.
         exampleBoolean: false
         name: Argonaut Group Characteristic Value Set
         reference:
             reference: ValueSet/argo-group-characteristic
-    -   description: Used to define group characteristic and limited to 'location'or
-            'team' or 'organization' or 'practitioner'
+    -   description: Initial set of group characteristic concepts for defining and
+            searching for patient lists.
         exampleBoolean: false
         name: Argonaut Group Characteristic Code System
         reference:

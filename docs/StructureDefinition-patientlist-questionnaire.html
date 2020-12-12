@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>IG\Argonaut Patient List Questionnaire - FHIR v4.0.1</title>
+    <title>IG\Argonaut Patient List Questionnaire Extension - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -74,9 +74,6 @@
   <li>
     <a href="index.html">IG Home</a>
   </li>
-  <li>
-    <a href="artifacts.html">Artifact Index</a>
-  </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
           </div>  <!-- /.container -->
@@ -88,7 +85,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Argonaut Patient List Questionnaire</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Argonaut Patient List Questionnaire Extension</b></li>
         </ul>
       </div>  <!-- /container -->
     </div>  <!-- /segment-breadcrumb -->
@@ -142,7 +139,7 @@
 </ul>
 
   <a name="root"> </a>
-  <h2 id="root">Extension: Argonaut Patient List Questionnaire</h2>
+  <h2 id="root">Extension: Argonaut Patient List Questionnaire Extension</h2>
   <p><p>An EHR <strong>MAY</strong> defines additional data for the members in a Patient List using a FHIR <a href="http://hl7.org/fhir/questionnaire.html">Questionnaire</a>  based on the <a href="https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html">SDC Base Questionnaire</a> profile.  This extension references the Questionnaire resource so the client app can retrieve it. The <em>Argonaut Patient List Member QuestionnaireResponse Extension</em> provides a corresponding link to the completed answers to the Questionnaire for a <code class="highlighter-rouge">Group.member</code>.  Note that typically the EHR and not the patient supplies the responses to the Questionnaire.</p>
 </p>
   <p>
@@ -264,7 +261,7 @@ Summary
     <div id="tabs-json">
       <div id="json">
         <div id="json-inner">
-           // <span style="color: navy; opacity: 0.8">Argonaut Patient List Questionnaire</span>
+           // <span style="color: navy; opacity: 0.8">Argonaut Patient List Questionnaire Extension</span>
  {
     "<a href="StructureDefinition-patientlist-questionnaire.html#Extension.id" title="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces" class="dict"><span style="text-decoration: underline">id</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Unique id for inter-element referencing</span>
     "<a href="StructureDefinition-patientlist-questionnaire.html#Extension.url" title="Source of the definition for the extension code - a logical name or a URL" class="dict"><span style="text-decoration: underline">url</span></a>" : "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaire", <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>
@@ -343,7 +340,7 @@ Summary
           <b>JSON Template</b>
         </p>
         <div id="all-json-inner">
-           // <span style="color: navy; opacity: 0.8">Argonaut Patient List Questionnaire</span>
+           // <span style="color: navy; opacity: 0.8">Argonaut Patient List Questionnaire Extension</span>
  {
     "<a href="StructureDefinition-patientlist-questionnaire.html#Extension.id" title="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces" class="dict"><span style="text-decoration: underline">id</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Unique id for inter-element referencing</span>
     "<a href="StructureDefinition-patientlist-questionnaire.html#Extension.url" title="Source of the definition for the extension code - a logical name or a URL" class="dict"><span style="text-decoration: underline">url</span></a>" : "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaire", <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>
@@ -420,7 +417,7 @@ Summary
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="https://confluence.hl7.org/display/AP/Argonaut+Project+Home">Argonaut Project</a>.  Package ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 11, 2020 16:52-0800">2020-12-11</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="https://confluence.hl7.org/display/AP/Argonaut+Project+Home">Argonaut Project</a>.  Package ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 11, 2020 18:22-0800">2020-12-11</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

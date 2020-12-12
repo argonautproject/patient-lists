@@ -15,9 +15,9 @@
   fhir:StructureDefinition.url [ fhir:value "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment"];
   fhir:StructureDefinition.version [ fhir:value "0.1.0"];
   fhir:StructureDefinition.name [ fhir:value "PatientListAppointment"];
-  fhir:StructureDefinition.title [ fhir:value "Argonaut Patient List Member Appointment"];
+  fhir:StructureDefinition.title [ fhir:value "Argonaut Patient List Member Appointment Extension"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2020-12-11T16:52:40-08:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-12-11T18:22:01-08:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Argonaut Project"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
