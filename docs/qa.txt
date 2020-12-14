@@ -1,9 +1,9 @@
 ﻿ArgonautPatientList : Validation Results
 =========================================
 
-err = 1, warn = 6, info = 0
+err = 3, warn = 6, info = 0
 IG Publisher Version: 1.1.51
-Generated Fri Dec 11 18:23:08 PST 2020. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
+Generated Mon Dec 14 15:12:42 PST 2020. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
 
  Build Errors : 1 / 0 / 0
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
@@ -14,7 +14,7 @@ Generated Fri Dec 11 18:23:08 PST 2020. FHIR version 4.0.1 for ig#0.1.0 (canonic
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-questionnaireresponse : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ValueSet-argo-group-characteristic : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/input/examples/test : 1 / 1 / 1
- /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-argo-characteristic-reference : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-argo-characteristic-reference : 2 / 0 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-argo-patientlist : 0 / 1 / 1
 </table>
 == n/a ==
@@ -43,6 +43,8 @@ ERROR: Observation/test: Observation.subject: Unable to resolve resource 'Patien
 WARNING: Observation/test: Observation.meta.profile[0]: Profile reference 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/test-obs' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
 == /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-argo-characteristic-reference.json ==
 INFORMATION: SearchParameter/Group-value-reference: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+ERROR: SearchParameter/Group-value-reference: SearchParameter.multipleOr.extension[0]: The Extension 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation' definition allows for the types [code] but found type string
+ERROR: SearchParameter/Group-value-reference: SearchParameter.multipleAnd.extension[0]: The Extension 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation' definition allows for the types [code] but found type string
 == /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-argo-patientlist.json ==
 INFORMATION: StructureDefinition/argo-patientlist: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/argo-patientlist'): The Implementation Guide contains no examples for this profile

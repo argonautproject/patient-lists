@@ -17,7 +17,7 @@
   fhir:ValueSet.name [ fhir:value "ArgonautGroupCharacteristicValueSet"];
   fhir:ValueSet.title [ fhir:value "Argonaut Group Characteristic Value Set"];
   fhir:ValueSet.status [ fhir:value "active"];
-  fhir:ValueSet.date [ fhir:value "2020-12-11T18:22:01-08:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2020-12-14T15:11:32-08:00"^^xsd:dateTime];
   fhir:ValueSet.publisher [ fhir:value "Argonaut Project"];
   fhir:ValueSet.contact [
      fhir:index 0;

@@ -11,7 +11,7 @@ contact:
   - telecom:
       - system: url
         value: 'https://confluence.hl7.org/display/AP/Argonaut+Project+Home'
-description: Reference value held by characteristic
+description: This custom SearchParameter defines searching the [Group](http://hl7.org/fhir/group.html) resource by a `Group.characteristic.valueReference` element value. It is used in combination with the standard`characteristic`  search parameter to query for Groups by characteristics that use valueReference values.
 code: value-reference
 base:
   - Group
@@ -21,3 +21,15 @@ expression: >-
 xpath: >-
   f:Group/f:characteristic/f:valueReference
 xpathUsage: normal
+multipleOr: true
+_multipleOr:
+  extension:
+    - url: >-
+        http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
+      valueString: SHOULD
+multipleAnd: true
+_multipleAnd:
+  extension:
+    - url: >-
+        http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
+      valueString: SHOULD
