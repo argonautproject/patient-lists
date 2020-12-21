@@ -1,0 +1,48 @@
+{
+    "resourceType": "SearchParameter",
+    "id": "Group-value-reference",
+    "url": "http://www.fhir.org/guides/argonaut/patient-list/SearchParameter/Group-value-reference",
+    "version": "4.0.1",
+    "name": "GroupValueReference",
+    "status": "draft",
+    "experimental": false,
+    "date": "2020-09-02",
+    "publisher": "The Argonaut Project",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "https://confluence.hl7.org/display/AP/Argonaut+Project+Home"
+                }
+            ]
+        }
+    ],
+    "description": "This custom SearchParameter defines searching the [Group](http://hl7.org/fhir/group.html) resource by a `Group.characteristic.valueReference` element value. It is used in combination with the standard`characteristic`  search parameter to query for Groups by characteristics that use valueReference values.",
+    "code": "value-reference",
+    "base": [
+        "Group"
+    ],
+    "type": "reference",
+    "expression": "Group.characteristic.value as Reference",
+    "xpath": "f:Group/f:characteristic/f:valueReference",
+    "xpathUsage": "normal",
+    "multipleOr": true,
+    "_multipleOr": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                "valueString": "SHOULD"
+            }
+        ]
+    },
+    "multipleAnd": true,
+    "_multipleAnd": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                "valueString": "SHOULD"
+            }
+        ]
+    }
+}
