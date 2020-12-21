@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/argonaut/patient-list/SearchParameter/Group-value-reference> a fhir:SearchParameter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Group-value-reference"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>http://www.fhir.org/guides/argonaut/patient-list/SearchParameter/Group-value-reference</code></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: GroupValueReference</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: 2020-09-02</p><p><b>publisher</b>: Argonaut Project</p><p><b>contact</b>: <a href=\"https://confluence.hl7.org/display/AP/Argonaut+Project+Home\">https://confluence.hl7.org/display/AP/Argonaut+Project+Home</a></p><p><b>description</b>: This custom SearchParameter defines searching the [Group](http://hl7.org/fhir/group.html) resource by a `Group.characteristic.valueReference` element value. It is used in combination with the standard`characteristic`  search parameter to query for Groups by characteristics that use valueReference values.</p><p><b>code</b>: value-reference</p><p><b>base</b>: Group</p><p><b>type</b>: reference</p><p><b>expression</b>: Group.characteristic.value as Reference</p><p><b>xpath</b>: f:Group/f:characteristic/f:valueReference</p><p><b>xpathUsage</b>: normal</p><p><b>multipleOr</b>: true</p><p><b>multipleAnd</b>: true</p></div>"
+  ];
+  fhir:SearchParameter.url [ fhir:value "http://www.fhir.org/guides/argonaut/patient-list/SearchParameter/Group-value-reference"];
+  fhir:SearchParameter.version [ fhir:value "0.1.0"];
+  fhir:SearchParameter.name [ fhir:value "GroupValueReference"];
+  fhir:SearchParameter.status [ fhir:value "draft"];
+  fhir:SearchParameter.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:SearchParameter.date [ fhir:value "2020-09-02"^^xsd:date];
+  fhir:SearchParameter.publisher [ fhir:value "Argonaut Project"];
+  fhir:SearchParameter.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://confluence.hl7.org/display/AP/Argonaut+Project+Home" ]
+     ]
+  ];
+  fhir:SearchParameter.description [ fhir:value "This custom SearchParameter defines searching the [Group](http://hl7.org/fhir/group.html) resource by a `Group.characteristic.valueReference` element value. It is used in combination with the standard`characteristic`  search parameter to query for Groups by characteristics that use valueReference values."];
+  fhir:SearchParameter.code [ fhir:value "value-reference"];
+  fhir:SearchParameter.base [
+     fhir:value "Group";
+     fhir:index 0
+  ];
+  fhir:SearchParameter.type [ fhir:value "reference"];
+  fhir:SearchParameter.expression [ fhir:value "Group.characteristic.value as Reference"];
+  fhir:SearchParameter.xpath [ fhir:value "f:Group/f:characteristic/f:valueReference"];
+  fhir:SearchParameter.xpathUsage [ fhir:value "normal"];
+  fhir:SearchParameter.multipleOr [
+     fhir:value "true"^^xsd:boolean;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+       fhir:Extension.valueString [ fhir:value "SHOULD" ]
+     ]
+  ];
+  fhir:SearchParameter.multipleAnd [
+     fhir:value "true"^^xsd:boolean;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+       fhir:Extension.valueString [ fhir:value "SHOULD" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://www.fhir.org/guides/argonaut/patient-list/SearchParameter/Group-value-reference.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

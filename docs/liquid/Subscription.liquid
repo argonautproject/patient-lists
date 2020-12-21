@@ -1,0 +1,53 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+<p><strong>id:</strong> {{Subscription.id}}</p>
+<p><strong>modifierExtension:</strong></p>
+
+<ul>
+{% for var in Subscription.modifierExtension %}
+<li><strong>url:</strong> {{var.url}}, <strong>value: </strong>{{var.valueUri}}</li>
+{% endfor %}
+</ul>
+
+<p><strong>status:</strong> {{Subscription.status}}</p>
+<p><strong>end:</strong> {{Subscription.end}}</p>
+<p><strong>reason:</strong> {{Subscription.reason}}</p>
+<p><strong>criteria:</strong> {{Subscription.criteria}}</p>
+<p><strong>channel:</strong></p>
+    <ul>
+      <li><p><strong>extension:</strong></p>
+
+          <ul>
+          {% for var in Subscription.channel.extension %}
+          <li><strong>url:</strong> {{var.url}}, <strong>value: </strong>{{var.valueUnsignedInt}}</li>
+          {% endfor %}
+          </ul>
+
+      </li>
+      <li><p><strong>type:</strong> {{Subscription.channel.type}}</p>
+      </li>
+      <li><p><strong>endpoint:</strong> {{Subscription.channel.endpoint}}</p>
+      </li>
+      <li><p><strong>payload:</strong>  {{Subscription.channel.payload}}</p>
+          <ul>
+          <li><strong>extension:</strong>
+
+            <ul>
+            {% for var in Subscription.channel.payload.extension %}
+            <li><strong>url:</strong> {{var.url}}, <strong>value: </strong> {{var.valueCode}}</li>
+            {% endfor %}
+            </ul>
+
+          </li>
+          </ul>
+      </li>
+      <li><p><strong>header:</strong></p>
+
+        <ul>
+          {% for var in Subscription.channel.header %}
+        <li>{{var}}</li>
+        {% endfor %}
+        </ul>
+
+      </li>
+    </ul>
+</div>

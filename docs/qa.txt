@@ -1,0 +1,54 @@
+﻿ArgonautPatientList : Validation Results
+=========================================
+
+err = 3, warn = 10, info = 0
+IG Publisher Version: 1.1.51 Out of date - current version is 1.1.55
+Generated Mon Dec 21 12:37:23 PST 2020. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
+
+ Build Errors : 1 / 0 / 0
+ /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ImplementationGuide-ig : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-appointment : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-encounter : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-questionnaire : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-questionnaireresponse : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ValueSet-argo-group-characteristic : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Argo-PL/input/examples/test : 1 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-characteristic-reference : 2 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-patientlist : 0 / 5 / 1
+</table>
+== n/a ==
+ERROR: /Users/ehaas/Documents/FHIR/Argo-PL/docs/Observation-test.html#/html/body/div/div/div/div/div/div/p/a at Line 140, column 382: The link 'Patient-example.html' for "Amy Shaw" cannot be resolved
+== /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/CodeSystem-argo-group-characteristic.json ==
+INFORMATION: CodeSystem/argo-group-characteristic: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+== /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ImplementationGuide-ig.json ==
+INFORMATION: ImplementationGuide/ig: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
+== /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-appointment.json ==
+INFORMATION: StructureDefinition/patientlist-appointment: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment'): The Implementation Guide contains no examples for this extension
+== /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-encounter.json ==
+INFORMATION: StructureDefinition/patientlist-encounter: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-encounter'): The Implementation Guide contains no examples for this extension
+== /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-questionnaire.json ==
+INFORMATION: StructureDefinition/patientlist-questionnaire: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaire'): The Implementation Guide contains no examples for this extension
+== /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-questionnaireresponse.json ==
+INFORMATION: StructureDefinition/patientlist-questionnaireresponse: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse'): The Implementation Guide contains no examples for this extension
+== /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ValueSet-argo-group-characteristic.json ==
+INFORMATION: ValueSet/argo-group-characteristic: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== /Users/ehaas/Documents/FHIR/Argo-PL/input/examples/test.json ==
+INFORMATION: Observation/test: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+ERROR: Observation/test: Observation.subject: Unable to resolve resource 'Patient/example'
+WARNING: Observation/test: Observation.meta.profile[0]: Profile reference 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/test-obs' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
+== /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-characteristic-reference.json ==
+INFORMATION: SearchParameter/Group-value-reference: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+ERROR: SearchParameter/Group-value-reference: SearchParameter.multipleOr.extension[0]: The Extension 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation' definition allows for the types [code] but found type string
+ERROR: SearchParameter/Group-value-reference: SearchParameter.multipleAnd.extension[0]: The Extension 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation' definition allows for the types [code] but found type string
+== /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-patientlist.json ==
+WARNING: http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist#Group.member.entity: Cannot check whether the target profile http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/argo-patientlist is valid constraint on the base because it is not known
+INFORMATION: StructureDefinition/patientlist: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+WARNING: StructureDefinition/patientlist: StructureDefinition.differential.element.where(path = 'Group.member.entity'): Cannot check whether the target profile http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/argo-patientlist is valid constraint on the base because it is not known
+WARNING: StructureDefinition/patientlist: StructureDefinition.differential.element[15].type[0].targetProfile[0]: Unable to resolve profile http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/argo-patientlist
+WARNING: StructureDefinition/patientlist: StructureDefinition.snapshot.element[39].type[0].targetProfile[0]: Unable to resolve profile http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/argo-patientlist
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist'): The Implementation Guide contains no examples for this profile
