@@ -114,6 +114,10 @@ definition:
         name: Argonaut Patient List (Group) Profile
         reference:
             reference: StructureDefinition/patientlist
+    -   exampleCanonical: http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire
+        name: argo-pl-q2
+        reference:
+            reference: Questionnaire/argo-pl-q2
     -   description: '###FOO
 
             - bar'

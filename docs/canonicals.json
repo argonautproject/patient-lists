@@ -14,6 +14,13 @@
     "name": "ArgonautPatientList"
   },
   {
+    "id": "argo-pl-q2",
+    "type": "Questionnaire",
+    "url": "http://www.fhir.org/guides/argonaut/patient-list/Questionniare/argo-pl-q2",
+    "version": "0.1.0",
+    "name": "Patient-List-columns"
+  },
+  {
     "id": "Group-value-reference",
     "type": "SearchParameter",
     "url": "http://www.fhir.org/guides/argonaut/patient-list/SearchParameter/Group-value-reference",

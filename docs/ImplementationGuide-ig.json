@@ -10,7 +10,7 @@
   "name": "ArgonautPatientList",
   "title": "Argonaut Patient List",
   "status": "active",
-  "date": "2020-12-21T12:36:21-08:00",
+  "date": "2020-12-26T10:53:51-08:00",
   "publisher": "Argonaut Project",
   "contact": [
     {
@@ -508,6 +508,19 @@
         "name": "Argonaut Patient List (Group) Profile",
         "description": "This profile sets minimum expectations for the [Group](http://hl7.org/fhir/group.html) resource to record, search, and fetch user-facing patient lists.",
         "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Questionnaire"
+          }
+        ],
+        "reference": {
+          "reference": "Questionnaire/argo-pl-q2"
+        },
+        "name": "argo-pl-q2",
+        "exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
       },
       {
         "extension": [

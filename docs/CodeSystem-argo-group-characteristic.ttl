@@ -10,14 +10,14 @@
   fhir:Resource.id [ fhir:value "argo-group-characteristic"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://www.fhir.org/guides/argonaut/patient-list/CodeSystem/argo-group-characteristic defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">location<a name=\"argo-group-characteristic-location\"> </a></td><td>Location</td><td>Members (Patients) whose care is at the location specified by the value which references the Location resource representing the physical structures managed/operated by an organization (e.g., a ward, building, clinic, etc)</td></tr><tr><td style=\"white-space:nowrap\">team<a name=\"argo-group-characteristic-team\"> </a></td><td>CareTeam</td><td>Members (Patients) who are under the care of the care-team specified by the value which references the CareTeam resource representing the care-team. (e.g., Respiratory Therapy CareTeam, CareTeam blue , etc)</td></tr><tr><td style=\"white-space:nowrap\">organization<a name=\"argo-group-characteristic-organization\"> </a></td><td>Organization</td><td>Members (Patients) whose care is at the organization specified by the value which references the Organization resource representing the organization. (e.g., Burgess Medical Group)</td></tr><tr><td style=\"white-space:nowrap\">practitioner<a name=\"argo-group-characteristic-practitioner\"> </a></td><td>Practitioner</td><td>Members (Patients) who are under the care of the practitioner specified by the value which references the Practitioner resource representing the practitioner. (e.g., Dr Leung)</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://www.fhir.org/guides/argonaut/patient-list/CodeSystem/argo-group-characteristic defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">location<a name=\"argo-group-characteristic-location\"> </a></td><td>Location</td><td>Members (Patients) whose care is at the location specified by the value which references the Location resource representing the physical structures managed/operated by an organization (e.g., a ward, building, clinic, etc)</td></tr><tr><td style=\"white-space:nowrap\">careteam<a name=\"argo-group-characteristic-careteam\"> </a></td><td>CareTeam</td><td>Members (Patients) who are under the care of the care-team specified by the value which references the CareTeam resource representing the care-team. (e.g., Respiratory Therapy CareTeam, CareTeam blue , etc)</td></tr><tr><td style=\"white-space:nowrap\">organization<a name=\"argo-group-characteristic-organization\"> </a></td><td>Organization</td><td>Members (Patients) whose care is at the organization specified by the value which references the Organization resource representing the organization. (e.g., Burgess Medical Group)</td></tr><tr><td style=\"white-space:nowrap\">practitioner<a name=\"argo-group-characteristic-practitioner\"> </a></td><td>Practitioner</td><td>Members (Patients) who are under the care of the practitioner specified by the value which references the Practitioner resource representing the practitioner. (e.g., Dr Leung)</td></tr></table></div>"
   ];
   fhir:CodeSystem.url [ fhir:value "http://www.fhir.org/guides/argonaut/patient-list/CodeSystem/argo-group-characteristic"];
   fhir:CodeSystem.version [ fhir:value "0.1.0"];
   fhir:CodeSystem.name [ fhir:value "ArgonautGroupCharacteristicCodeSystem"];
   fhir:CodeSystem.title [ fhir:value "Argonaut Group Characteristic Code System"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2020-12-21T12:36:21-08:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2020-12-26T10:53:51-08:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "Argonaut Project"];
   fhir:CodeSystem.contact [
      fhir:index 0;
@@ -37,7 +37,7 @@
      fhir:CodeSystem.concept.definition [ fhir:value "Members (Patients) whose care is at the location specified by the value which references the Location resource representing the physical structures managed/operated by an organization (e.g., a ward, building, clinic, etc)" ]
   ], [
      fhir:index 1;
-     fhir:CodeSystem.concept.code [ fhir:value "team" ];
+     fhir:CodeSystem.concept.code [ fhir:value "careteam" ];
      fhir:CodeSystem.concept.display [ fhir:value "CareTeam" ];
      fhir:CodeSystem.concept.definition [ fhir:value "Members (Patients) who are under the care of the care-team specified by the value which references the CareTeam resource representing the care-team. (e.g., Respiratory Therapy CareTeam, CareTeam blue , etc)" ]
   ], [

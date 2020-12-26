@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="6d11788a-bad8-47ad-a902-71ffd82b8b92"/>
+  <id value="7323dc78-1d16-420b-91dc-bf2f53e7f3b5"/>
   <meta>
-    <lastUpdated value="2020-12-21T12:36:21.109-08:00"/>
+    <lastUpdated value="2020-12-26T10:53:51.861-08:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -45,8 +45,8 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---www.fhir.org-guides-argonaut-patient-list-CodeSystem-argo-group-characteristic-team"> </a>
-                  <a href="CodeSystem-argo-group-characteristic.html#argo-group-characteristic-team">team</a>
+                  <a name="http---www.fhir.org-guides-argonaut-patient-list-CodeSystem-argo-group-characteristic-careteam"> </a>
+                  <a href="CodeSystem-argo-group-characteristic.html#argo-group-characteristic-careteam">careteam</a>
                 </td>
                 <td>CareTeam</td>
                 <td>Members (Patients) who are under the care of the care-team specified by the value which references the CareTeam resource representing the care-team. (e.g., Respiratory Therapy CareTeam, CareTeam blue , etc)</td>
@@ -75,7 +75,7 @@
         <name value="ArgonautGroupCharacteristicValueSet"/>
         <title value="Argonaut Group Characteristic Value Set"/>
         <status value="active"/>
-        <date value="2020-12-21T12:36:21-08:00"/>
+        <date value="2020-12-26T10:53:51-08:00"/>
         <publisher value="Argonaut Project"/>
         <contact>
           <telecom>
@@ -85,8 +85,8 @@
         </contact>
         <description value="Initial set of group characteristic concepts for defining and searching for patient lists."/>
         <expansion>
-          <identifier value="urn:uuid:9d485ebc-d868-4475-ade4-af8366dfa6de"/>
-          <timestamp value="2020-12-21T12:37:04-08:00"/>
+          <identifier value="urn:uuid:591777a8-23bb-4418-9b07-682aa5e83285"/>
+          <timestamp value="2020-12-26T10:54:42-08:00"/>
           <total value="4"/>
           <parameter>
             <name value="excludeNested"/>
@@ -103,7 +103,7 @@
           </contains>
           <contains>
             <system value="http://www.fhir.org/guides/argonaut/patient-list/CodeSystem/argo-group-characteristic"/>
-            <code value="team"/>
+            <code value="careteam"/>
             <display value="CareTeam"/>
           </contains>
           <contains>

@@ -105,6 +105,13 @@
       },
       {
         "reference": {
+          "reference": "Questionnaire/argo-pl-q2"
+        },
+        "name": "argo-pl-q2",
+        "exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+      },
+      {
+        "reference": {
           "reference": "Observation/test"
         },
         "description": "###FOO\n- bar",
