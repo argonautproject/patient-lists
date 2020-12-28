@@ -11,7 +11,4 @@ title: todo
 # Todo..
 ![](https://i.imgur.com/EwDKF8N.png)
 
-hello
-world
-
 {%hackmd 4AMMqV_dQqmCrx1yZibv7Q %}
