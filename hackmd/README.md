@@ -1,1 +1,1 @@
-This folder contains all the markdown source files for the hackmd.io Patient List site.
+This folder contains all the markdown source files for [Draft Patient List Implementation Guide](https://hackmd.io/iLbMj3DVTtaNjTsseYAo5g?view) using [HackMD](https://hackmd.io/), a realtime collaborative markdown notes on all platforms publishing platform. 
