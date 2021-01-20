@@ -3,7 +3,7 @@
 
 err = 5, warn = 14, info = 0
 IG Publisher Version: 1.1.51 Out of date - current version is 1.1.57
-Generated Tue Jan 19 23:31:20 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
+Generated Wed Jan 20 00:18:21 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
 
  Build Errors : 2 / 1 / 0
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1

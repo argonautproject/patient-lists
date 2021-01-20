@@ -127,11 +127,11 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A"
-"Group.member.extension","enc-ref","","",0,1,"","","","Extension {[CanonicalType[http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-encounter]]} {[]}
+"Group.member.extension","enc-ref","","",0,*,"","","","Extension {[CanonicalType[http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-encounter]]} {[]}
 ","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A"
-"Group.member.extension","appt-ref","","",0,1,"","","","Extension {[CanonicalType[http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment]]} {[]}
+"Group.member.extension","appt-ref","","",0,*,"","","","Extension {[CanonicalType[http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment]]} {[]}
 ","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A"

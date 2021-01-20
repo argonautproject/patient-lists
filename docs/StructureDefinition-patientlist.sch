@@ -204,8 +204,6 @@
     <sch:title>f:Group/f:member</sch:title>
     <sch:rule context="f:Group/f:member">
       <sch:assert test="count(f:extension[@url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse']) &lt;= 1">extension with URL = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-encounter']) &lt;= 1">extension with URL = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-encounter': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment']) &lt;= 1">extension with URL = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment': maximum cardinality of 'extension' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
