@@ -45,7 +45,7 @@
                         ]
                     }
                 ],
-                "mustSupport": true
+                "mustSupport": false
             },
             {
                 "id": "Group.type",
@@ -127,7 +127,7 @@
                 "id": "Group.characteristic",
                 "path": "Group.characteristic",
                 "requirements": "Used for searching for by group parameter such as location",
-                "mustSupport": true
+                "mustSupport": false
             },
             {
                 "id": "Group.characteristic.code",
@@ -147,7 +147,7 @@
                         "extension": [
                             {
                                 "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
+                                "valueBoolean": false
                             }
                         ]
                     },
@@ -183,7 +183,7 @@
                         "extension": [
                             {
                                 "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": false
+                                "valueBoolean": true
                             }
                         ]
                     }
@@ -215,7 +215,7 @@
                         ]
                     }
                 ],
-                "mustSupport": true
+                "mustSupport": "fasle"
             },
             {
                 "id": "Group.member.extension:enc-ref",
@@ -231,7 +231,7 @@
                         ]
                     }
                 ],
-                "mustSupport": true
+                "mustSupport": false
             },
             {
                 "id": "Group.member.extension:appt-ref",
@@ -247,7 +247,7 @@
                         ]
                     }
                 ],
-                "mustSupport": true
+                "mustSupport": false
             },
             {
                 "id": "Group.member.entity",

@@ -17,7 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "PatientListAppointment"];
   fhir:StructureDefinition.title [ fhir:value "Argonaut Patient List Member Appointment Extension"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2020-12-26T10:53:51-08:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2021-01-19T23:30:18-08:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Argonaut Project"];
   fhir:StructureDefinition.contact [
      fhir:index 0;

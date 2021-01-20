@@ -23,7 +23,7 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Group.extension","q-ref","","",0,1,"Y","","","Extension {[CanonicalType[http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaire]]} {[]}
+"Group.extension","q-ref","","",0,1,"","","","Extension {[CanonicalType[http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaire]]} {[]}
 ","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A"
@@ -86,7 +86,7 @@ Reference is intended to point to a structure that can potentially be expressed 
 "Group.managingEntity.display","","","",0,1,"","","Y","string {[]} {[]}
 ","Text alternative for the resource","Plain text narrative that identifies the resource in addition to the resource reference.","This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.","","","","","","","","",,,,,"",,,,"Reference.display",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A"
-"Group.characteristic","","","",0,*,"Y","","","BackboneElement {[]} {[]}
+"Group.characteristic","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Include / Exclude group members by Trait","Identifies traits whose presence r absence is shared by members of the group.","All the identified characteristics must be true for an entity to a member of the group.","Used for searching for by group parameter such as location","","","","","","","",,,,,"",,,,"Group.characteristic",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./playedRole[isNormalRole()]/participation[isNormalParticipation() and typeCode=""SBJ""]/act[isNormalAct and classCode=""OBS"" and moodCode=""EVN""]"
 "Group.characteristic.id","","","",0,1,"","","","string {[]} {[]}
@@ -123,15 +123,15 @@ boolean {[]} {[]}Quantity {[]} {[]}Range {[]} {[]}Reference {[]} {[]}","Value he
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Group.member.extension","qr-ref","","",0,1,"Y","","","Extension {[CanonicalType[http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse]]} {[]}
+"Group.member.extension","qr-ref","","",0,1,"","","","Extension {[CanonicalType[http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse]]} {[]}
 ","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A"
-"Group.member.extension","enc-ref","","",0,1,"Y","","","Extension {[CanonicalType[http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-encounter]]} {[]}
+"Group.member.extension","enc-ref","","",0,1,"","","","Extension {[CanonicalType[http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-encounter]]} {[]}
 ","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A"
-"Group.member.extension","appt-ref","","",0,1,"Y","","","Extension {[CanonicalType[http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment]]} {[]}
+"Group.member.extension","appt-ref","","",0,1,"","","","Extension {[CanonicalType[http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment]]} {[]}
 ","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A"

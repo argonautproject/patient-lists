@@ -1,9 +1,9 @@
 ﻿ArgonautPatientList : Validation Results
 =========================================
 
-err = 4, warn = 14, info = 0
-IG Publisher Version: 1.1.51 Out of date - current version is 1.1.56
-Generated Sat Dec 26 10:55:10 PST 2020. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
+err = 5, warn = 14, info = 0
+IG Publisher Version: 1.1.51 Out of date - current version is 1.1.57
+Generated Tue Jan 19 23:31:20 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
 
  Build Errors : 2 / 1 / 0
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
@@ -16,7 +16,7 @@ Generated Sat Dec 26 10:55:10 PST 2020. FHIR version 4.0.1 for ig#0.1.0 (canonic
  /Users/ehaas/Documents/FHIR/Argo-PL/input/examples/questionnaire-argo-pl-q2 : 0 / 3 / 2
  /Users/ehaas/Documents/FHIR/Argo-PL/input/examples/test : 1 / 1 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-characteristic-reference : 2 / 0 / 1
- /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-patientlist : 0 / 5 / 1
+ /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-patientlist : 1 / 5 / 1
 </table>
 == n/a ==
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/argo-pl-q2.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
@@ -55,6 +55,7 @@ INFORMATION: SearchParameter/Group-value-reference: SearchParameter: Validate re
 ERROR: SearchParameter/Group-value-reference: SearchParameter.multipleOr.extension[0]: The Extension 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation' definition allows for the types [code] but found type string
 ERROR: SearchParameter/Group-value-reference: SearchParameter.multipleAnd.extension[0]: The Extension 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation' definition allows for the types [code] but found type string
 == /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-patientlist.json ==
+ERROR: StructureDefinition.differential.element[12].mustSupport: Error parsing JSON: the primitive value must be a boolean
 WARNING: http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist#Group.member.entity: Cannot check whether the target profile http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/argo-patientlist is valid constraint on the base because it is not known
 INFORMATION: StructureDefinition/patientlist: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 WARNING: StructureDefinition/patientlist: StructureDefinition.differential.element.where(path = 'Group.member.entity'): Cannot check whether the target profile http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/argo-patientlist is valid constraint on the base because it is not known

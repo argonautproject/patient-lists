@@ -6,35 +6,35 @@ version: 0.1.0
 name: ArgonautPatientListProfile
 title: Argonaut Patient List (Group) Profile
 status: active
-date: '2020-12-10T16:51:15-08:00'
+date: "2020-12-10T16:51:15-08:00"
 publisher: Argonaut Project
 contact:
   - telecom:
       - system: url
-        value: 'https://confluence.hl7.org/display/AP/Argonaut+Project+Home'
+        value: "https://confluence.hl7.org/display/AP/Argonaut+Project+Home"
 description: >-
   This profile sets minimum expectations for the [Group](http://hl7.org/fhir/group.html) resource to record, search, and fetch user-facing patient lists.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
 type: Group
-baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Group'
+baseDefinition: "http://hl7.org/fhir/StructureDefinition/Group"
 derivation: constraint
 differential:
   element:
     - id: Group
       path: Group
-    - id: 'Group.extension:q-ref'
+    - id: "Group.extension:q-ref"
       path: Group.extension
       sliceName: q-ref
       min: 0
-      max: '1'
+      max: "1"
       type:
         - code: Extension
           profile:
             - >-
               http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaire
-      mustSupport: true
+      mustSupport: false
     # - id: Group.identifier
     #   path: Group.identifier
     #   comment: do we need to include or be silent? I think should be silent
@@ -97,7 +97,7 @@ differential:
     - id: Group.characteristic
       path: Group.characteristic
       requirements: Used for searching for by group parameter such as location
-      mustSupport: true
+      mustSupport: false
     - id: Group.characteristic.code
       path: Group.characteristic.code
       mustSupport: true
@@ -105,14 +105,14 @@ differential:
         strength: extensible
         valueSet: >-
           http://www.fhir.org/guides/argonaut/patient-list/ValueSet/argo-group-characteristic
-    - id: 'Group.characteristic.value[x]'
-      path: 'Group.characteristic.value[x]'
+    - id: "Group.characteristic.value[x]"
+      path: "Group.characteristic.value[x]"
       type:
         - code: CodeableConcept
           extension:
             - url: >-
                 http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-              valueBoolean: true
+              valueBoolean: false
         - code: boolean
           extension:
             - url: >-
@@ -132,7 +132,7 @@ differential:
           extension:
             - url: >-
                 http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-              valueBoolean: false
+              valueBoolean: True
       mustSupport: true
     - id: Group.characteristic.exclude
       path: Group.characteristic.exclude
@@ -145,39 +145,39 @@ differential:
       path: Group.member
       comment: enumerated list of members
       mustSupport: true
-    - id: 'Group.member.extension:qr-ref'
+    - id: "Group.member.extension:qr-ref"
       path: Group.member.extension
       sliceName: qr-ref
       min: 0
-      max: '1'
+      max: "1"
       type:
         - code: Extension
           profile:
             - >-
               http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse
-      mustSupport: true
-    - id: 'Group.member.extension:enc-ref'
+      mustSupport: fasle
+    - id: "Group.member.extension:enc-ref"
       path: Group.member.extension
       sliceName: enc-ref
       min: 0
-      max: '1'
+      max: "1"
       type:
         - code: Extension
           profile:
             - >-
               http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-encounter
-      mustSupport: true
-    - id: 'Group.member.extension:appt-ref'
+      mustSupport: false
+    - id: "Group.member.extension:appt-ref"
       path: Group.member.extension
       sliceName: appt-ref
       min: 0
-      max: '1'
+      max: "1"
       type:
         - code: Extension
           profile:
             - >-
               http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment
-      mustSupport: true
+      mustSupport: false
     - id: Group.member.entity
       path: Group.member.entity
       comment: >-
@@ -188,11 +188,11 @@ differential:
       type:
         - code: Reference
           targetProfile:
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
+            - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
             - >-
               http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/argo-patientlist
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner'
-            - 'http://hl7.org/fhir/StructureDefinition/PractitionerRole'
+            - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+            - "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
           _targetProfile:
             - extension:
                 - url: >-
@@ -211,7 +211,7 @@ differential:
                     http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
                   valueBoolean: false
       mustSupport: true
-    - id:  Group.member.entity.reference
+    - id: Group.member.entity.reference
       path: Group.member.entity.reference
       min: 1
       mustSupport: true
