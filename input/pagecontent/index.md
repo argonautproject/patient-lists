@@ -1,8 +1,7 @@
-### Argonaut Patient List FHIR artifacts
+### Argonaut User Facing Patient List FHIR Artifacts
 
-This Implementation Guide defines and renders the [Argonaut Patient List FHIR Artifacts](artifacts.html)
-
-The current [Argonaut Draft IG](https://hackmd.io/iLbMj3DVTtaNjTsseYAo5g?view) (using HACKMD) is able to render these artifacts.  This site will host a future Implementation Guide.
+This Implementation Guide defines the FHIR Artifacts listed below.
+They are used in the [Argonaut Draft IG](https://hackmd.io/iLbMj3DVTtaNjTsseYAo5g?view) (using HACKMD) which documents how they are used in the Argonaut User Facing Patient List API.  This site will host a future HL7 Implementation Guide.
 
 #### Profiles
 
