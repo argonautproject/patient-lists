@@ -27,12 +27,12 @@
   <xpathUsage value="normal"/>
   <multipleOr value="true">
     <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-      <valueString value="SHOULD"/>
+      <valueCode value="SHOULD"/>
     </extension>
   </multipleOr>
   <multipleAnd value="true">
     <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-      <valueString value="SHOULD"/>
+      <valueCode value="SHOULD"/>
     </extension>
   </multipleAnd>
 </SearchParameter>

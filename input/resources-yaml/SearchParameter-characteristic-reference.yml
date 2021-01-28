@@ -26,10 +26,10 @@ _multipleOr:
   extension:
     - url: >-
         http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
-      valueString: SHOULD
+      valueCode: SHOULD
 multipleAnd: true
 _multipleAnd:
   extension:
     - url: >-
         http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
-      valueString: SHOULD
+      valueCode: SHOULD

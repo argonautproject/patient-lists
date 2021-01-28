@@ -215,7 +215,7 @@
                         ]
                     }
                 ],
-                "mustSupport": "fasle"
+                "mustSupport": false
             },
             {
                 "id": "Group.member.extension:enc-ref",

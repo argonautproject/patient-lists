@@ -155,7 +155,7 @@ differential:
           profile:
             - >-
               http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse
-      mustSupport: fasle
+      mustSupport: false
     - id: "Group.member.extension:enc-ref"
       path: Group.member.extension
       sliceName: enc-ref

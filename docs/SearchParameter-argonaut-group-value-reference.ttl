@@ -42,7 +42,7 @@
      fhir:Element.extension [
        fhir:index 0;
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
-       fhir:Extension.valueString [ fhir:value "SHOULD" ]
+       fhir:Extension.valueCode [ fhir:value "SHOULD" ]
      ]
   ];
   fhir:SearchParameter.multipleAnd [
@@ -50,7 +50,7 @@
      fhir:Element.extension [
        fhir:index 0;
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
-       fhir:Extension.valueString [ fhir:value "SHOULD" ]
+       fhir:Extension.valueCode [ fhir:value "SHOULD" ]
      ]
   ] .
 

@@ -2,7 +2,7 @@
   {
     "id": "client",
     "type": "CapabilityStatement",
-    "url": " http://www.fhir.org/guides/argonaut/patient-list/CapabilityStatement/client",
+    "url": "http://www.fhir.org/guides/argonaut/patient-list/CapabilityStatement/client",
     "version": "0.1.0",
     "name": "ClientCapabilityStatement"
   },
@@ -19,13 +19,6 @@
     "url": "http://www.fhir.org/guides/argonaut/patient-list/ImplementationGuide/ig",
     "version": "0.1.0",
     "name": "ArgonautPatientList"
-  },
-  {
-    "id": "argo-pl-q2",
-    "type": "Questionnaire",
-    "url": "http://www.fhir.org/guides/argonaut/patient-list/Questionniare/argo-pl-q2",
-    "version": "0.1.0",
-    "name": "Patient-List-columns"
   },
   {
     "id": "argonaut-group-value-reference",

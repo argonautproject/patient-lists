@@ -115,7 +115,7 @@ definition:
         reference:
             reference: StructureDefinition/patientlist
     -   description: 'This CapabilityStatement outlines the conformance requirements
-            and expectations for the Argonaut User Facing Patient List **Client applications**.  It
+            and expectations for Argonaut User Facing Patient List **Client applications**.  It
             identifies the specific profiles and RESTful transactions for  requesting
             user facing patient list data from an EHR using the Argonaut User Facing
             Patient List API.  This includes the following interactions:
@@ -141,17 +141,6 @@ definition:
         name: Client CapabilityStatement
         reference:
             reference: CapabilityStatement/client
-    -   exampleCanonical: http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire
-        name: argo-pl-q2
-        reference:
-            reference: Questionnaire/argo-pl-q2
-    -   description: '###FOO
-
-            - bar'
-        exampleBoolean: true
-        name: FOO
-        reference:
-            reference: Observation/test
 dependsOn:
 -   id: hl7_fhir_us_core
     packageId: hl7.fhir.us.core

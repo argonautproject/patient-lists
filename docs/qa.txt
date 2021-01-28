@@ -1,11 +1,11 @@
 ﻿ArgonautPatientList : Validation Results
 =========================================
 
-err = 16, warn = 11, info = 6
+err = 2, warn = 6, info = 6
 IG Publisher Version: 1.1.51 Out of date - current version is 1.1.59
-Generated Wed Jan 27 20:50:46 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
+Generated Wed Jan 27 21:57:13 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
 
- Build Errors : 2 / 1 / 0
+ Build Errors : 0 / 0 / 0
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ImplementationGuide-ig : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-appointment : 0 / 1 / 1
@@ -13,16 +13,11 @@ Generated Wed Jan 27 20:50:46 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonic
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-questionnaire : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-questionnaireresponse : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ValueSet-argo-group-characteristic : 0 / 0 / 1
- /Users/ehaas/Documents/FHIR/Argo-PL/input/examples/questionnaire-argo-pl-q2 : 0 / 3 / 2
- /Users/ehaas/Documents/FHIR/Argo-PL/input/examples/test : 1 / 1 / 1
- /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-characteristic-reference : 2 / 0 / 1
- /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-patientlist : 1 / 1 / 1
- /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/capabilitystatement-client : 11 / 0 / 7
+ /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-characteristic-reference : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-patientlist : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/capabilitystatement-client : 2 / 0 / 7
 </table>
 == n/a ==
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/argo-pl-q2.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: Questionnaire/argo-pl-q2: Unable to find profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire nominated as the profile for which resource /Questionnaire/argo-pl-q2 is an example
-ERROR: /Users/ehaas/Documents/FHIR/Argo-PL/docs/Observation-test.html#/html/body/div/div/div/div/div/div/p/a at Line 140, column 382: The link 'Patient-example.html' for "Amy Shaw" cannot be resolved
 == /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/CodeSystem-argo-group-characteristic.json ==
 INFORMATION: CodeSystem/argo-group-characteristic: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 == /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ImplementationGuide-ig.json ==
@@ -42,40 +37,18 @@ INFORMATION: StructureDefinition/patientlist-questionnaireresponse: StructureDef
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse'): The Implementation Guide contains no examples for this extension
 == /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ValueSet-argo-group-characteristic.json ==
 INFORMATION: ValueSet/argo-group-characteristic: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-== /Users/ehaas/Documents/FHIR/Argo-PL/input/examples/questionnaire-argo-pl-q2.json ==
-INFORMATION: Questionnaire/argo-pl-q2: Questionnaire: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Questionnaire
-WARNING: Questionnaire/argo-pl-q2: Questionnaire: que-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
-WARNING: Questionnaire/argo-pl-q2: Questionnaire.meta.tag[0]: A code with no system has no defined meaning. A system should be provided
-WARNING: Questionnaire/argo-pl-q2: Questionnaire.meta.tag[1]: A code with no system has no defined meaning. A system should be provided
-INFORMATION: Questionnaire/argo-pl-q2: Questionnaire: Validate resource against profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire - listed in meta
-== /Users/ehaas/Documents/FHIR/Argo-PL/input/examples/test.json ==
-INFORMATION: Observation/test: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
-ERROR: Observation/test: Observation.subject: Unable to resolve resource 'Patient/example'
-WARNING: Observation/test: Observation.meta.profile[0]: Profile reference 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/test-obs' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
 == /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-characteristic-reference.json ==
 INFORMATION: SearchParameter/argonaut-group-value-reference: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
-ERROR: SearchParameter/argonaut-group-value-reference: SearchParameter.multipleOr.extension[0]: The Extension 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation' definition allows for the types [code] but found type string
-ERROR: SearchParameter/argonaut-group-value-reference: SearchParameter.multipleAnd.extension[0]: The Extension 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation' definition allows for the types [code] but found type string
 == /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-patientlist.json ==
-ERROR: StructureDefinition.differential.element[12].mustSupport: Error parsing JSON: the primitive value must be a boolean
 INFORMATION: StructureDefinition/patientlist: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist'): The Implementation Guide contains no examples for this profile
 == /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/capabilitystatement-client.json ==
 INFORMATION: CapabilityStatement/client: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
-ERROR: CapabilityStatement/client: CapabilityStatement.url: URI values cannot have whitespace(' http://www.fhir.org/guides/argonaut/patient-list/CapabilityStatement/client')
 INFORMATION: CapabilityStatement/client: CapabilityStatement.jurisdiction[0]: Could not confirm that the codes provided are from the extensible value set http://hl7.org/fhir/ValueSet/jurisdiction because there is no terminology service
 INFORMATION: CapabilityStatement/client: CapabilityStatement.jurisdiction[0].coding[0]: Code System URI 'urn:iso:std:iso:3166' is unknown so the code cannot be validated
 INFORMATION: CapabilityStatement/client: CapabilityStatement.format[0]: The value provided ('xml') could not be validated in the absence of a terminology server
 INFORMATION: CapabilityStatement/client: CapabilityStatement.format[1]: The value provided ('json') could not be validated in the absence of a terminology server
 INFORMATION: CapabilityStatement/client: CapabilityStatement.patchFormat[0]: The value provided ('application/json-patch+json') could not be validated in the absence of a terminology server
-ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[0].searchParam[0].definition: URL value 'http://hl7.org/fhir/SearchParameter/Appointment-id' does not resolve
-ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[1].searchParam[0].definition: URL value 'http://hl7.org/fhir/SearchParameter/Encounter-id' does not resolve
 INFORMATION: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
-ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[1].definition: URL value 'http://hl7.org/fhir/SearchParameter/Group-summary' does not resolve
-ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[4].definition: URI values cannot have whitespace(' http://www.fhir.org/guides/argonaut/patient-list/SearchParameter/argonaut-group-value-reference')
-ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[4].definition: Canonical URLs must be absolute URLs if they are not fragment references ( http://www.fhir.org/guides/argonaut/patient-list/SearchParameter/argonaut-group-value-reference) 
-ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[5].definition: URL value 'http://hl7.org/fhir/SearchParameter/Group-include' does not resolve
-ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[6].definition: URL value 'http://hl7.org/fhir/SearchParameter/Group-id' does not resolve
-ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[3].searchParam[0].definition: URL value 'http://hl7.org/fhir/SearchParameter/Questionnaire-id' does not resolve
-ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[4].searchParam[0].definition: URL value 'http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-id' does not resolve
-ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[2]: Type mismatch - SearchParameter 'http://hl7.org/fhir/SearchParameter/Group-managing-entity' type is reference, but type here is token
+ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[1].definition: URL value 'http://hl7.org/fhir/SearchParameter/Resource-summary' does not resolve
+ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[5].definition: URL value 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve

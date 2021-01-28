@@ -80,15 +80,6 @@
       "StructureDefinition.snapshot.element.type",
       "StructureDefinition.snapshot.element.type.targetProfile"
     ],
-    "http://hl7.org/fhir/StructureDefinition/instance-description": [
-      "Observation.meta"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/instance-name": [
-      "Observation.meta"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/rendered-value": [
-      "Observation.identifier.value"
-    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
     ],
