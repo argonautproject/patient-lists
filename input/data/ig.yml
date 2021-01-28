@@ -163,9 +163,9 @@ definition:
             with each capability to describe the capabilities of a deployed and configured
             Server.'
         exampleBoolean: false
-        name: Server CapabilityStatement
+        name: Foo Server CapabilityStatement
         reference:
-            reference: CapabilityStatement/Server
+            reference: CapabilityStatement/foo-server
 dependsOn:
 -   id: hl7_fhir_us_core
     packageId: hl7.fhir.us.core

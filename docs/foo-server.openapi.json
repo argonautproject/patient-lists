@@ -1,7 +1,7 @@
 ﻿{
   "openapi": "3.0.2",
   "info": {
-    "title": "Server CapabilityStatement",
+    "title": "Foo Server CapabilityStatement",
     "description": "This CapabilityStatement outlines the conformance requirements and expectations for Argonaut User Facing Patient List **EHR Server**.  It identifies the specific profiles and RESTful transactions for requesting user facing patient list data from an EHR using the Argonaut User Facing Patient List API.  This includes the following interactions:\n\n1. Discovery of User Facing Patient Lists\n2. Fetching User Facing Patient Lists\n3. Fetching Additional Data about each Patient in a User Facing Patient Lists\n\nThis is a [Requirements CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html#requirements) describing what capabilities are potentially relevant.  It can be used as a template for creating an [Instance CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html#instance) by removing expectation extensions and making actual assertions associated with each capability to describe the capabilities of a deployed and configured Server.",
     "license": {
       "name": "Creative Commons Zero v1.0 Universal",
@@ -13,7 +13,7 @@
     }
   },
   "externalDocs": {
-    "url": "http://www.fhir.org/guides/argonaut/patient-list/CapabilityStatement/Server",
+    "url": "http://www.fhir.org/guides/argonaut/patient-list/CapabilityStatement/foo-server",
     "description": "FHIR CapabilityStatement"
   },
   "paths": {

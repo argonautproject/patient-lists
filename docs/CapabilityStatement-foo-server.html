@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>IG\Foo Server CapabilityStatement - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"2.2"}
+    h3,h4,h5,h6{--heading-prefix:"2.2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Argonaut User Facing Patient List</span><br/>0.1.0 - CI Build</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">IG Home</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Foo Server CapabilityStatement</b></li>
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <div id="segment-content">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Argonaut User Facing Patient List - Local Development build (v0.1.0). See the <a href="http://www.fhir.org/guides/argonaut/patient-list/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+  
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CapabilityStatement-foo-server.json.html">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">CapabilityStatement: Foo Server CapabilityStatement</h2>
+
+
+  
+      <p>
+      <a href="foo-server.openapi.json" no-download="true">Raw OpenAPI-Swagger Definition file</a> | <a href="foo-server.openapi.json" download>Download</a>
+      </p>
+  
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml"> <h2 id="title">Foo Server CapabilityStatement</h2> <ul> <li>Implementation Guide Version: 0.1.0</li> <li>FHIR Version: 4.0.1</li> <li>Supported formats: JSON</li> <li>Published: 2021-01-28</li> <li>Published by: Argonaut Project</li> </ul> <p>This CapabilityStatement outlines the conformance requirements and expectations for Argonaut User Facing Patient List <strong>EHR Server</strong>. It identifies the specific profiles and RESTful transactions for requesting user facing patient list data from an EHR using the Argonaut User Facing Patient List API. This includes the following interactions:</p> <ol> <li>Discovery of User Facing Patient Lists</li> <li>Fetching User Facing Patient Lists</li> <li>Fetching Additional Data about each Patient in a User Facing Patient Lists</li> </ol> <p>This is a <a href="http://hl7.org/fhir/capabilitystatement.html#requirements">Requirements CapabilityStatement</a> describing what capabilities are potentially relevant. It can be used as a template for creating an <a href="http://hl7.org/fhir/capabilitystatement.html#instance">Instance CapabilityStatement</a> by removing expectation extensions and making actual assertions associated with each capability to describe the capabilities of a deployed and configured Server.</p> <h3 id="igs" class="no_toc">SHOULD Support the Following Implementation Guides:</h3> <ul> <li><a href="http://hl7.org/fhir/us/core/index.html">HL7 FHIR® US Core Implementation Guide STU3 Release 3.1.1</a></li> </ul> <h3 id="behavior">FHIR RESTful Capabilities</h3> <p>The Server <strong>SHALL</strong>:</p> <ol> <li>Support discovery of user facing patient lists</li> <li>Support fetching user facing lists</li> <li>Support JSON source formats for all transactions</li> <li>Declare a CapabilityStatement identifying the transactions and profiles supported</li> </ol> <p>The Server <strong>SHOULD</strong>:</p> <ol> <li>Support fetching additional data about each patient in a user facing patient lists</li> <li>Support XML source formats for all transactions</li> </ol> <p id="security"><strong>Security:</strong></p> <ol> <li>See the <a href="http://hl7.org/fhir/us/core/security.html">US Core General Security Considerations</a> section for requirements and recommendations.</li> </ol> <p><strong>Summary of System Wide Interactions</strong></p> <ul> <li><strong>SHOULD</strong> support the <code>transaction</code> interaction.</li> <li><strong>SHOULD</strong> support the <code>batch</code> interaction.</li> <li><strong>MAY</strong> support the <code>search-system</code> interaction.</li> <li><strong>MAY</strong> support the <code>history-system</code> interaction.</li> </ul> <h3 id="resource--details" class="no_toc">RESTful Capabilities by Resource/Profile:</h3> <p><strong>Summary of Search Criteria</strong></p> <table class="grid"> <thead> <tr> <th>Resource Type</th> <th>Supported Profiles</th> <th>Supported Searches</th> <th>Supported <code>_includes</code></th> <th>Supported <code>_revincludes</code></th> <th>Supported Operations</th> </tr> </thead> <tbody> <tr> <td> <a href="#appointment">Appointment</a> </td> <td> </td> <td> _id </td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td> <a href="#encounter">Encounter</a> </td> <td> <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter">US Core Encounter Profile</a> </td> <td> _id </td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td> <a href="#group">Group</a> </td> <td> <a href="StructureDefinition-patientlist.html">Argonaut User Facing Patient List (Group) Profile</a> </td> <td> type, _summary, managing-entity, characteristic, value-reference, _include, _id characteristic+value-reference </td> <td> Group:member </td> <td> </td> <td> </td> </tr> <tr> <td> <a href="#questionnaire">Questionnaire</a> </td> <td> <a href="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire">SDC Base Questionnaire</a> </td> <td> _id </td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td> <a href="#questionnaireresponse">QuestionnaireResponse</a> </td> <td> <a href="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse">SDC Questionnaire Response</a> </td> <td> _id </td> <td> </td> <td> </td> <td> </td> </tr> </tbody> </table> <h4 id="appointment" class="no_toc">Appointment</h4> <p>Conformance Expectation: <strong>SHOULD</strong></p> <p>Resource Specific Documentation:</p> <blockquote><p>For getting additional data about Group members, the Argonaut Patient List (Group) Profile support an extension on the <code>Group.member</code> element for directly accessing one or more Appointment resources for each patient on the patient list. The Server <strong>MAY</strong> supply this extension so that the Client can efficiently fetch the Appointment resource.</p> </blockquote> <p>Profile Interaction Summary:</p> <ul> <li><strong>SHOULD</strong> support <code>search-type</code>, <code>read</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>vread</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-instance</code>, <code>history-type</code>.</li> </ul> <p>Fetch and Search Criteria:</p> <ul> <li> A Server <strong>SHOULD</strong> be capable of returning a Appointment resource using: <code class="highlighter-rouge">GET [base]/Appointment/[id]</code> </li> </ul> <p>Search Parameter Summary:</p> <table class="grid"> <thead> <tr> <th>Conformance</th> <th>Parameter</th> <th>Type</th> <th>Documentation</th> </tr> </thead> <tbody><tr> <td> <strong>SHOULD</strong> </td> <td> <a href="http://hl7.org/fhir/R4/search.html"> _id</a> </td> <td> token </td> <td align="left"> <p>for fetching of additional appointment data about group members. The Server <strong>SHOULD</strong> support comma-separated values.</p> </td> </tr> </tbody> </table> <hr/> <h4 id="encounter" class="no_toc">Encounter</h4> <p>Conformance Expectation: <strong>SHOULD</strong></p> <p>Supported Profiles: <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter">US Core Encounter Profile</a> </p> <p>Resource Specific Documentation:</p> <blockquote><p>For getting additional data about Group members, the Argonaut Patient List (Group) Profile supports an extension on the <code>Group.member</code> element for directly accessing one or more Encounter resources for each patient on the patient list. The Server <strong>MAY</strong> supply this extension so that the Client can efficiently fetch the Encounter resource.</p> </blockquote> <p>Profile Interaction Summary:</p> <ul> <li><strong>SHOULD</strong> support <code>search-type</code>, <code>read</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>vread</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-instance</code>, <code>history-type</code>.</li> </ul> <p>Fetch and Search Criteria:</p> <ul> <li> A Server <strong>SHOULD</strong> be capable of returning a Encounter resource using: <code class="highlighter-rouge">GET [base]/Encounter/[id]</code> </li> </ul> <p>Search Parameter Summary:</p> <table class="grid"> <thead> <tr> <th>Conformance</th> <th>Parameter</th> <th>Type</th> <th>Documentation</th> </tr> </thead> <tbody><tr> <td> <strong>SHOULD</strong> </td> <td> <a href="http://hl7.org/fhir/R4/search.html"> _id</a> </td> <td> token </td> <td align="left"> <p>for fetching of additional encounter data about group members. The Server <strong>SHOULD</strong> support comma-separated values.</p> </td> </tr> </tbody> </table> <hr/> <h4 id="group" class="no_toc">Group</h4> <p>Conformance Expectation: <strong>SHALL</strong></p> <p>Supported Profiles: <a href="StructureDefinition-patientlist.html">Argonaut User Facing Patient List (Group) Profile</a> </p> <p>Resource Specific Documentation:</p> <blockquote><p>Required resource type for discovery and fetching of user facing lists. For getting additional data about Group members. The Server <strong>MAY</strong> supply one or more of these extensions:</p> <ol> <li><a href="https://argonautproject.github.io/patient-lists/StructureDefinition-patientlist-appointment.html#profile">Argonaut Patient List Member Appointment Extension</a></li> <li><a href="https://argonautproject.github.io/patient-lists/StructureDefinition-patientlist-encounter.html#profile">Argonaut Patient List Member Encounter Extension</a></li> <li><a href="https://argonautproject.github.io/patient-lists/StructureDefinition-patientlist-questionnaire.html#profile">Argonaut User Facing Patient List Questionnaire Extension</a></li> <li><a href="https://argonautproject.github.io/patient-lists/StructureDefinition-patientlist-questionnaireresponse.html#profile">Argonaut User Facing Patient List Member QuestionnaireResponse Extension</a></li> </ol> </blockquote> <p>Profile Interaction Summary:</p> <ul> <li><strong>SHALL</strong> support <code>read</code><sup>†</sup>.</li><li><strong>SHOULD</strong> support <code>search-type</code><sup>†</sup>, <code>vread</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-instance</code>, <code>history-type</code>.</li> </ul> <blockquote>search-type<sup>†</sup><ol> <li>Servers <strong>SHALL</strong> require the following search parameters and parameter values for discovery of user-facing lists: <ul> <li>_summary=“true&quot;</li> <li>type=“person”.</li> </ul> </li> <li>Servers <strong>SHALL</strong> include <code>Group.characteristic</code> <em>in addition to</em> all the standard Group summary elements.</li> <li>Servers <strong>SHALL</strong> support discovering all available patient lists using the required parameter</li> <li>Servers <strong>SHOULD</strong> support discovering all available patient lists managed by a particular organization or practitioner using the required parameters and the <code>managing-entity</code> search parameter.</li> <li>Servers <strong>SHOULD</strong> support discovering all available patient lists that have a particular characteristic using the required parameters and the combination of <code>characteristic</code> and <code>value-reference</code> search parameters</li> </ol> </blockquote><blockquote>read<sup>†</sup><p>When the Patient list is too large be able to return a whole resource:</p> <ul> <li>The Server <strong>SHOULD NOT</strong> return first-page results as described <a href="http://hl7.org/fhir/search.html#count">here</a></li> <li>The Server <strong>SHOULD</strong> return an <em>OperationOutcome</em> indicating that the client needs to call the <code>$getpage</code>operation to return a Group</li> </ul> </blockquote> <p>Fetch and Search Criteria:</p> <ul> <li> A Server <strong>SHALL</strong> be capable of returning a Group resource using: <code class="highlighter-rouge">GET [base]/Group/[id]</code> </li> <li> A Server <strong>SHOULD</strong> be capable of supporting the following _includes: Group:member - <code class="highlighter-rouge">GET [base]/Group?[parameter=value]&amp;_include=Group:member</code> </li> </ul> <p>Search Parameter Summary:</p> <table class="grid"> <thead> <tr> <th>Conformance</th> <th>Parameter</th> <th>Type</th> <th>Documentation</th> </tr> </thead> <tbody><tr> <td> <strong>SHOULD</strong> </td> <td> <a href="http://hl7.org/fhir/R4/group.html#search"> type</a> </td> <td> token </td> <td align="left"> <p>required search parameters and parameter value <code> type=person</code> for discovery of user-facing lists:</p> </td> </tr><tr> <td> <strong>SHOULD</strong> </td> <td> <a href="http://hl7.org/fhir/R4/search.html"> _summary</a> </td> <td> token </td> <td align="left"> <p>required search parameters and parameter value <code> _summary=true</code> for discovery of user-facing lists:</p> </td> </tr><tr> <td> <strong>SHOULD</strong> </td> <td> <a href="http://hl7.org/fhir/R4/group.html#search"> managing-entity</a> </td> <td> reference </td> <td align="left"> <p>for discovery of user-facing lists managed by a particular organization or practitioner</p> </td> </tr><tr> <td> <strong>SHOULD</strong> </td> <td> <a href="http://hl7.org/fhir/R4/group.html#search"> characteristic</a> </td> <td> token </td> <td align="left"> <p>for discovery of user-facing lists by a characteristic used in combination with <code>value-reference</code></p> </td> </tr><tr> <td> <strong>SHOULD</strong> </td> <td> <a href="SearchParameter-argonaut-group-value-reference.html"> value-reference</a> </td> <td> reference </td> <td align="left"> <p>for discovery of user-facing lists by a characteristic used in combination with <code>characteristic</code></p> </td> </tr><tr> <td> <strong>SHOULD</strong> </td> <td> <a href="http://hl7.org/fhir/R4/search.html"> _include</a> </td> <td> token </td> <td align="left"> <p>the <code>_include</code> parameter can be used when fetching a Group resource to include all the Patient resources in addition to Group</p> </td> </tr><tr> <td> <strong>SHALL</strong> </td> <td> <a href="http://hl7.org/fhir/R4/search.html"> _id</a> </td> <td> token </td> <td align="left"> <p>for fetching of user facing lists</p> </td> </tr> </tbody> </table> <p>Search Parameter Combination Summary:</p> <table class="grid"> <thead> <tr> <th>Conformance</th> <th>Parameter Combination</th> <th>Types</th> </tr> </thead> <tbody> <tr> <td><strong>SHOULD</strong> </td> <td>characteristic+value-reference </td> <td>token+reference </td> </tr> </tbody> </table> <hr/> <h4 id="questionnaire" class="no_toc">Questionnaire</h4> <p>Conformance Expectation: <strong>SHOULD</strong></p> <p>Supported Profiles: <a href="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire">SDC Base Questionnaire</a> </p> <p>Resource Specific Documentation:</p> <blockquote><p>For getting additional data about Group members, the Argonaut Patient List (Group) Profile supports 2 extension for directly accessing the Group level Questionnaire and the resultant pre-filled QuestionnaireResponse form for each patient on the patient list: The Server <strong>MAY</strong> supply this extension so that the Client can fetch the form definitions in the Questionnaire resource and the form data in the QuestionnaireResponse resource.</p> </blockquote> <p>Profile Interaction Summary:</p> <ul> <li><strong>SHOULD</strong> support <code>search-type</code>, <code>read</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>vread</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-instance</code>, <code>history-type</code>.</li> </ul> <p>Fetch and Search Criteria:</p> <ul> <li> A Server <strong>SHOULD</strong> be capable of returning a Questionnaire resource using: <code class="highlighter-rouge">GET [base]/Questionnaire/[id]</code> </li> </ul> <p>Search Parameter Summary:</p> <table class="grid"> <thead> <tr> <th>Conformance</th> <th>Parameter</th> <th>Type</th> <th>Documentation</th> </tr> </thead> <tbody><tr> <td> <strong>SHOULD</strong> </td> <td> <a href="http://hl7.org/fhir/R4/search.html"> _id</a> </td> <td> token </td> <td align="left"> <p>for fetching the definitions of associated data about group members represented in the Questionnaire resource. The Server <strong>SHOULD</strong> support comma-separated values.</p> </td> </tr> </tbody> </table> <hr/> <h4 id="questionnaireresponse" class="no_toc">QuestionnaireResponse</h4> <p>Conformance Expectation: <strong>SHOULD</strong></p> <p>Supported Profiles: <a href="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse">SDC Questionnaire Response</a> </p> <p>Resource Specific Documentation:</p> <blockquote><p>For getting additional data about Group members, the Argonaut Patient List (Group) Profile supports 2 extension for directly accessing the Group level Questionnaire and the resultant pre-filled QuestionnaireResponse form for each patient on the patient list: The Server <strong>MAY</strong> supply these extensions so that the Client can fetch the form definitions in the Questionnaire resource and the form data in the QuestionnaireResponse resource.</p> </blockquote> <p>Profile Interaction Summary:</p> <ul> <li><strong>SHOULD</strong> support <code>search-type</code>, <code>read</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>vread</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-instance</code>, <code>history-type</code>.</li> </ul> <p>Fetch and Search Criteria:</p> <ul> <li> A Server <strong>SHOULD</strong> be capable of returning a QuestionnaireResponse resource using: <code class="highlighter-rouge">GET [base]/QuestionnaireResponse/[id]</code> </li> </ul> <p>Search Parameter Summary:</p> <table class="grid"> <thead> <tr> <th>Conformance</th> <th>Parameter</th> <th>Type</th> <th>Documentation</th> </tr> </thead> <tbody><tr> <td> <strong>SHOULD</strong> </td> <td> <a href="http://hl7.org/fhir/R4/search.html"> _id</a> </td> <td> token </td> <td align="left"> <p>for fetching associated data about group members represented in the QuestionnaireResponse resource. The Server <strong>SHOULD</strong> support comma-separated values.</p> </td> </tr> </tbody> </table> <hr/> </div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="https://confluence.hl7.org/display/AP/Argonaut+Project+Home">Argonaut Project</a>.  Package ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 28, 2021 15:27-0800">2021-01-28</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="2193b555-a745-41cd-87d7-50be3af273cd"/>
+  <id value="6fda78da-1288-4a00-b021-6d5b6b8d0962"/>
   <meta>
-    <lastUpdated value="2021-01-28T13:50:46.555-08:00"/>
+    <lastUpdated value="2021-01-28T15:27:32.805-08:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -75,7 +75,7 @@
         <name value="ArgonautGroupCharacteristicValueSet"/>
         <title value="Argonaut Group Characteristic Value Set"/>
         <status value="active"/>
-        <date value="2021-01-28T13:50:46-08:00"/>
+        <date value="2021-01-28T15:27:32-08:00"/>
         <publisher value="Argonaut Project"/>
         <contact>
           <telecom>
@@ -85,8 +85,8 @@
         </contact>
         <description value="Initial set of group characteristic concepts for defining and searching for patient lists."/>
         <expansion>
-          <identifier value="urn:uuid:fbe1346a-18f7-4983-b32a-227f2dc15b6a"/>
-          <timestamp value="2021-01-28T13:51:31-08:00"/>
+          <identifier value="urn:uuid:d72b0aa7-c805-471f-95a4-07fc80ca9071"/>
+          <timestamp value="2021-01-28T15:28:13-08:00"/>
           <total value="4"/>
           <parameter>
             <name value="excludeNested"/>
