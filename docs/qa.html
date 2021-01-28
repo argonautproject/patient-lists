@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 0, errors = 2, warn = 6, info = 6 -->
+<!-- broken links = 0, errors = 2, warn = 6, info = 5 -->
 <head>
   <title>ArgonautPatientList : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -23,7 +23,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for ArgonautPatientList</h1>
- <p>Generated Wed Jan 27 21:57:12 PST 2021, FHIR version 4.0.1 for ig#0.1.0 (canonical = <a href="http://www.fhir.org/guides/argonaut/patient-list">http://www.fhir.org/guides/argonaut/patient-list</a> (<a href="http://www.fhir.org/guides/argonaut/patient-list/history.html">history</a>)). See <a href="/users/ehaas/documents/fhir/argo-pl/docs/qa.min.html">Errors Only</a></p>
+ <p>Generated Thu Jan 28 12:05:46 PST 2021, FHIR version 4.0.1 for ig#0.1.0 (canonical = <a href="http://www.fhir.org/guides/argonaut/patient-list">http://www.fhir.org/guides/argonaut/patient-list</a> (<a href="http://www.fhir.org/guides/argonaut/patient-list/history.html">history</a>)). See <a href="/users/ehaas/documents/fhir/argo-pl/docs/qa.min.html">Errors Only</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span style="background-color: #ffcccc">IG Publisher Version: v1.1.51, which is out of date. The current version is v1.1.59 <a href="https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar">Download Latest</a></span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ig, Canonical = http://www.fhir.org/guides/argonaut/patient-list</td></tr>
@@ -38,7 +38,7 @@
  <tr><td>HL7 Publication Rules:</td><td>Code = n/a. package-list.json: file not found in /Users/ehaas/Documents/FHIR/Argo-PL</td></tr>
  <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://www.fhir.org/guides/argonaut/patient-list (Problem #1 with package-list.json at http://www.fhir.org/guides/argonaut/patient-list: http://www.fhir.org/guides/argonaut/patient-list/package-list.json)</td></tr>
- <tr><td>Summary:</td><td> broken links = 0, errors = 2, warn = 6, info = 6</td></tr>
+ <tr><td>Summary:</td><td> broken links = 0, errors = 2, warn = 6, info = 5</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -75,7 +75,7 @@
      <td><a href="#_Users_ehaas_Documents_FHIR_Argo-PL_input_resources_StructureDefinition-patientlist"><b>/Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-patientlist</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#_Users_ehaas_Documents_FHIR_Argo-PL_input_resources_capabilitystatement-client"><b>/Users/ehaas/Documents/FHIR/Argo-PL/input/resources/capabilitystatement-client</b></a></td><td><b>2</b></td><td><b>0</b></td><td><b>7</b></td>
+     <td><a href="#_Users_ehaas_Documents_FHIR_Argo-PL_input_resources_capabilitystatement-client"><b>/Users/ehaas/Documents/FHIR/Argo-PL/input/resources/capabilitystatement-client</b></a></td><td><b>2</b></td><td><b>0</b></td><td><b>6</b></td>
    </tr>
 </table>
 <hr/>
@@ -217,16 +217,13 @@
      <td><b>CapabilityStatement/client: CapabilityStatement.jurisdiction[0].coding[0]</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'urn:iso:std:iso:3166' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>CapabilityStatement/client: CapabilityStatement.format[0]</b></td><td><b>information</b></td><td title="Terminology_TX_NoValid_15"><b>The value provided ('xml') could not be validated in the absence of a terminology server</b></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b>CapabilityStatement/client: CapabilityStatement.format[1]</b></td><td><b>information</b></td><td title="Terminology_TX_NoValid_15"><b>The value provided ('json') could not be validated in the absence of a terminology server</b></td>
+     <td><b>CapabilityStatement/client: CapabilityStatement.format[0]</b></td><td><b>information</b></td><td title="Terminology_TX_NoValid_15"><b>The value provided ('json') could not be validated in the absence of a terminology server</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>CapabilityStatement/client: CapabilityStatement.patchFormat[0]</b></td><td><b>information</b></td><td title="Terminology_TX_NoValid_15"><b>The value provided ('application/json-patch+json') could not be validated in the absence of a terminology server</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].extension[1].extension[0]</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination</b> <span id="sl21" class="flip" onclick="flip('l21')">Show Reasoning</span><div id="l21" style="display: none"><p>&nbsp;</p>This element does not match any known slicedefined_in_the_profilehttp://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination<ul><li>CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: discriminator = true and ('required' in url)</li>, <li>CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: discriminator = true and ('optional' in url)</li></ul></div></td>
+     <td><b><a href="">CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].extension[1].extension[0]</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination</b> <span id="sl20" class="flip" onclick="flip('l20')">Show Reasoning</span><div id="l20" style="display: none"><p>&nbsp;</p>This element does not match any known slicedefined_in_the_profilehttp://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination<ul><li>CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: discriminator = true and ('required' in url)</li>, <li>CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: discriminator = true and ('optional' in url)</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[1].definition</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/SearchParameter/Resource-summary' does not resolve</b></td>
@@ -251,9 +248,6 @@
 <a name="Terminology_TX_NoValid_15"> </a>
 <h2>Terminology_TX_NoValid_15</h2>
  <table class="grid">
-   <tr style="background-color: #fffff2">
-     <td><a href="CapabilityStatement-client.html">/Users/ehaas/Documents/FHIR/Argo-PL/input/resources/capabilitystatement-client.json</a></td><td><b>The value provided ('xml') could not be validated in the absence of a terminology server</b></td>
-   </tr>
    <tr style="background-color: #fffff2">
      <td><a href="CapabilityStatement-client.html">/Users/ehaas/Documents/FHIR/Argo-PL/input/resources/capabilitystatement-client.json</a></td><td><b>The value provided ('json') could not be validated in the absence of a terminology server</b></td>
    </tr>

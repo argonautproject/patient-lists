@@ -3,10 +3,10 @@
   "name": "ArgonautPatientList",
   "package-id": "ig",
   "ig-ver": "0.1.0",
-  "date": "Wed, 27 Jan, 2021 21:55:25 -0800",
+  "date": "Thu, 28 Jan, 2021 12:04:45 -0800",
   "errs": 2,
   "warnings": 6,
-  "hints": 6,
+  "hints": 5,
   "version": "4.0.1",
   "tool": "4.5.0 (3)"
 }
