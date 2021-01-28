@@ -1,7 +1,7 @@
 {
     "resourceType": "SearchParameter",
-    "id": "Group-value-reference",
-    "url": "http://www.fhir.org/guides/argonaut/patient-list/SearchParameter/Group-value-reference",
+    "id": "argonaut-group-value-reference",
+    "url": "http://www.fhir.org/guides/argonaut/patient-list/SearchParameter/argonaut-group-value-reference",
     "version": "4.0.1",
     "name": "GroupValueReference",
     "status": "draft",

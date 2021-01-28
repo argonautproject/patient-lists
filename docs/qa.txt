@@ -3,7 +3,7 @@
 
 err = 16, warn = 11, info = 6
 IG Publisher Version: 1.1.51 Out of date - current version is 1.1.59
-Generated Wed Jan 27 18:30:19 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
+Generated Wed Jan 27 20:50:46 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
 
  Build Errors : 2 / 1 / 0
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
@@ -53,9 +53,9 @@ INFORMATION: Observation/test: Observation: Validate resource against profile ht
 ERROR: Observation/test: Observation.subject: Unable to resolve resource 'Patient/example'
 WARNING: Observation/test: Observation.meta.profile[0]: Profile reference 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/test-obs' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
 == /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-characteristic-reference.json ==
-INFORMATION: SearchParameter/Group-value-reference: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
-ERROR: SearchParameter/Group-value-reference: SearchParameter.multipleOr.extension[0]: The Extension 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation' definition allows for the types [code] but found type string
-ERROR: SearchParameter/Group-value-reference: SearchParameter.multipleAnd.extension[0]: The Extension 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation' definition allows for the types [code] but found type string
+INFORMATION: SearchParameter/argonaut-group-value-reference: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+ERROR: SearchParameter/argonaut-group-value-reference: SearchParameter.multipleOr.extension[0]: The Extension 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation' definition allows for the types [code] but found type string
+ERROR: SearchParameter/argonaut-group-value-reference: SearchParameter.multipleAnd.extension[0]: The Extension 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation' definition allows for the types [code] but found type string
 == /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-patientlist.json ==
 ERROR: StructureDefinition.differential.element[12].mustSupport: Error parsing JSON: the primitive value must be a boolean
 INFORMATION: StructureDefinition/patientlist: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition

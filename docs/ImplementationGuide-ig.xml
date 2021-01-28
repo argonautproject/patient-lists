@@ -11,7 +11,7 @@
   <name value="ArgonautPatientList"/>
   <title value="Argonaut User Facing Patient List"/>
   <status value="active"/>
-  <date value="2021-01-27T18:28:39-08:00"/>
+  <date value="2021-01-27T20:49:19-08:00"/>
   <publisher value="Argonaut Project"/>
   <contact>
     <telecom>
@@ -321,7 +321,7 @@
         <valueString value="SearchParameter"/>
       </extension>
       <reference>
-        <reference value="SearchParameter/Group-value-reference"/>
+        <reference value="SearchParameter/argonaut-group-value-reference"/>
       </reference>
       <name value="GroupValueReference"/>
       <description value="This custom SearchParameter defines searching the [Group](http://hl7.org/fhir/group.html) resource by a `Group.characteristic.valueReference` element value. It is used in combination with the standard`characteristic`  search parameter to query for Groups by characteristics that use valueReference values."/>

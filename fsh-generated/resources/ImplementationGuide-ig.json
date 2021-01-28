@@ -89,7 +89,7 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/Group-value-reference"
+          "reference": "SearchParameter/argonaut-group-value-reference"
         },
         "description": "This custom SearchParameter defines searching the [Group](http://hl7.org/fhir/group.html) resource by a `Group.characteristic.valueReference` element value. It is used in combination with the standard`characteristic`  search parameter to query for Groups by characteristics that use valueReference values.",
         "exampleBoolean": false,
