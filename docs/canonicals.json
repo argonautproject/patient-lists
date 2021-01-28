@@ -7,11 +7,11 @@
     "name": "ClientCapabilityStatement"
   },
   {
-    "id": "foo-server",
+    "id": "server",
     "type": "CapabilityStatement",
-    "url": "http://www.fhir.org/guides/argonaut/patient-list/CapabilityStatement/foo-server",
+    "url": "http://www.fhir.org/guides/argonaut/patient-list/CapabilityStatement/server",
     "version": "0.1.0",
-    "name": "FooServerCapabilityStatement"
+    "name": "ServerCapabilityStatement"
   },
   {
     "id": "argo-group-characteristic",

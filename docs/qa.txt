@@ -3,7 +3,7 @@
 
 err = 4, warn = 6, info = 10
 IG Publisher Version: 1.1.51 Out of date - current version is 1.1.59
-Generated Thu Jan 28 15:28:34 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
+Generated Thu Jan 28 15:59:07 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
 
  Build Errors : 0 / 0 / 0
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
@@ -16,7 +16,7 @@ Generated Thu Jan 28 15:28:34 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonic
  /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-characteristic-reference : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-patientlist : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/capabilitystatement-client : 2 / 0 / 6
- /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/capabilitystatement-foo-server : 2 / 0 / 6
+ /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/capabilitystatement-server : 2 / 0 / 6
 </table>
 == n/a ==
 == /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/CodeSystem-argo-group-characteristic.json ==
@@ -52,12 +52,12 @@ INFORMATION: CapabilityStatement/client: CapabilityStatement.patchFormat[0]: The
 INFORMATION: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
 ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[1].definition: URL value 'http://hl7.org/fhir/SearchParameter/Resource-summary' does not resolve
 ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[5].definition: URL value 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve
-== /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/capabilitystatement-foo-server.json ==
-INFORMATION: CapabilityStatement/foo-server: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
-INFORMATION: CapabilityStatement/foo-server: CapabilityStatement.jurisdiction[0]: Could not confirm that the codes provided are from the extensible value set http://hl7.org/fhir/ValueSet/jurisdiction because there is no terminology service
-INFORMATION: CapabilityStatement/foo-server: CapabilityStatement.jurisdiction[0].coding[0]: Code System URI 'urn:iso:std:iso:3166' is unknown so the code cannot be validated
-INFORMATION: CapabilityStatement/foo-server: CapabilityStatement.format[0]: The value provided ('json') could not be validated in the absence of a terminology server
-INFORMATION: CapabilityStatement/foo-server: CapabilityStatement.patchFormat[0]: The value provided ('application/json-patch+json') could not be validated in the absence of a terminology server
-INFORMATION: CapabilityStatement/foo-server: CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
-ERROR: CapabilityStatement/foo-server: CapabilityStatement.rest[0].resource[2].searchParam[1].definition: URL value 'http://hl7.org/fhir/SearchParameter/Resource-summary' does not resolve
-ERROR: CapabilityStatement/foo-server: CapabilityStatement.rest[0].resource[2].searchParam[5].definition: URL value 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve
+== /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/capabilitystatement-server.json ==
+INFORMATION: CapabilityStatement/server: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+INFORMATION: CapabilityStatement/server: CapabilityStatement.jurisdiction[0]: Could not confirm that the codes provided are from the extensible value set http://hl7.org/fhir/ValueSet/jurisdiction because there is no terminology service
+INFORMATION: CapabilityStatement/server: CapabilityStatement.jurisdiction[0].coding[0]: Code System URI 'urn:iso:std:iso:3166' is unknown so the code cannot be validated
+INFORMATION: CapabilityStatement/server: CapabilityStatement.format[0]: The value provided ('json') could not be validated in the absence of a terminology server
+INFORMATION: CapabilityStatement/server: CapabilityStatement.patchFormat[0]: The value provided ('application/json-patch+json') could not be validated in the absence of a terminology server
+INFORMATION: CapabilityStatement/server: CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+ERROR: CapabilityStatement/server: CapabilityStatement.rest[0].resource[2].searchParam[1].definition: URL value 'http://hl7.org/fhir/SearchParameter/Resource-summary' does not resolve
+ERROR: CapabilityStatement/server: CapabilityStatement.rest[0].resource[2].searchParam[5].definition: URL value 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve

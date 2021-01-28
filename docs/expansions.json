@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "6fda78da-1288-4a00-b021-6d5b6b8d0962",
+  "id" : "7a7de62b-1fed-4f15-9391-18dedf3de830",
   "meta" : {
-    "lastUpdated" : "2021-01-28T15:27:32.805-08:00"
+    "lastUpdated" : "2021-01-28T15:57:27.699-08:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -19,7 +19,7 @@
       "name" : "ArgonautGroupCharacteristicValueSet",
       "title" : "Argonaut Group Characteristic Value Set",
       "status" : "active",
-      "date" : "2021-01-28T15:27:32-08:00",
+      "date" : "2021-01-28T15:57:27-08:00",
       "publisher" : "Argonaut Project",
       "contact" : [{
         "telecom" : [{
@@ -29,8 +29,8 @@
       }],
       "description" : "Initial set of group characteristic concepts for defining and searching for patient lists.",
       "expansion" : {
-        "identifier" : "urn:uuid:d72b0aa7-c805-471f-95a4-07fc80ca9071",
-        "timestamp" : "2021-01-28T15:28:13-08:00",
+        "identifier" : "urn:uuid:2ba41060-eee4-4b43-b64e-3714f11639cd",
+        "timestamp" : "2021-01-28T15:58:17-08:00",
         "total" : 4,
         "parameter" : [{
           "name" : "excludeNested",
