@@ -1,0 +1,106 @@
+﻿{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Client CapabilityStatement",
+    "description": "This CapabilityStatement outlines the conformance requirements and expectations for the Argonaut User Facing Patient List **Client applications**.  It identifies the specific profiles and RESTful transactions for  requesting user facing patient list data from an EHR using the Argonaut User Facing Patient List API.  This includes the following interactions:\n\n1. Discovery of User Facing Patient Lists\n2. Fetching User Facing Patient Lists\n3. Fetching Additional Data about each Patient in a User Facing Patient Lists\n\nThis is a [Requirements CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html#requirements) describing what capabilities are potentially relevant.  It can be used as a template for creating an [Instance CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html#instance) by removing expectation extensions and making actual assertions associated with each capability to describe the capabilities of a deployed and configured implementation.\n",
+    "license": {
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "http://spdx.org/licenses/CC0-1.0.html"
+    },
+    "version": "0.1.0",
+    "contact": {
+      "name": "Argonaut Project"
+    }
+  },
+  "externalDocs": {
+    "url": " http://www.fhir.org/guides/argonaut/patient-list/CapabilityStatement/client",
+    "description": "FHIR CapabilityStatement"
+  },
+  "components": {
+    "parameters": {
+      "rid": {
+        "name": "rid",
+        "in": "path",
+        "description": "id of the resource (\u003dResource.id)",
+        "required": true,
+        "allowEmptyValue": false,
+        "style": "simple",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "hid": {
+        "name": "hid",
+        "in": "path",
+        "description": "id of the history entry (\u003dResource.meta.versionId)",
+        "required": true,
+        "allowEmptyValue": false,
+        "style": "simple",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "summary": {
+        "name": "_summary",
+        "in": "query",
+        "description": "Requests the server to return a designated subset of the resource",
+        "allowEmptyValue": true,
+        "style": "form",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "true",
+            "text",
+            "data",
+            "count",
+            "false"
+          ]
+        }
+      },
+      "format": {
+        "name": "_format",
+        "in": "query",
+        "description": "Specify alternative response formats by their MIME-types (when a client is unable acccess accept: header)",
+        "allowEmptyValue": true,
+        "style": "form",
+        "schema": {
+          "type": "string",
+          "format": "mime-type"
+        }
+      },
+      "pretty": {
+        "name": "_pretty",
+        "in": "query",
+        "description": "Ask for a pretty printed response for human convenience",
+        "allowEmptyValue": true,
+        "style": "form",
+        "schema": {
+          "type": "boolean"
+        }
+      },
+      "elements": {
+        "name": "_elements",
+        "in": "query",
+        "description": "Requests the server to return a collection of elements from the resource",
+        "allowEmptyValue": true,
+        "style": "form",
+        "explode": false,
+        "schema": {
+          "type": "array",
+          "format": "string",
+          "items": {
+            "format": "string"
+          }
+        }
+      },
+      "count": {
+        "name": "_count",
+        "in": "query",
+        "description": "The maximum number of search results on a page. The server is not bound to return the number requested, but cannot return more",
+        "schema": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

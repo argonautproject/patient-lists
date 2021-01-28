@@ -1,5 +1,12 @@
 [
   {
+    "id": "client",
+    "type": "CapabilityStatement",
+    "url": " http://www.fhir.org/guides/argonaut/patient-list/CapabilityStatement/client",
+    "version": "0.1.0",
+    "name": "ClientCapabilityStatement"
+  },
+  {
     "id": "argo-group-characteristic",
     "type": "CodeSystem",
     "url": "http://www.fhir.org/guides/argonaut/patient-list/CodeSystem/argo-group-characteristic",

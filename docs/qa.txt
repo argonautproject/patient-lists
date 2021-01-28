@@ -1,13 +1,13 @@
 ﻿ArgonautPatientList : Validation Results
 =========================================
 
-err = 5, warn = 10, info = 0
+err = 16, warn = 11, info = 6
 IG Publisher Version: 1.1.51 Out of date - current version is 1.1.59
-Generated Tue Jan 26 16:11:21 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
+Generated Wed Jan 27 18:30:19 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
 
  Build Errors : 2 / 1 / 0
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
- /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ImplementationGuide-ig : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ImplementationGuide-ig : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-appointment : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-encounter : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-questionnaire : 0 / 1 / 1
@@ -17,6 +17,7 @@ Generated Tue Jan 26 16:11:21 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonic
  /Users/ehaas/Documents/FHIR/Argo-PL/input/examples/test : 1 / 1 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-characteristic-reference : 2 / 0 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-patientlist : 1 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/capabilitystatement-client : 11 / 0 / 7
 </table>
 == n/a ==
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/argo-pl-q2.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
@@ -26,6 +27,7 @@ ERROR: /Users/ehaas/Documents/FHIR/Argo-PL/docs/Observation-test.html#/html/body
 INFORMATION: CodeSystem/argo-group-characteristic: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 == /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ImplementationGuide-ig.json ==
 INFORMATION: ImplementationGuide/ig: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
+WARNING: ImplementationGuide/ig: ImplementationGuide.definition.resource[8].description: value should not start or finish with whitespace
 == /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-appointment.json ==
 INFORMATION: StructureDefinition/patientlist-appointment: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment'): The Implementation Guide contains no examples for this extension
@@ -58,3 +60,22 @@ ERROR: SearchParameter/Group-value-reference: SearchParameter.multipleAnd.extens
 ERROR: StructureDefinition.differential.element[12].mustSupport: Error parsing JSON: the primitive value must be a boolean
 INFORMATION: StructureDefinition/patientlist: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist'): The Implementation Guide contains no examples for this profile
+== /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/capabilitystatement-client.json ==
+INFORMATION: CapabilityStatement/client: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+ERROR: CapabilityStatement/client: CapabilityStatement.url: URI values cannot have whitespace(' http://www.fhir.org/guides/argonaut/patient-list/CapabilityStatement/client')
+INFORMATION: CapabilityStatement/client: CapabilityStatement.jurisdiction[0]: Could not confirm that the codes provided are from the extensible value set http://hl7.org/fhir/ValueSet/jurisdiction because there is no terminology service
+INFORMATION: CapabilityStatement/client: CapabilityStatement.jurisdiction[0].coding[0]: Code System URI 'urn:iso:std:iso:3166' is unknown so the code cannot be validated
+INFORMATION: CapabilityStatement/client: CapabilityStatement.format[0]: The value provided ('xml') could not be validated in the absence of a terminology server
+INFORMATION: CapabilityStatement/client: CapabilityStatement.format[1]: The value provided ('json') could not be validated in the absence of a terminology server
+INFORMATION: CapabilityStatement/client: CapabilityStatement.patchFormat[0]: The value provided ('application/json-patch+json') could not be validated in the absence of a terminology server
+ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[0].searchParam[0].definition: URL value 'http://hl7.org/fhir/SearchParameter/Appointment-id' does not resolve
+ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[1].searchParam[0].definition: URL value 'http://hl7.org/fhir/SearchParameter/Encounter-id' does not resolve
+INFORMATION: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[1].definition: URL value 'http://hl7.org/fhir/SearchParameter/Group-summary' does not resolve
+ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[4].definition: URI values cannot have whitespace(' http://www.fhir.org/guides/argonaut/patient-list/SearchParameter/argonaut-group-value-reference')
+ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[4].definition: Canonical URLs must be absolute URLs if they are not fragment references ( http://www.fhir.org/guides/argonaut/patient-list/SearchParameter/argonaut-group-value-reference) 
+ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[5].definition: URL value 'http://hl7.org/fhir/SearchParameter/Group-include' does not resolve
+ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[6].definition: URL value 'http://hl7.org/fhir/SearchParameter/Group-id' does not resolve
+ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[3].searchParam[0].definition: URL value 'http://hl7.org/fhir/SearchParameter/Questionnaire-id' does not resolve
+ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[4].searchParam[0].definition: URL value 'http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-id' does not resolve
+ERROR: CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[2]: Type mismatch - SearchParameter 'http://hl7.org/fhir/SearchParameter/Group-managing-entity' type is reference, but type here is token

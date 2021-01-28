@@ -10,7 +10,7 @@
   "name": "ArgonautPatientList",
   "title": "Argonaut User Facing Patient List",
   "status": "active",
-  "date": "2021-01-26T16:09:39-08:00",
+  "date": "2021-01-27T18:28:39-08:00",
   "publisher": "Argonaut Project",
   "contact": [
     {
@@ -507,6 +507,20 @@
         },
         "name": "Argonaut Patient List (Group) Profile",
         "description": "This profile sets minimum expectations for the [Group](http://hl7.org/fhir/group.html) resource to record, search, and fetch user-facing patient lists.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CapabilityStatement"
+          }
+        ],
+        "reference": {
+          "reference": "CapabilityStatement/client"
+        },
+        "name": "Client CapabilityStatement",
+        "description": "This CapabilityStatement outlines the conformance requirements and expectations for the Argonaut User Facing Patient List **Client applications**.  It identifies the specific profiles and RESTful transactions for  requesting user facing patient list data from an EHR using the Argonaut User Facing Patient List API.  This includes the following interactions:\n\n1. Discovery of User Facing Patient Lists\n2. Fetching User Facing Patient Lists\n3. Fetching Additional Data about each Patient in a User Facing Patient Lists\n\nThis is a [Requirements CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html#requirements) describing what capabilities are potentially relevant.  It can be used as a template for creating an [Instance CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html#instance) by removing expectation extensions and making actual assertions associated with each capability to describe the capabilities of a deployed and configured implementation.\n",
         "exampleBoolean": false
       },
       {

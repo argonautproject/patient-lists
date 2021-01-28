@@ -24,3 +24,7 @@ They are used in the [Argonaut Draft IG](https://hackmd.io/iLbMj3DVTtaNjTsseYAo5
 ##### Code Systems
 
 {% include list-simple-codesystems.xhtml %}
+
+##### Capability Statements
+
+{% include list-simple-capabilitystatements.xhtml %}

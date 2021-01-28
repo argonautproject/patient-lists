@@ -113,22 +113,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
    <p>Contents:</p>
    <ul>
       <li>
-         <a href="#1">Behavior: Search Parameters</a>
+         <a href="#1">Behavior: Capability Statements</a>
       </li>
       <li>
-         <a href="#2">Structures: Resource Profiles</a>
+         <a href="#2">Behavior: Search Parameters</a>
       </li>
       <li>
-         <a href="#3">Structures: Extension Definitions</a>
+         <a href="#3">Structures: Resource Profiles</a>
       </li>
       <li>
-         <a href="#4">Terminology: Value Sets</a>
+         <a href="#4">Structures: Extension Definitions</a>
       </li>
       <li>
-         <a href="#5">Terminology: Code Systems</a>
+         <a href="#5">Terminology: Value Sets</a>
       </li>
       <li>
-         <a href="#6">Example: Example Instances</a>
+         <a href="#6">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#7">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -137,6 +140,35 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      xmlns:f="http://hl7.org/fhir">
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
    <a name="1"> </a>
+   <h3>Behavior: Capability Statements </h3>
+   <p>
+    <p>The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements.</p>
+</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="CapabilityStatement-client.html"
+                     title="CapabilityStatement/client">Client CapabilityStatement</a>
+               </td>
+               <td>
+<p>This CapabilityStatement outlines the conformance requirements and expectations for the Argonaut User Facing Patient List <strong>Client applications</strong>.  It identifies the specific profiles and RESTful transactions for  requesting user facing patient list data from an EHR using the Argonaut User Facing Patient List API.  This includes the following interactions:</p>
+
+<ol>
+  <li>Discovery of User Facing Patient Lists</li>
+  <li>Fetching User Facing Patient Lists</li>
+  <li>Fetching Additional Data about each Patient in a User Facing Patient Lists</li>
+</ol>
+
+<p>This is a <a href="http://hl7.org/fhir/capabilitystatement.html#requirements">Requirements CapabilityStatement</a> describing what capabilities are potentially relevant.  It can be used as a template for creating an <a href="http://hl7.org/fhir/capabilitystatement.html#instance">Instance CapabilityStatement</a> by removing expectation extensions and making actual assertions associated with each capability to describe the capabilities of a deployed and configured implementation.</p>
+</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="2"> </a>
    <h3>Behavior: Search Parameters </h3>
    <p>
     <p>These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources.</p>
@@ -157,7 +189,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="2"> </a>
+   <a name="3"> </a>
    <h3>Structures: Resource Profiles </h3>
    <p>
     <p>These define constraints on FHIR resources for systems conforming to this implementation guide</p>
@@ -178,7 +210,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="3"> </a>
+   <a name="4"> </a>
    <h3>Structures: Extension Definitions </h3>
    <p>
     <p>These define constraints on FHIR data types for systems conforming to this implementation guide</p>
@@ -226,7 +258,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="4"> </a>
+   <a name="5"> </a>
    <h3>Terminology: Value Sets </h3>
    <p>
     <p>These define sets of codes used by systems conforming to this implementation guide</p>
@@ -247,7 +279,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="5"> </a>
+   <a name="6"> </a>
    <h3>Terminology: Code Systems </h3>
    <p>
     <p>These define new code systems used by systems conforming to this implementation guide</p>
@@ -268,7 +300,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tbody>
       </table>
    </p>
-   <a name="6"> </a>
+   <a name="7"> </a>
    <h3>Example: Example Instances </h3>
    <p>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like</p>
@@ -321,7 +353,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="https://confluence.hl7.org/display/AP/Argonaut+Project+Home">Argonaut Project</a>.  Package ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 26, 2021 16:09-0800">2021-01-26</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="https://confluence.hl7.org/display/AP/Argonaut+Project+Home">Argonaut Project</a>.  Package ig#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 27, 2021 18:28-0800">2021-01-27</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

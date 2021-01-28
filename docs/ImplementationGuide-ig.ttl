@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "ArgonautPatientList"];
   fhir:ImplementationGuide.title [ fhir:value "Argonaut User Facing Patient List"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2021-01-26T16:09:39-08:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-01-27T18:28:39-08:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Argonaut Project"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -496,6 +496,20 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CapabilityStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/argonaut/patient-list/CapabilityStatement/client>;
+         fhir:Reference.reference [ fhir:value "CapabilityStatement/client" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Client CapabilityStatement" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This CapabilityStatement outlines the conformance requirements and expectations for the Argonaut User Facing Patient List **Client applications**.  It identifies the specific profiles and RESTful transactions for  requesting user facing patient list data from an EHR using the Argonaut User Facing Patient List API.  This includes the following interactions:\n\n1. Discovery of User Facing Patient Lists\n2. Fetching User Facing Patient Lists\n3. Fetching Additional Data about each Patient in a User Facing Patient Lists\n\nThis is a [Requirements CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html#requirements) describing what capabilities are potentially relevant.  It can be used as a template for creating an [Instance CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html#instance) by removing expectation extensions and making actual assertions associated with each capability to describe the capabilities of a deployed and configured implementation.\n" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "Questionnaire" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
@@ -508,7 +522,7 @@
          fhir:link <http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire>
        ]
      ], [
-       fhir:index 9;
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
