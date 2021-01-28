@@ -1,0 +1,721 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/argonaut/patient-list/CapabilityStatement/Server> a fhir:CapabilityStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Server"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"> <h2 id=\"title\">Server CapabilityStatement</h2> <ul> <li>Implementation Guide Version: 0.1.0</li> <li>FHIR Version: 4.0.1</li> <li>Supported formats: JSON</li> <li>Published: 2021-01-28</li> <li>Published by: Argonaut Project</li> </ul> <p>This CapabilityStatement outlines the conformance requirements and expectations for Argonaut User Facing Patient List <strong>EHR Server</strong>. It identifies the specific profiles and RESTful transactions for requesting user facing patient list data from an EHR using the Argonaut User Facing Patient List API. This includes the following interactions:</p> <ol> <li>Discovery of User Facing Patient Lists</li> <li>Fetching User Facing Patient Lists</li> <li>Fetching Additional Data about each Patient in a User Facing Patient Lists</li> </ol> <p>This is a <a href=\"http://hl7.org/fhir/capabilitystatement.html#requirements\">Requirements CapabilityStatement</a> describing what capabilities are potentially relevant. It can be used as a template for creating an <a href=\"http://hl7.org/fhir/capabilitystatement.html#instance\">Instance CapabilityStatement</a> by removing expectation extensions and making actual assertions associated with each capability to describe the capabilities of a deployed and configured Server.</p> <h3 id=\"igs\" class=\"no_toc\">SHOULD Support the Following Implementation Guides:</h3> <ul> <li><a href=\"http://hl7.org/fhir/us/core/index.html\">HL7 FHIR® US Core Implementation Guide STU3 Release 3.1.1</a></li> </ul> <h3 id=\"behavior\">FHIR RESTful Capabilities</h3> <p>The Server <strong>SHALL</strong>:</p> <ol> <li>Support discovery of user facing patient lists</li> <li>Support fetching user facing lists</li> <li>Support JSON source formats for all transactions</li> <li>Declare a CapabilityStatement identifying the transactions and profiles supported</li> </ol> <p>The Server <strong>SHOULD</strong>:</p> <ol> <li>Support fetching additional data about each patient in a user facing patient lists</li> <li>Support XML source formats for all transactions</li> </ol> <p id=\"security\"><strong>Security:</strong></p> <ol> <li>See the <a href=\"http://hl7.org/fhir/us/core/security.html\">US Core General Security Considerations</a> section for requirements and recommendations.</li> </ol> <p><strong>Summary of System Wide Interactions</strong></p> <ul> <li><strong>SHOULD</strong> support the <code>transaction</code> interaction.</li> <li><strong>SHOULD</strong> support the <code>batch</code> interaction.</li> <li><strong>MAY</strong> support the <code>search-system</code> interaction.</li> <li><strong>MAY</strong> support the <code>history-system</code> interaction.</li> </ul> <h3 id=\"resource--details\" class=\"no_toc\">RESTful Capabilities by Resource/Profile:</h3> <p><strong>Summary of Search Criteria</strong></p> <table class=\"grid\"> <thead> <tr> <th>Resource Type</th> <th>Supported Profiles</th> <th>Supported Searches</th> <th>Supported <code>_includes</code></th> <th>Supported <code>_revincludes</code></th> <th>Supported Operations</th> </tr> </thead> <tbody> <tr> <td> <a href=\"#appointment\">Appointment</a> </td> <td> </td> <td> _id </td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td> <a href=\"#encounter\">Encounter</a> </td> <td> <a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter\">US Core Encounter Profile</a> </td> <td> _id </td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td> <a href=\"#group\">Group</a> </td> <td> <a href=\"StructureDefinition-patientlist.html\">Argonaut User Facing Patient List (Group) Profile</a> </td> <td> type, _summary, managing-entity, characteristic, value-reference, _include, _id characteristic+value-reference </td> <td> Group:member </td> <td> </td> <td> </td> </tr> <tr> <td> <a href=\"#questionnaire\">Questionnaire</a> </td> <td> <a href=\"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire\">SDC Base Questionnaire</a> </td> <td> _id </td> <td> </td> <td> </td> <td> </td> </tr> <tr> <td> <a href=\"#questionnaireresponse\">QuestionnaireResponse</a> </td> <td> <a href=\"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse\">SDC Questionnaire Response</a> </td> <td> _id </td> <td> </td> <td> </td> <td> </td> </tr> </tbody> </table> <h4 id=\"appointment\" class=\"no_toc\">Appointment</h4> <p>Conformance Expectation: <strong>SHOULD</strong></p> <p>Resource Specific Documentation:</p> <blockquote><p>For getting additional data about Group members, the Argonaut Patient List (Group) Profile support an extension on the <code>Group.member</code> element for directly accessing one or more Appointment resources for each patient on the patient list. The Server <strong>MAY</strong> supply this extension so that the Client can efficiently fetch the Appointment resource.</p> </blockquote> <p>Profile Interaction Summary:</p> <ul> <li><strong>SHOULD</strong> support <code>search-type</code>, <code>read</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>vread</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-instance</code>, <code>history-type</code>.</li> </ul> <p>Fetch and Search Criteria:</p> <ul> <li> A Server <strong>SHOULD</strong> be capable of returning a Appointment resource using: <code class=\"highlighter-rouge\">GET [base]/Appointment/[id]</code> </li> </ul> <p>Search Parameter Summary:</p> <table class=\"grid\"> <thead> <tr> <th>Conformance</th> <th>Parameter</th> <th>Type</th> <th>Documentation</th> </tr> </thead> <tbody><tr> <td> <strong>SHOULD</strong> </td> <td> <a href=\"http://hl7.org/fhir/R4/search.html\"> _id</a> </td> <td> token </td> <td align=\"left\"> <p>for fetching of additional appointment data about group members. The Server <strong>SHOULD</strong> support comma-separated values.</p> </td> </tr> </tbody> </table> <hr/> <h4 id=\"encounter\" class=\"no_toc\">Encounter</h4> <p>Conformance Expectation: <strong>SHOULD</strong></p> <p>Supported Profiles: <a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter\">US Core Encounter Profile</a> </p> <p>Resource Specific Documentation:</p> <blockquote><p>For getting additional data about Group members, the Argonaut Patient List (Group) Profile supports an extension on the <code>Group.member</code> element for directly accessing one or more Encounter resources for each patient on the patient list. The Server <strong>MAY</strong> supply this extension so that the Client can efficiently fetch the Encounter resource.</p> </blockquote> <p>Profile Interaction Summary:</p> <ul> <li><strong>SHOULD</strong> support <code>search-type</code>, <code>read</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>vread</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-instance</code>, <code>history-type</code>.</li> </ul> <p>Fetch and Search Criteria:</p> <ul> <li> A Server <strong>SHOULD</strong> be capable of returning a Encounter resource using: <code class=\"highlighter-rouge\">GET [base]/Encounter/[id]</code> </li> </ul> <p>Search Parameter Summary:</p> <table class=\"grid\"> <thead> <tr> <th>Conformance</th> <th>Parameter</th> <th>Type</th> <th>Documentation</th> </tr> </thead> <tbody><tr> <td> <strong>SHOULD</strong> </td> <td> <a href=\"http://hl7.org/fhir/R4/search.html\"> _id</a> </td> <td> token </td> <td align=\"left\"> <p>for fetching of additional encounter data about group members. The Server <strong>SHOULD</strong> support comma-separated values.</p> </td> </tr> </tbody> </table> <hr/> <h4 id=\"group\" class=\"no_toc\">Group</h4> <p>Conformance Expectation: <strong>SHALL</strong></p> <p>Supported Profiles: <a href=\"StructureDefinition-patientlist.html\">Argonaut User Facing Patient List (Group) Profile</a> </p> <p>Resource Specific Documentation:</p> <blockquote><p>Required resource type for discovery and fetching of user facing lists. For getting additional data about Group members. The Server <strong>MAY</strong> supply one or more of these extensions:</p> <ol> <li><a href=\"https://argonautproject.github.io/patient-lists/StructureDefinition-patientlist-appointment.html#profile\">Argonaut Patient List Member Appointment Extension</a></li> <li><a href=\"https://argonautproject.github.io/patient-lists/StructureDefinition-patientlist-encounter.html#profile\">Argonaut Patient List Member Encounter Extension</a></li> <li>[Argonaut User Facing Patient List Questionnaire Extension]](https://argonautproject.github.io/patient-lists/StructureDefinition-patientlist-questionnaire.html#profile)</li> <li>[Argonaut User Facing Patient List Member QuestionnaireResponse Extension]](https://argonautproject.github.io/patient-lists/StructureDefinition-patientlist-questionnaireresponse.html#profile)</li> </ol> </blockquote> <p>Profile Interaction Summary:</p> <ul> <li><strong>SHALL</strong> support <code>read</code><sup>†</sup>.</li><li><strong>SHOULD</strong> support <code>search-type</code><sup>†</sup>, <code>vread</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-instance</code>, <code>history-type</code>.</li> </ul> <blockquote>search-type<sup>†</sup><ol> <li>Servers <strong>SHALL</strong> require the following search parameters and parameter values for discovery of user-facing lists: <ul> <li>_summary=“true&quot;</li> <li>type=“person”.</li> </ul> </li> <li>Servers <strong>SHALL</strong> include <code>Group.characteristic</code> <em>in addition to</em> all the standard Group summary elements.</li> <li>Servers <strong>SHALL</strong> support discovering all available patient lists using the required parameter</li> <li>Servers <strong>SHOULD</strong> support discovering all available patient lists managed by a particular organization or practitioner using the required parameters and the <code>managing-entity</code> search parameter.</li> <li>Servers <strong>SHOULD</strong> support discovering all available patient lists that have a particular characteristic using the required parameters and the combination of <code>characteristic</code> and <code>value-reference</code> search parameters</li> </ol> </blockquote><blockquote>read<sup>†</sup><p>When the Patient list is too large be able to return a whole resource:</p> <ul> <li>The Server <strong>SHOULD NOT</strong> return first-page results as described <a href=\"http://hl7.org/fhir/search.html#count\">here</a></li> <li>The Server <strong>SHOULD</strong> return an <em>OperationOutcome</em> indicating that the client needs to call the <code>$getpage</code>operation to return a Group</li> </ul> </blockquote> <p>Fetch and Search Criteria:</p> <ul> <li> A Server <strong>SHALL</strong> be capable of returning a Group resource using: <code class=\"highlighter-rouge\">GET [base]/Group/[id]</code> </li> <li> A Server <strong>SHOULD</strong> be capable of supporting the following _includes: Group:member - <code class=\"highlighter-rouge\">GET [base]/Group?[parameter=value]&amp;_include=Group:member</code> </li> </ul> <p>Search Parameter Summary:</p> <table class=\"grid\"> <thead> <tr> <th>Conformance</th> <th>Parameter</th> <th>Type</th> <th>Documentation</th> </tr> </thead> <tbody><tr> <td> <strong>SHOULD</strong> </td> <td> <a href=\"http://hl7.org/fhir/R4/group.html#search\"> type</a> </td> <td> token </td> <td align=\"left\"> <p>required search parameters and parameter value <code> type=person</code> for discovery of user-facing lists:</p> </td> </tr><tr> <td> <strong>SHOULD</strong> </td> <td> <a href=\"http://hl7.org/fhir/R4/search.html\"> _summary</a> </td> <td> token </td> <td align=\"left\"> <p>required search parameters and parameter value <code> _summary=true</code> for discovery of user-facing lists:</p> </td> </tr><tr> <td> <strong>SHOULD</strong> </td> <td> <a href=\"http://hl7.org/fhir/R4/group.html#search\"> managing-entity</a> </td> <td> reference </td> <td align=\"left\"> <p>for discovery of user-facing lists managed by a particular organization or practitioner</p> </td> </tr><tr> <td> <strong>SHOULD</strong> </td> <td> <a href=\"http://hl7.org/fhir/R4/group.html#search\"> characteristic</a> </td> <td> token </td> <td align=\"left\"> <p>for discovery of user-facing lists by a characteristic used in combination with <code>value-reference</code></p> </td> </tr><tr> <td> <strong>SHOULD</strong> </td> <td> <a href=\"SearchParameter-argonaut-group-value-reference.html\"> value-reference</a> </td> <td> reference </td> <td align=\"left\"> <p>for discovery of user-facing lists by a characteristic used in combination with <code>characteristic</code></p> </td> </tr><tr> <td> <strong>SHOULD</strong> </td> <td> <a href=\"http://hl7.org/fhir/R4/search.html\"> _include</a> </td> <td> token </td> <td align=\"left\"> <p>the <code>_include</code> parameter can be used when fetching a Group resource to include all the Patient resources in addition to Group</p> </td> </tr><tr> <td> <strong>SHALL</strong> </td> <td> <a href=\"http://hl7.org/fhir/R4/search.html\"> _id</a> </td> <td> token </td> <td align=\"left\"> <p>for fetching of user facing lists</p> </td> </tr> </tbody> </table> <p>Search Parameter Combination Summary:</p> <table class=\"grid\"> <thead> <tr> <th>Conformance</th> <th>Parameter Combination</th> <th>Types</th> </tr> </thead> <tbody> <tr> <td><strong>SHOULD</strong> </td> <td>characteristic+value-reference </td> <td>token+reference </td> </tr> </tbody> </table> <hr/> <h4 id=\"questionnaire\" class=\"no_toc\">Questionnaire</h4> <p>Conformance Expectation: <strong>SHOULD</strong></p> <p>Supported Profiles: <a href=\"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire\">SDC Base Questionnaire</a> </p> <p>Resource Specific Documentation:</p> <blockquote><p>For getting additional data about Group members, the Argonaut Patient List (Group) Profile supports 2 extension for directly accessing the Group level Questionnaire and the resultant pre-filled QuestionnaireResponse form for each patient on the patient list: The Server <strong>MAY</strong> supply this extension so that the Client can fetch the form definitions in the Questionnaire resource and the form data in the QuestionnaireResponse resource.</p> </blockquote> <p>Profile Interaction Summary:</p> <ul> <li><strong>SHOULD</strong> support <code>search-type</code>, <code>read</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>vread</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-instance</code>, <code>history-type</code>.</li> </ul> <p>Fetch and Search Criteria:</p> <ul> <li> A Server <strong>SHOULD</strong> be capable of returning a Questionnaire resource using: <code class=\"highlighter-rouge\">GET [base]/Questionnaire/[id]</code> </li> </ul> <p>Search Parameter Summary:</p> <table class=\"grid\"> <thead> <tr> <th>Conformance</th> <th>Parameter</th> <th>Type</th> <th>Documentation</th> </tr> </thead> <tbody><tr> <td> <strong>SHOULD</strong> </td> <td> <a href=\"http://hl7.org/fhir/R4/search.html\"> _id</a> </td> <td> token </td> <td align=\"left\"> <p>for fetching the definitions of associated data about group members represented in the Questionnaire resource. The Server <strong>SHOULD</strong> support comma-separated values.</p> </td> </tr> </tbody> </table> <hr/> <h4 id=\"questionnaireresponse\" class=\"no_toc\">QuestionnaireResponse</h4> <p>Conformance Expectation: <strong>SHOULD</strong></p> <p>Supported Profiles: <a href=\"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse\">SDC Questionnaire Response</a> </p> <p>Resource Specific Documentation:</p> <blockquote><p>For getting additional data about Group members, the Argonaut Patient List (Group) Profile supports 2 extension for directly accessing the Group level Questionnaire and the resultant pre-filled QuestionnaireResponse form for each patient on the patient list: The Server <strong>MAY</strong> supply these extensions so that the Client can fetch the form definitions in the Questionnaire resource and the form data in the QuestionnaireResponse resource.</p> </blockquote> <p>Profile Interaction Summary:</p> <ul> <li><strong>SHOULD</strong> support <code>search-type</code>, <code>read</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>vread</code>, <code>update</code>, <code>patch</code>, <code>delete</code>, <code>history-instance</code>, <code>history-type</code>.</li> </ul> <p>Fetch and Search Criteria:</p> <ul> <li> A Server <strong>SHOULD</strong> be capable of returning a QuestionnaireResponse resource using: <code class=\"highlighter-rouge\">GET [base]/QuestionnaireResponse/[id]</code> </li> </ul> <p>Search Parameter Summary:</p> <table class=\"grid\"> <thead> <tr> <th>Conformance</th> <th>Parameter</th> <th>Type</th> <th>Documentation</th> </tr> </thead> <tbody><tr> <td> <strong>SHOULD</strong> </td> <td> <a href=\"http://hl7.org/fhir/R4/search.html\"> _id</a> </td> <td> token </td> <td align=\"left\"> <p>for fetching associated data about group members represented in the QuestionnaireResponse resource. The Server <strong>SHOULD</strong> support comma-separated values.</p> </td> </tr> </tbody> </table> <hr/> </div>"
+  ];
+  fhir:CapabilityStatement.url [ fhir:value "http://www.fhir.org/guides/argonaut/patient-list/CapabilityStatement/Server"];
+  fhir:CapabilityStatement.version [ fhir:value "0.1.0"];
+  fhir:CapabilityStatement.name [ fhir:value "ServerCapabilityStatement"];
+  fhir:CapabilityStatement.title [ fhir:value "Server CapabilityStatement"];
+  fhir:CapabilityStatement.status [ fhir:value "active"];
+  fhir:CapabilityStatement.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:CapabilityStatement.date [ fhir:value "2021-01-28"^^xsd:date];
+  fhir:CapabilityStatement.publisher [ fhir:value "Argonaut Project"];
+  fhir:CapabilityStatement.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://confluence.hl7.org/display/AP/Argonaut+Project+Home" ]
+     ]
+  ];
+  fhir:CapabilityStatement.description [ fhir:value "This CapabilityStatement outlines the conformance requirements and expectations for Argonaut User Facing Patient List **EHR Server**.  It identifies the specific profiles and RESTful transactions for requesting user facing patient list data from an EHR using the Argonaut User Facing Patient List API.  This includes the following interactions:\n\n1. Discovery of User Facing Patient Lists\n2. Fetching User Facing Patient Lists\n3. Fetching Additional Data about each Patient in a User Facing Patient Lists\n\nThis is a [Requirements CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html#requirements) describing what capabilities are potentially relevant.  It can be used as a template for creating an [Instance CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html#instance) by removing expectation extensions and making actual assertions associated with each capability to describe the capabilities of a deployed and configured Server."];
+  fhir:CapabilityStatement.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ]
+     ]
+  ];
+  fhir:CapabilityStatement.kind [ fhir:value "requirements"];
+  fhir:CapabilityStatement.fhirVersion [ fhir:value "4.0.1"];
+  fhir:CapabilityStatement.format [
+     fhir:value "json";
+     fhir:index 0
+  ];
+  fhir:CapabilityStatement.patchFormat [
+     fhir:value "application/json-patch+json";
+     fhir:index 0
+  ];
+  fhir:CapabilityStatement.implementationGuide [
+     fhir:value "http://www.fhir.org/guides/argonaut/patient-list/ImplementationGuide/ig";
+     fhir:index 0;
+     fhir:link <http://www.fhir.org/guides/argonaut/patient-list/ImplementationGuide/ig>
+  ], [
+     fhir:value "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.1";
+     fhir:index 1;
+     fhir:link <http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.1>
+  ];
+  fhir:CapabilityStatement.rest [
+     fhir:index 0;
+     fhir:CapabilityStatement.rest.mode [ fhir:value "server" ];
+     fhir:CapabilityStatement.rest.documentation [ fhir:value "The Server **SHALL**:\n\n1. Support discovery of user facing patient lists\n1. Support fetching user facing lists\n1. Support JSON source formats for all transactions\n1. Declare a CapabilityStatement identifying the transactions and profiles supported\n\nThe Server **SHOULD**:\n\n1. Support fetching additional data about each patient in a user facing patient lists\n1. Support XML source formats for all transactions" ];
+     fhir:CapabilityStatement.rest.security [
+       fhir:CapabilityStatement.rest.security.description [ fhir:value "1. See the [US Core General Security Considerations](http://hl7.org/fhir/us/core/security.html) section for requirements and recommendations." ]
+     ];
+     fhir:CapabilityStatement.rest.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Appointment" ];
+       fhir:CapabilityStatement.rest.resource.documentation [ fhir:value "For getting additional data about Group members, the Argonaut Patient List (Group) Profile support an extension on the `Group.member` element for directly accessing one or more Appointment  resources for each patient on the patient list. The Server **MAY** supply this extension so that the Client can efficiently fetch the Appointment  resource." ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "create" ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "vread" ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "update" ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "patch" ]
+       ], [
+         fhir:index 6;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "delete" ]
+       ], [
+         fhir:index 7;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-instance" ]
+       ], [
+         fhir:index 8;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-type" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_id" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-id";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value " for fetching of additional appointment data about group members.  The Server **SHOULD** support comma-separated values." ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Encounter" ];
+       fhir:CapabilityStatement.rest.resource.supportedProfile [
+         fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter";
+         fhir:index 0;
+         fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter>
+       ];
+       fhir:CapabilityStatement.rest.resource.documentation [ fhir:value "For getting additional data about Group members, the Argonaut Patient List (Group) Profile supports an  extension on the `Group.member` element for directly accessing one or more  Encounter resources for each patient on the patient list. The Server **MAY** supply this extension so that the Client can efficiently fetch the  Encounter resource." ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "create" ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "vread" ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "update" ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "patch" ]
+       ], [
+         fhir:index 6;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "delete" ]
+       ], [
+         fhir:index 7;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-instance" ]
+       ], [
+         fhir:index 8;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-type" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_id" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-id";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value " for fetching of additional encounter data about group members. The Server **SHOULD** support comma-separated values." ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "SHALL" ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ], [
+           fhir:index 1;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "characteristic" ]
+         ], [
+           fhir:index 2;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "value-reference" ]
+         ];
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Group" ];
+       fhir:CapabilityStatement.rest.resource.supportedProfile [
+         fhir:value "http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist";
+         fhir:index 0;
+         fhir:link <http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist>
+       ];
+       fhir:CapabilityStatement.rest.resource.documentation [ fhir:value "Required resource type for discovery and fetching of user facing lists. For getting additional data about Group members. The Server **MAY** supply one or more of these extensions:\n\n1. [Argonaut Patient List Member Appointment Extension](https://argonautproject.github.io/patient-lists/StructureDefinition-patientlist-appointment.html#profile)\n1. [Argonaut Patient List Member Encounter Extension](https://argonautproject.github.io/patient-lists/StructureDefinition-patientlist-encounter.html#profile)\n1. [Argonaut User Facing Patient List Questionnaire Extension]](https://argonautproject.github.io/patient-lists/StructureDefinition-patientlist-questionnaire.html#profile)\n1. [Argonaut User Facing Patient List Member QuestionnaireResponse Extension]](https://argonautproject.github.io/patient-lists/StructureDefinition-patientlist-questionnaireresponse.html#profile)" ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "create" ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ];
+         fhir:CapabilityStatement.rest.resource.interaction.documentation [ fhir:value "1. Servers **SHALL** require the following search parameters and parameter values for discovery of user-facing lists:\n   - _summary=“true\"\n   - type=“person”.\n1. Servers **SHALL** include `Group.characteristic` *in addition to* all the standard Group summary elements.\n1. Servers **SHALL** support discovering all available patient lists using the required parameter\n1. Servers **SHOULD** support discovering all available patient lists managed by a particular organization or practitioner using the required parameters and the `managing-entity` search parameter.\n1. Servers **SHOULD** support discovering all available patient lists that have a particular characteristic using the required parameters and the combination of `characteristic` and `value-reference` search parameters " ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ];
+         fhir:CapabilityStatement.rest.resource.interaction.documentation [ fhir:value "When the Patient list is too large be able to return a whole resource:\n- The Server **SHOULD NOT** return first-page results as described [here](http://hl7.org/fhir/search.html#count)\n- The Server **SHOULD** return an *OperationOutcome* indicating that the client needs to call the `$getpage`operation to return a Group" ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "vread" ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "update" ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "patch" ]
+       ], [
+         fhir:index 6;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "delete" ]
+       ], [
+         fhir:index 7;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-instance" ]
+       ], [
+         fhir:index 8;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-type" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.searchInclude [
+         fhir:value "Group:member";
+         fhir:index 0
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "type" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Group-type";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Group-type>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "required search parameters and parameter value ` type=person`  for discovery of user-facing lists:" ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_summary" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-summary";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-summary>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "required search parameters and parameter value ` _summary=true`  for discovery of user-facing lists:" ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "managing-entity" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Group-managing-entity";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Group-managing-entity>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "for discovery of user-facing lists managed by a particular organization or practitioner" ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "characteristic" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Group-characteristic";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Group-characteristic>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "for discovery of user-facing lists by a characteristic used in combination with `value-reference`" ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "value-reference" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://www.fhir.org/guides/argonaut/patient-list/SearchParameter/argonaut-group-value-reference";
+           fhir:link <http://www.fhir.org/guides/argonaut/patient-list/SearchParameter/argonaut-group-value-reference>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "for discovery of user-facing lists by a characteristic used in combination with `characteristic`" ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_include" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-include";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-include>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "the `_include` parameter can be used when fetching a Group resource to include all the Patient resources in addition to Group" ]
+       ], [
+         fhir:index 6;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_id" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-id";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value " for fetching of user facing lists" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Questionnaire" ];
+       fhir:CapabilityStatement.rest.resource.supportedProfile [
+         fhir:value "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire";
+         fhir:index 0;
+         fhir:link <http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire>
+       ];
+       fhir:CapabilityStatement.rest.resource.documentation [ fhir:value "For getting additional data about Group members, the Argonaut Patient List (Group) Profile supports 2 extension for directly accessing the Group level Questionnaire and the resultant pre-filled QuestionnaireResponse form for each patient on the patient list: The Server **MAY** supply this extension so that the Client can fetch the form definitions in the Questionnaire resource and the form data in the QuestionnaireResponse resource." ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "create" ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "vread" ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "update" ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "patch" ]
+       ], [
+         fhir:index 6;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "delete" ]
+       ], [
+         fhir:index 7;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-instance" ]
+       ], [
+         fhir:index 8;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-type" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_id" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-id";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "for fetching the definitions of associated data about group members represented in the Questionnaire resource. The Server **SHOULD** support comma-separated values." ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "QuestionnaireResponse" ];
+       fhir:CapabilityStatement.rest.resource.supportedProfile [
+         fhir:value "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse";
+         fhir:index 0;
+         fhir:link <http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse>
+       ];
+       fhir:CapabilityStatement.rest.resource.documentation [ fhir:value "For getting additional data about Group members, the Argonaut Patient List (Group) Profile supports 2 extension for directly accessing the Group level Questionnaire and the resultant pre-filled QuestionnaireResponse form for each patient on the patient list: The Server **MAY** supply  these extensions so that the Client can fetch the form definitions in the Questionnaire resource and the form data in the QuestionnaireResponse resource." ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "create" ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "vread" ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "update" ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "patch" ]
+       ], [
+         fhir:index 6;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "delete" ]
+       ], [
+         fhir:index 7;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-instance" ]
+       ], [
+         fhir:index 8;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-type" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_id" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-id";
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value " for fetching associated data about group members represented in the QuestionnaireResponse resource. The Server **SHOULD** support comma-separated values." ]
+       ]
+     ];
+     fhir:CapabilityStatement.rest.interaction [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+       ];
+       fhir:CapabilityStatement.rest.interaction.code [ fhir:value "transaction" ];
+       fhir:CapabilityStatement.rest.interaction.documentation [ fhir:value "The Server **SHOULD** support transaction interactions to Getting Additional Data About Group Members" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+       ];
+       fhir:CapabilityStatement.rest.interaction.code [ fhir:value "batch" ];
+       fhir:CapabilityStatement.rest.interaction.documentation [ fhir:value "The Server **SHOULD** support batch  interactions to Getting Additional Data About Group Members" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "MAY" ]
+       ];
+       fhir:CapabilityStatement.rest.interaction.code [ fhir:value "search-system" ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "MAY" ]
+       ];
+       fhir:CapabilityStatement.rest.interaction.code [ fhir:value "history-system" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://www.fhir.org/guides/argonaut/patient-list/CapabilityStatement/Server.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

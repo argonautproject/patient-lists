@@ -1,5 +1,12 @@
 [
   {
+    "id": "Server",
+    "type": "CapabilityStatement",
+    "url": "http://www.fhir.org/guides/argonaut/patient-list/CapabilityStatement/Server",
+    "version": "0.1.0",
+    "name": "ServerCapabilityStatement"
+  },
+  {
     "id": "client",
     "type": "CapabilityStatement",
     "url": "http://www.fhir.org/guides/argonaut/patient-list/CapabilityStatement/client",

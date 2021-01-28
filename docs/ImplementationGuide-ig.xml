@@ -11,7 +11,7 @@
   <name value="ArgonautPatientList"/>
   <title value="Argonaut User Facing Patient List"/>
   <status value="active"/>
-  <date value="2021-01-28T12:04:45-08:00"/>
+  <date value="2021-01-28T13:50:46-08:00"/>
   <publisher value="Argonaut Project"/>
   <contact>
     <telecom>
@@ -347,6 +347,17 @@
       </reference>
       <name value="Client CapabilityStatement"/>
       <description value="This CapabilityStatement outlines the conformance requirements and expectations for Argonaut User Facing Patient List **Client applications**.  It identifies the specific profiles and RESTful transactions for  requesting user facing patient list data from an EHR using the Argonaut User Facing Patient List API.  This includes the following interactions:&#xA;&#xA;1. Discovery of User Facing Patient Lists&#xA;2. Fetching User Facing Patient Lists&#xA;3. Fetching Additional Data about each Patient in a User Facing Patient Lists&#xA;&#xA;This is a [Requirements CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html#requirements) describing what capabilities are potentially relevant.  It can be used as a template for creating an [Instance CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html#instance) by removing expectation extensions and making actual assertions associated with each capability to describe the capabilities of a deployed and configured implementation.&#xA;"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/Server"/>
+      </reference>
+      <name value="Server CapabilityStatement"/>
+      <description value="This CapabilityStatement outlines the conformance requirements and expectations for Argonaut User Facing Patient List **EHR Server**.  It identifies the specific profiles and RESTful transactions for requesting user facing patient list data from an EHR using the Argonaut User Facing Patient List API.  This includes the following interactions:&#xA;&#xA;1. Discovery of User Facing Patient Lists&#xA;2. Fetching User Facing Patient Lists&#xA;3. Fetching Additional Data about each Patient in a User Facing Patient Lists&#xA;&#xA;This is a [Requirements CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html#requirements) describing what capabilities are potentially relevant.  It can be used as a template for creating an [Instance CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html#instance) by removing expectation extensions and making actual assertions associated with each capability to describe the capabilities of a deployed and configured Server."/>
       <exampleBoolean value="false"/>
     </resource>
     <page>
