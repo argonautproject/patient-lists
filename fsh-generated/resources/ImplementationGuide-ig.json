@@ -89,6 +89,14 @@
       },
       {
         "reference": {
+          "reference": "OperationDefinition/getpage"
+        },
+        "description": "The Group resources can contain a lot of members and make dealing with them as a whole hard for a client.  To work around this issue, the  `$getpage` operation returns a List or Group with just a subset of its members. It is an instance level operation that uses the input parameters `offset` and `count` to specify the subset.\n`$getPage?offset=X&count=Y`\nThe offset is  0 based and defaults to 0, and the count defaults to the `_count` of a search operation.",
+        "exampleBoolean": false,
+        "name": "Group Get Page Operation"
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/argonaut-group-value-reference"
         },
         "description": "This custom SearchParameter defines searching the [Group](http://hl7.org/fhir/group.html) resource by a `Group.characteristic.valueReference` element value. It is used in combination with the standard`characteristic`  search parameter to query for Groups by characteristics that use valueReference values.",

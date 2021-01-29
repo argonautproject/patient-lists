@@ -3,7 +3,7 @@
 
 err = 4, warn = 6, info = 10
 IG Publisher Version: 1.1.51 Out of date - current version is 1.1.59
-Generated Thu Jan 28 16:06:44 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
+Generated Thu Jan 28 17:39:39 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonical = http://www.fhir.org/guides/argonaut/patient-list)
 
  Build Errors : 0 / 0 / 0
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
@@ -13,6 +13,7 @@ Generated Thu Jan 28 16:06:44 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonic
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-questionnaire : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-questionnaireresponse : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ValueSet-argo-group-characteristic : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/OperationDefinition-getpage : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-characteristic-reference : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-patientlist : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/capabilitystatement-client : 2 / 0 / 6
@@ -23,7 +24,7 @@ Generated Thu Jan 28 16:06:44 PST 2021. FHIR version 4.0.1 for ig#0.1.0 (canonic
 INFORMATION: CodeSystem/argo-group-characteristic: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 == /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ImplementationGuide-ig.json ==
 INFORMATION: ImplementationGuide/ig: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
-WARNING: ImplementationGuide/ig: ImplementationGuide.definition.resource[8].description: value should not start or finish with whitespace
+WARNING: ImplementationGuide/ig: ImplementationGuide.definition.resource[9].description: value should not start or finish with whitespace
 == /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/StructureDefinition-patientlist-appointment.json ==
 INFORMATION: StructureDefinition/patientlist-appointment: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-appointment'): The Implementation Guide contains no examples for this extension
@@ -38,6 +39,8 @@ INFORMATION: StructureDefinition/patientlist-questionnaireresponse: StructureDef
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/patient-list/StructureDefinition/patientlist-questionnaireresponse'): The Implementation Guide contains no examples for this extension
 == /Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ValueSet-argo-group-characteristic.json ==
 INFORMATION: ValueSet/argo-group-characteristic: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/OperationDefinition-getpage.json ==
+INFORMATION: OperationDefinition/getpage: OperationDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/OperationDefinition
 == /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-characteristic-reference.json ==
 INFORMATION: SearchParameter/argonaut-group-value-reference: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
 == /Users/ehaas/Documents/FHIR/Argo-PL/input/resources/StructureDefinition-patientlist.json ==

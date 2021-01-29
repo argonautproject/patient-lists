@@ -23,7 +23,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for ArgonautPatientList</h1>
- <p>Generated Thu Jan 28 16:06:44 PST 2021, FHIR version 4.0.1 for ig#0.1.0 (canonical = <a href="http://www.fhir.org/guides/argonaut/patient-list">http://www.fhir.org/guides/argonaut/patient-list</a> (<a href="http://www.fhir.org/guides/argonaut/patient-list/history.html">history</a>)). See <a href="/users/ehaas/documents/fhir/argo-pl/docs/qa.min.html">Errors Only</a></p>
+ <p>Generated Thu Jan 28 17:39:39 PST 2021, FHIR version 4.0.1 for ig#0.1.0 (canonical = <a href="http://www.fhir.org/guides/argonaut/patient-list">http://www.fhir.org/guides/argonaut/patient-list</a> (<a href="http://www.fhir.org/guides/argonaut/patient-list/history.html">history</a>)). See <a href="/users/ehaas/documents/fhir/argo-pl/docs/qa.min.html">Errors Only</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span style="background-color: #ffcccc">IG Publisher Version: v1.1.51, which is out of date. The current version is v1.1.59 <a href="https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar">Download Latest</a></span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ig, Canonical = http://www.fhir.org/guides/argonaut/patient-list</td></tr>
@@ -69,6 +69,9 @@
      <td><a href="#_Users_ehaas_Documents_FHIR_Argo-PL_fsh-generated_resources_ValueSet-argo-group-characteristic"><b>/Users/ehaas/Documents/FHIR/Argo-PL/fsh-generated/resources/ValueSet-argo-group-characteristic</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Argo-PL_input_resources_OperationDefinition-getpage"><b>/Users/ehaas/Documents/FHIR/Argo-PL/input/resources/OperationDefinition-getpage</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
      <td><a href="#_Users_ehaas_Documents_FHIR_Argo-PL_input_resources_SearchParameter-characteristic-reference"><b>/Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-characteristic-reference</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
@@ -108,7 +111,7 @@
      <td><b>ImplementationGuide/ig: ImplementationGuide</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ImplementationGuide/ig: ImplementationGuide.definition.resource[8].description</b></td><td><b>warning</b></td><td title="Type_Specific_Checks_DT_String_WS"><b>value should not start or finish with whitespace</b></td>
+     <td><b>ImplementationGuide/ig: ImplementationGuide.definition.resource[9].description</b></td><td><b>warning</b></td><td title="Type_Specific_Checks_DT_String_WS"><b>value should not start or finish with whitespace</b></td>
    </tr>
 </table>
 <hr/>
@@ -179,6 +182,17 @@
    </tr>
 </table>
 <hr/>
+<a name="_Users_ehaas_Documents_FHIR_Argo-PL_input_resources_OperationDefinition-getpage"> </a>
+<h2><a href="OperationDefinition-getpage.html">/Users/ehaas/Documents/FHIR/Argo-PL/input/resources/OperationDefinition-getpage.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>OperationDefinition/getpage: OperationDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/OperationDefinition</b></td>
+   </tr>
+</table>
+<hr/>
 <a name="_Users_ehaas_Documents_FHIR_Argo-PL_input_resources_SearchParameter-characteristic-reference"> </a>
 <h2><a href="SearchParameter-argonaut-group-value-reference.html">/Users/ehaas/Documents/FHIR/Argo-PL/input/resources/SearchParameter-characteristic-reference.json</a></h2>
  <table class="grid">
@@ -226,7 +240,7 @@
      <td><b>CapabilityStatement/client: CapabilityStatement.patchFormat[0]</b></td><td><b>information</b></td><td title="Terminology_TX_NoValid_15"><b>The value provided ('application/json-patch+json') could not be validated in the absence of a terminology server</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].extension[1].extension[0]</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination</b> <span id="sl20" class="flip" onclick="flip('l20')">Show Reasoning</span><div id="l20" style="display: none"><p>&nbsp;</p>This element does not match any known slicedefined_in_the_profilehttp://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination<ul><li>CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: discriminator = true and ('required' in url)</li>, <li>CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: discriminator = true and ('optional' in url)</li></ul></div></td>
+     <td><b><a href="">CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].extension[1].extension[0]</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination</b> <span id="sl21" class="flip" onclick="flip('l21')">Show Reasoning</span><div id="l21" style="display: none"><p>&nbsp;</p>This element does not match any known slicedefined_in_the_profilehttp://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination<ul><li>CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: discriminator = true and ('required' in url)</li>, <li>CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: discriminator = true and ('optional' in url)</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>CapabilityStatement/client: CapabilityStatement.rest[0].resource[2].searchParam[1].definition</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/SearchParameter/Resource-summary' does not resolve</b></td>
@@ -258,7 +272,7 @@
      <td><b>CapabilityStatement/server: CapabilityStatement.patchFormat[0]</b></td><td><b>information</b></td><td title="Terminology_TX_NoValid_15"><b>The value provided ('application/json-patch+json') could not be validated in the absence of a terminology server</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">CapabilityStatement/server: CapabilityStatement.rest[0].resource[2].extension[1].extension[0]</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination</b> <span id="sl28" class="flip" onclick="flip('l28')">Show Reasoning</span><div id="l28" style="display: none"><p>&nbsp;</p>This element does not match any known slicedefined_in_the_profilehttp://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination<ul><li>CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: discriminator = true and ('required' in url)</li>, <li>CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: discriminator = true and ('optional' in url)</li></ul></div></td>
+     <td><b><a href="">CapabilityStatement/server: CapabilityStatement.rest[0].resource[2].extension[1].extension[0]</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination</b> <span id="sl29" class="flip" onclick="flip('l29')">Show Reasoning</span><div id="l29" style="display: none"><p>&nbsp;</p>This element does not match any known slicedefined_in_the_profilehttp://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination<ul><li>CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: discriminator = true and ('required' in url)</li>, <li>CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: discriminator = true and ('optional' in url)</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>CapabilityStatement/server: CapabilityStatement.rest[0].resource[2].searchParam[1].definition</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/SearchParameter/Resource-summary' does not resolve</b></td>

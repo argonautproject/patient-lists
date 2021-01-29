@@ -28,6 +28,13 @@
     "name": "ArgonautPatientList"
   },
   {
+    "id": "getpage",
+    "type": "OperationDefinition",
+    "url": "http://www.fhir.org/guides/argonaut/patient-list/OperationDefinition/getpage",
+    "version": "0.1.0",
+    "name": "GroupGetPageOperation"
+  },
+  {
     "id": "argonaut-group-value-reference",
     "type": "SearchParameter",
     "url": "http://www.fhir.org/guides/argonaut/patient-list/SearchParameter/argonaut-group-value-reference",

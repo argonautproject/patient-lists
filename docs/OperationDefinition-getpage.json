@@ -1,0 +1,62 @@
+{
+  "resourceType": "OperationDefinition",
+  "id": "getpage",
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GroupGetPageOperation</h2><p>OPERATION: GroupGetPageOperation</p><p>The official URL for this operation definition is: </p><pre>http://www.fhir.org/guides/argonaut/patient-list/OperationDefinition/getpage</pre><div><p>The Group resources can contain a lot of members and make dealing with them as a whole hard for a client.  To work around this issue, the  <code>$getpage</code> operation returns a List or Group with just a subset of its members. It is an instance level operation that uses the input parameters <code>offset</code> and <code>count</code> to specify the subset.</p>\n</div><p>URL: [base]/Group/[id]/$getpage</p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>offset</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#integer\">integer</a></td><td/><td><div><p>Offset is the starting 0 based index (default = 0) of the `Group.member' element array if a Group subset is desired.</p>\n</div></td></tr><tr><td>IN</td><td>count</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#integer\">integer</a></td><td/><td><div><p>Count is the number `Group.member' elements that should be provided if a Group subset is desired. The count defaults to the Server's existing paging limit for the results of a search or interaction.</p>\n</div></td></tr><tr><td>OUT</td><td>return</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/group.html\">Group</a></td><td/><td><div><p>The Group resource with the subset of <code>Group.member</code> elements that is desired</p>\n</div></td></tr></table><div><ul>\n<li>\n<p>This operation uses the following Syntax:</p>\n<p><code>[Base]/Group/[id]/$getPage?offset=X\\&amp;amp;count=Y{\\&amp;amp;...}</code></p>\n</li>\n<li>\n<p>Servers are not obliged to support this operation, but if they do, they <strong>SHALL</strong> support <em>both</em> the offset and count parameters.</p>\n</li>\n<li>\n<p>The same as when using as when using <code>_summary</code>, Servers <strong>SHOULD</strong> mark the Group resource with the tag &quot;SUBSETTED&quot; to ensure that the incomplete resource is not accidentally used to overwrite a complete resource.</p>\n</li>\n</ul>\n</div></div>"
+  },
+  "url": "http://www.fhir.org/guides/argonaut/patient-list/OperationDefinition/getpage",
+  "version": "0.1.0",
+  "name": "GroupGetPageOperation",
+  "title": "Group Get Page Operation",
+  "status": "active",
+  "kind": "operation",
+  "date": "2021-01-28",
+  "publisher": "Argonaut Project",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://confluence.hl7.org/display/AP/Argonaut+Project+Home"
+        }
+      ]
+    }
+  ],
+  "description": "The Group resources can contain a lot of members and make dealing with them as a whole hard for a client.  To work around this issue, the  `$getpage` operation returns a List or Group with just a subset of its members. It is an instance level operation that uses the input parameters `offset` and `count` to specify the subset.",
+  "affectsState": false,
+  "code": "getpage",
+  "comment": "- This operation uses the following Syntax:\n\n   `[Base]/Group/[id]/$getPage?offset=X\\&count=Y{\\&...}`\n\n- Servers are not obliged to support this operation, but if they do, they **SHALL** support *both* the offset and count parameters.\n- The same as when using as when using `_summary`, Servers **SHOULD** mark the Group resource with the tag \"SUBSETTED\" to ensure that the incomplete resource is not accidentally used to overwrite a complete resource.",
+  "resource": [
+    "Group"
+  ],
+  "system": false,
+  "type": false,
+  "instance": true,
+  "parameter": [
+    {
+      "name": "offset",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "Offset is the starting 0 based index (default = 0) of the `Group.member' element array if a Group subset is desired.",
+      "type": "integer"
+    },
+    {
+      "name": "count",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "Count is the number `Group.member' elements that should be provided if a Group subset is desired. The count defaults to the Server's existing paging limit for the results of a search or interaction.",
+      "type": "integer"
+    },
+    {
+      "name": "return",
+      "use": "out",
+      "min": 1,
+      "max": "1",
+      "documentation": "The Group resource with the subset of `Group.member` elements that is desired",
+      "type": "Group"
+    }
+  ]
+}

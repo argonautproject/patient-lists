@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "ArgonautPatientList"];
   fhir:ImplementationGuide.title [ fhir:value "Argonaut User Facing Patient List"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2021-01-28T16:05:11-08:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-01-28T17:38:22-08:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Argonaut Project"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -468,6 +468,20 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "OperationDefinition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/argonaut/patient-list/OperationDefinition/getpage>;
+         fhir:Reference.reference [ fhir:value "OperationDefinition/getpage" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Group Get Page Operation" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The Group resources can contain a lot of members and make dealing with them as a whole hard for a client.  To work around this issue, the  `$getpage` operation returns a List or Group with just a subset of its members. It is an instance level operation that uses the input parameters `offset` and `count` to specify the subset.\n`$getPage?offset=X&count=Y`\nThe offset is  0 based and defaults to 0, and the count defaults to the `_count` of a search operation." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "SearchParameter" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
@@ -478,7 +492,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This custom SearchParameter defines searching the [Group](http://hl7.org/fhir/group.html) resource by a `Group.characteristic.valueReference` element value. It is used in combination with the standard`characteristic`  search parameter to query for Groups by characteristics that use valueReference values." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 7;
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -492,7 +506,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This profile sets minimum expectations for the [Group](http://hl7.org/fhir/group.html) resource to record, search, and fetch user-facing patient lists." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 8;
+       fhir:index 9;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -506,7 +520,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This CapabilityStatement outlines the conformance requirements and expectations for Argonaut User Facing Patient List **Client applications**.  It identifies the specific profiles and RESTful transactions for  requesting user facing patient list data from an EHR using the Argonaut User Facing Patient List API.  This includes the following interactions:\n\n1. Discovery of User Facing Patient Lists\n2. Fetching User Facing Patient Lists\n3. Fetching Additional Data about each Patient in a User Facing Patient Lists\n\nThis is a [Requirements CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html#requirements) describing what capabilities are potentially relevant.  It can be used as a template for creating an [Instance CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html#instance) by removing expectation extensions and making actual assertions associated with each capability to describe the capabilities of a deployed and configured implementation.\n" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 9;
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];

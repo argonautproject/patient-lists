@@ -10,7 +10,7 @@
   "name": "ArgonautPatientList",
   "title": "Argonaut User Facing Patient List",
   "status": "active",
-  "date": "2021-01-28T16:05:11-08:00",
+  "date": "2021-01-28T17:38:22-08:00",
   "publisher": "Argonaut Project",
   "contact": [
     {
@@ -479,6 +479,20 @@
         },
         "name": "Argonaut Group Characteristic Code System",
         "description": "Initial set of group characteristic concepts for defining and searching for patient lists.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "OperationDefinition"
+          }
+        ],
+        "reference": {
+          "reference": "OperationDefinition/getpage"
+        },
+        "name": "Group Get Page Operation",
+        "description": "The Group resources can contain a lot of members and make dealing with them as a whole hard for a client.  To work around this issue, the  `$getpage` operation returns a List or Group with just a subset of its members. It is an instance level operation that uses the input parameters `offset` and `count` to specify the subset.\n`$getPage?offset=X&count=Y`\nThe offset is  0 based and defaults to 0, and the count defaults to the `_count` of a search operation.",
         "exampleBoolean": false
       },
       {
