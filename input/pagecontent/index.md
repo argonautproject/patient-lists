@@ -15,6 +15,10 @@ They are used in the [Argonaut Draft IG](https://hackmd.io/iLbMj3DVTtaNjTsseYAo5
 
 {% include list-simple-searchparameters.xhtml %}
 
+#### Operations
+{% raw %}
+{% include list-simple-operations.xhtml %}
+{% endraw %}
 #### Terminology
 
 ##### Value Sets

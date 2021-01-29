@@ -17,7 +17,7 @@
   fhir:CodeSystem.name [ fhir:value "ArgonautGroupCharacteristicCodeSystem"];
   fhir:CodeSystem.title [ fhir:value "Argonaut Group Characteristic Code System"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2021-01-28T15:57:27-08:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2021-01-28T16:05:11-08:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "Argonaut Project"];
   fhir:CodeSystem.contact [
      fhir:index 0;
