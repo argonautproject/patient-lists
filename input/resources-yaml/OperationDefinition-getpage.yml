@@ -13,7 +13,7 @@ contact:
       - system: url
         value: 'https://confluence.hl7.org/display/AP/Argonaut+Project+Home'
 description: >-
-  The Group resources can contain a lot of members and make dealing with them as a whole hard for a client.  To work around this issue, the  `$getpage` operation returns a List or Group with just a subset of its members. It is an instance level operation that uses the input parameters `offset` and `count` to specify the subset.
+  The Group resource can contain a large number of member elements. When it is large, it may pose a challenge to a Client to efficiently fetch and process it.  To work around this issue, the `$getpage` operation returns a List or Group with just a *subset* of its member elements. It is an instance level operation that uses the input parameters `offset` and `count` to specify the subset.
 affectsState: false
 code: getpage
 comment: >-
@@ -35,14 +35,14 @@ parameter:
     min: 0
     max: '1'
     documentation: >-
-      Offset is the starting 0 based index (default = 0) of the `Group.member' element array if a Group subset is desired.
+      Offset is the starting 0 based index (default = 0) of the `Group.member` element array if a Group subset is desired.
     type: integer
   - name: count
     use: in
     min: 0
     max: '1'
     documentation: >-
-      Count is the number `Group.member' elements that should be provided if a Group subset is desired. The count defaults to the Server's existing paging limit for the results of a search or interaction.
+      Count is the number `Group.member` elements that should be provided if a Group subset is desired. The count defaults to the Server's existing paging limit for the results of a search or interaction.
     type: integer
   - name: return
     use: out

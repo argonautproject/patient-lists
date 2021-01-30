@@ -3,9 +3,9 @@
 <OperationDefinition xmlns="http://hl7.org/fhir">
   <id value="getpage"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>GroupGetPageOperation</h2><p>OPERATION: GroupGetPageOperation</p><p>The official URL for this operation definition is: </p><pre>http://www.fhir.org/guides/argonaut/patient-list/OperationDefinition/getpage</pre><div><p>The Group resources can contain a lot of members and make dealing with them as a whole hard for a client.  To work around this issue, the  <code>$getpage</code> operation returns a List or Group with just a subset of its members. It is an instance level operation that uses the input parameters <code>offset</code> and <code>count</code> to specify the subset.</p>
-</div><p>URL: [base]/Group/[id]/$getpage</p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>offset</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#integer">integer</a></td><td/><td><div><p>Offset is the starting 0 based index (default = 0) of the `Group.member' element array if a Group subset is desired.</p>
-</div></td></tr><tr><td>IN</td><td>count</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#integer">integer</a></td><td/><td><div><p>Count is the number `Group.member' elements that should be provided if a Group subset is desired. The count defaults to the Server's existing paging limit for the results of a search or interaction.</p>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>GroupGetPageOperation</h2><p>OPERATION: GroupGetPageOperation</p><p>The official URL for this operation definition is: </p><pre>http://www.fhir.org/guides/argonaut/patient-list/OperationDefinition/getpage</pre><div><p>The Group resource can contain a large number of member elements. When it is large, it may pose a challenge to a Client to efficiently fetch and process it.  To work around this issue, the <code>$getpage</code> operation returns a List or Group with just a <em>subset</em> of its member elements. It is an instance level operation that uses the input parameters <code>offset</code> and <code>count</code> to specify the subset.</p>
+</div><p>URL: [base]/Group/[id]/$getpage</p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>offset</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#integer">integer</a></td><td/><td><div><p>Offset is the starting 0 based index (default = 0) of the <code>Group.member</code> element array if a Group subset is desired.</p>
+</div></td></tr><tr><td>IN</td><td>count</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#integer">integer</a></td><td/><td><div><p>Count is the number <code>Group.member</code> elements that should be provided if a Group subset is desired. The count defaults to the Server's existing paging limit for the results of a search or interaction.</p>
 </div></td></tr><tr><td>OUT</td><td>return</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/group.html">Group</a></td><td/><td><div><p>The Group resource with the subset of <code>Group.member</code> elements that is desired</p>
 </div></td></tr></table><div><ul>
 <li>
@@ -35,7 +35,7 @@
       <value value="https://confluence.hl7.org/display/AP/Argonaut+Project+Home"/>
     </telecom>
   </contact>
-  <description value="The Group resources can contain a lot of members and make dealing with them as a whole hard for a client.  To work around this issue, the  `$getpage` operation returns a List or Group with just a subset of its members. It is an instance level operation that uses the input parameters `offset` and `count` to specify the subset."/>
+  <description value="The Group resource can contain a large number of member elements. When it is large, it may pose a challenge to a Client to efficiently fetch and process it.  To work around this issue, the `$getpage` operation returns a List or Group with just a *subset* of its member elements. It is an instance level operation that uses the input parameters `offset` and `count` to specify the subset."/>
   <affectsState value="false"/>
   <code value="getpage"/>
   <comment value="- This operation uses the following Syntax:&#xA;&#xA;   `[Base]/Group/[id]/$getPage?offset=X\&amp;count=Y{\&amp;...}`&#xA;&#xA;- Servers are not obliged to support this operation, but if they do, they **SHALL** support *both* the offset and count parameters.&#xA;- The same as when using as when using `_summary`, Servers **SHOULD** mark the Group resource with the tag &quot;SUBSETTED&quot; to ensure that the incomplete resource is not accidentally used to overwrite a complete resource."/>
@@ -48,7 +48,7 @@
     <use value="in"/>
     <min value="0"/>
     <max value="1"/>
-    <documentation value="Offset is the starting 0 based index (default = 0) of the `Group.member&#39; element array if a Group subset is desired."/>
+    <documentation value="Offset is the starting 0 based index (default = 0) of the `Group.member` element array if a Group subset is desired."/>
     <type value="integer"/>
   </parameter>
   <parameter>
@@ -56,7 +56,7 @@
     <use value="in"/>
     <min value="0"/>
     <max value="1"/>
-    <documentation value="Count is the number `Group.member&#39; elements that should be provided if a Group subset is desired. The count defaults to the Server&#39;s existing paging limit for the results of a search or interaction."/>
+    <documentation value="Count is the number `Group.member` elements that should be provided if a Group subset is desired. The count defaults to the Server&#39;s existing paging limit for the results of a search or interaction."/>
     <type value="integer"/>
   </parameter>
   <parameter>
