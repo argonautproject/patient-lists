@@ -1,7 +1,7 @@
 # patient-lists
 Patient List API: Provider-facing apps often need to know things like "who are the patients I'm seeing today," or "who are the patients I'm responsible for in the hospital right now," or "who are the patients in this ward." Vendor-specific APIs outside of FHIR provide access to this kind of information, but it's hard to write a cross-platform app for patient management without a standard approach. The FHIR Patient Lists will define a few key "list types" and ensure that FHIR-based apps can interact with lists as needed. The initial focus is read-only access to lists.
 
-[Draft Patient List Implementation Guide](https://hackmd.io/iLbMj3DVTtaNjTsseYAo5g?view) uses [HackMD](https://hackmd.io/), a realtime collaborative markdown notes on all platforms publishing platform. 
+[Draft Patient List Implementation Guide](https://hackmd.io/@erichaas/BJEWWQWrw/%2FDptlrUg_RqaSH9s6M0CClg) uses [HackMD](https://hackmd.io/), a realtime collaborative markdown notes on all platforms publishing platform. 
 
 [Overview Presentation](https://confluence.hl7.org/download/attachments/97467953/Argo-PL.pptx?version=1&modificationDate=1606861846254&api=v2)
 
